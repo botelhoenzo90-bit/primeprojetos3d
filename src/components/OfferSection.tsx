@@ -148,10 +148,10 @@ const OfferSection = () => {
 
                   <div className="mt-auto">
                     <motion.a
-                      href="https://pay.hotmart.com/U105838525T?checkoutMode=10"
+                      href="https://pay.cakto.com.br/36cgyiw_840628"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => handleCheckout(e, 'https://pay.hotmart.com/U105838525T?checkoutMode=10', 19.90, 'Receitas na Airfryer - Premium')}
+                      onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 19.90, 'Receitas na Airfryer - Premium')}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-4 cursor-pointer"

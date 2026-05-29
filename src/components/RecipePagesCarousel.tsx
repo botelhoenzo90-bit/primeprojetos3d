@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import page1 from "@/assets/airfryer-page-1.png";
-import page2 from "@/assets/airfryer-page-2.png";
-import page3 from "@/assets/airfryer-page-3.png";
-import page4 from "@/assets/airfryer-page-4.png";
-import page5 from "@/assets/airfryer-page-5.png";
-import page6 from "@/assets/airfryer-page-6.png";
-import page7 from "@/assets/airfryer-page-7.png";
+import page1 from "@/assets/recipe-guide-1.png";
+import page2 from "@/assets/recipe-guide-2.png";
+import page3 from "@/assets/recipe-guide-3.png";
+import page4 from "@/assets/recipe-guide-4.png";
+import page5 from "@/assets/recipe-guide-5.png";
+import page6 from "@/assets/recipe-guide-6.png";
+import page7 from "@/assets/recipe-guide-7.png";
 
 const pages = [page1, page2, page3, page4, page5, page6, page7];
 const doubled = [...pages, ...pages, ...pages, ...pages];

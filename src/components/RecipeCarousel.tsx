@@ -12,16 +12,16 @@ import { motion } from "framer-motion";
 import { ChefHat } from "lucide-react";
 
 const images = [
-  { src: recipe1, label: "Bife con papas doradas", time: "20 min", badge: "Doradito sin ensuciar" },
-  { src: recipe2, label: "Tortilla cremosa rellena", time: "18 min", badge: "Perfecta para una cena rápida" },
-  { src: recipe3, label: "Salmón con vegetales", time: "17 min", badge: "Jugoso por dentro" },
-  { src: recipe4, label: "Pollo cítrico crocante", time: "22 min", badge: "Costra crocante" },
-  { src: recipe5, label: "Costillas barbecue", time: "25 min", badge: "Terminado caramelizado" },
-  { src: recipe6, label: "Berenjena gratinada", time: "19 min", badge: "Gratinada y práctica" },
-  { src: recipe7, label: "Pollo con calabaza asada", time: "20 min", badge: "Comida completa" },
-  { src: recipe8, label: "Pan casero crocante", time: "25 min", badge: "Corteza dorada por fuera" },
-  { src: recipe9, label: "Bizcocho de chocolate", time: "22 min", badge: "Húmedo y esponjoso" },
-  { src: recipe10, label: "Lasaña gratinada", time: "30 min", badge: "Queso derretido perfecto" },
+  { src: recipe1, label: "Bife com batatas douradas", time: "20 min", badge: "Douradinho sem sujar" },
+  { src: recipe2, label: "Omelete cremoso recheado", time: "18 min", badge: "Perfeito para um jantar rápido" },
+  { src: recipe3, label: "Salmão com legumes", time: "17 min", badge: "Suculento por dentro" },
+  { src: recipe4, label: "Frango cítrico crocante", time: "22 min", badge: "Casquinha crocante" },
+  { src: recipe5, label: "Costelinha barbecue", time: "25 min", badge: "Finalização caramelizada" },
+  { src: recipe6, label: "Berinjela gratinada", time: "19 min", badge: "Gratinada e prática" },
+  { src: recipe7, label: "Frango com abóbora assada", time: "20 min", badge: "Refeição completa" },
+  { src: recipe8, label: "Pão caseiro crocante", time: "25 min", badge: "Casca dourada por fora" },
+  { src: recipe9, label: "Bolo de chocolate", time: "22 min", badge: "Úmido e fofinho" },
+  { src: recipe10, label: "Lasanha gratinada", time: "30 min", badge: "Queijo derretido perfeito" },
 ];
 
 const doubled = [...images, ...images];
@@ -38,13 +38,13 @@ const RecipeCarousel = () => {
         >
           <div className="text-center">
             <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-              <ChefHat className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Recetas en Airfryer
+              <ChefHat className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Receitas na Airfryer
             </span>
             <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3 tracking-tight">
-              Algunas recetas que <span className="text-cta">vas a preparar:</span>
+              Algumas receitas que <span className="text-cta">você vai preparar:</span>
             </h2>
             <p className="text-green-title text-base md:text-xl font-medium max-w-2xl mx-auto">
-              Prácticas, sabrosas y perfectas para facilitar tu rutina con la airfryer.
+              Práticas, saborosas e perfeitas para facilitar sua rotina com a airfryer.
             </p>
           </div>
         </motion.div>
@@ -64,7 +64,7 @@ const RecipeCarousel = () => {
                 />
                 <div className="p-3 text-center">
                   <p className="font-bold text-green-title text-sm">{img.label}</p>
-                  <p className="text-muted-foreground text-xs mt-0.5">⏱️ Listo en {img.time}</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">⏱️ Pronto em {img.time}</p>
                   <span className="inline-block text-xs bg-cta/10 text-cta font-semibold px-2 py-0.5 rounded-full mt-1">
                     🔥 {img.badge}
                   </span>

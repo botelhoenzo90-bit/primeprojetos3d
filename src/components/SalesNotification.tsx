@@ -39,7 +39,7 @@ const SalesNotification = () => {
         </div>
         <div className="text-sm leading-tight">
           <span className="font-bold">{name}</span>
-          <p className="text-green-100 text-xs mt-0.5">acaba de asegurar sus recetas! ✨</p>
+          <p className="text-green-100 text-xs mt-0.5">acabou de garantir as receitas! ✨</p>
         </div>
       </div>
     </div>

@@ -7,7 +7,6 @@ import dep4 from "@/assets/testimonial-new-4.png";
 import dep5 from "@/assets/testimonial-new-5.png";
 import dep6 from "@/assets/testimonial-new-6.png";
 
-// Order interleaves new testimonials (5 and 6) with at least 3 positions between them
 const testimonials = [dep1, dep2, dep5, dep3, dep4, dep6];
 const doubled = [...testimonials, ...testimonials];
 
@@ -22,13 +21,13 @@ const TestimonialsSection = () => {
           className="text-center mb-8"
         >
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-            <Star className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Resultados Reales
+            <Star className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Resultados Reais
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
-            Mira quién ya <span className="text-cta">transformó su rutina</span> con nuestras recetas
+            Veja quem já <span className="text-cta">transformou a rotina</span> com nossas receitas
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-medium">
-            Mira los resultados reales de quienes compraron:
+            Veja os resultados reais de quem comprou:
           </p>
         </motion.div>
       </div>
@@ -59,10 +58,10 @@ const TestimonialsSection = () => {
           whileTap={{ scale: 0.98 }}
           className="inline-block w-full md:w-auto bg-[#FF4500] hover:bg-[#E63E00] text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-2"
         >
-          ¡QUIERO MIS RESULTADOS AHORA! 🔥
+          QUERO MEUS RESULTADOS AGORA! 🔥
         </motion.a>
         <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5">
-          🛡️ Garantía de 7 días · Acceso inmediato por e-mail
+          🛡️ Garantia de 7 dias · Acesso imediato por e-mail
         </p>
       </div>
     </section>

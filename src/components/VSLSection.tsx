@@ -24,9 +24,9 @@ const VSLSection = () => {
           className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-5xl font-black text-[#064E3B] leading-tight mb-2">
-            Descubre cómo preparar <span className="text-[#16a34a]">ensaladas perfectas</span> en frasco:
+            Descubra como preparar <span className="text-[#16a34a]">refeições perfeitas</span> na airfryer:
           </h2>
-          <p className="text-muted-foreground text-sm md:text-base">¡Mira y ve qué fácil es tener comidas saludables listas para toda la semana!</p>
+          <p className="text-muted-foreground text-sm md:text-base">Assista e veja como é fácil ter refeições saudáveis prontas para a semana toda!</p>
         </motion.div>
 
         <motion.div
@@ -40,7 +40,7 @@ const VSLSection = () => {
             <div className="rounded-[2.2rem] overflow-hidden bg-black aspect-[9/16]">
               <iframe
                 src="https://www.youtube.com/embed/2-A2chrN41w?autoplay=0&rel=0&modestbranding=1"
-                title="Mira cómo funcionan las Recetas en Airfryer"
+                title="Veja como funcionam as Receitas na Airfryer"
                 className="w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -54,7 +54,7 @@ const VSLSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
             </span>
-            <span className="text-[10px] md:text-xs text-foreground font-bold uppercase tracking-wider">🔥 {viewers} personas viendo ahora!</span>
+            <span className="text-[10px] md:text-xs text-foreground font-bold uppercase tracking-wider">🔥 {viewers} pessoas assistindo agora!</span>
           </div>
 
           <div className="text-center mt-6">
@@ -64,7 +64,7 @@ const VSLSection = () => {
               whileTap={{ scale: 0.98 }}
               className="inline-block w-full md:w-auto bg-[#FF4500] hover:bg-[#E63E00] text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-4"
             >
-              QUIERO APRENDER AHORA POR $ 2! 🔥
+              QUERO APRENDER AGORA! 🔥
             </motion.a>
           </div>
         </motion.div>

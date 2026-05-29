@@ -8,14 +8,14 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "¿El material es digital?", a: "Sí. Después de la compra recibes acceso inmediato al material en formato digital para verlo desde celular, tablet o computadora." },
-  { q: "¿Necesito experiencia en la cocina?", a: "No. Las recetas fueron pensadas para principiantes y también para quien ya cocina. Todo viene explicado paso a paso." },
-  { q: "¿Las recetas usan ingredientes caros?", a: "No. La propuesta es justamente facilitar tu rutina con ingredientes accesibles y fáciles de encontrar." },
-  { q: "¿Cuánto tardan las recetas?", a: "La mayoría de las recetas está pensada para prepararse en hasta 20 minutos usando la airfryer." },
-  { q: "¿Qué tipo de recetas voy a encontrar?", a: "Vas a encontrar recetas prácticas para el día a día: carnes, pollo, pescados, platos principales, acompañamientos y hasta postres en la airfryer." },
-  { q: "¿Cómo funciona la garantía?", a: "Tienes 7 días para probar el contenido. Si no te gusta, puedes pedir el reembolso del 100% de tu compra." },
-  { q: "¿Cómo recibo el acceso?", a: "Justo después de la confirmación del pago recibirás el acceso por e-mail." },
-  { q: "¿Sirve para quien llega sin tiempo a casa?", a: "Sí. Este recetario fue creado exactamente para ayudarte a decidir rápido qué preparar, sin improvisar ni pedir delivery." },
+  { q: "O material é digital?", a: "Sim. Depois da compra você recebe acesso imediato ao material em formato digital para acessar pelo celular, tablet ou computador." },
+  { q: "Preciso ter experiência na cozinha?", a: "Não. As receitas foram pensadas para iniciantes e também para quem já cozinha. Tudo vem explicado passo a passo." },
+  { q: "As receitas usam ingredientes caros?", a: "Não. A proposta é justamente facilitar a sua rotina com ingredientes acessíveis e fáceis de encontrar." },
+  { q: "Quanto tempo levam as receitas?", a: "A maioria das receitas é pensada para ficar pronta em até 20 minutos usando a airfryer." },
+  { q: "Que tipo de receitas vou encontrar?", a: "Você vai encontrar receitas práticas para o dia a dia: carnes, frango, peixes, pratos principais, acompanhamentos e até sobremesas na airfryer." },
+  { q: "Como funciona a garantia?", a: "Você tem 7 dias para testar o conteúdo. Se não gostar, pode pedir o reembolso de 100% da sua compra." },
+  { q: "Como recebo o acesso?", a: "Logo após a confirmação do pagamento você receberá o acesso por e-mail." },
+  { q: "Serve para quem chega em casa sem tempo?", a: "Sim. Esse receituário foi criado exatamente para te ajudar a decidir rapidinho o que preparar, sem improvisar nem pedir delivery." },
 ];
 
 const FAQSection = () => {
@@ -30,11 +30,11 @@ const FAQSection = () => {
         >
           <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-              <HelpCircle className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Dudas Comunes
+              <HelpCircle className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Dúvidas Comuns
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3 tracking-tight">
-            Preguntas <span className="text-cta">frecuentes</span>
+            Perguntas <span className="text-cta">frequentes</span>
           </h2>
         </motion.div>
 
@@ -62,10 +62,10 @@ const FAQSection = () => {
             whileTap={{ scale: 0.97 }}
             className="inline-block bg-cta hover:bg-cta-hover text-cream font-bold text-sm md:text-lg px-6 md:px-8 py-4 rounded-xl transition-colors whitespace-nowrap mb-2"
           >
-            ¿AÚN TIENES DUDAS? ¡COMPRA SIN RIESGO! 🔥
+            AINDA TEM DÚVIDAS? COMPRE SEM RISCO! 🔥
           </motion.a>
           <p className="text-xs md:text-sm text-green-title font-semibold flex items-center justify-center gap-1.5">
-            🛡️ Garantía de 7 días · Acceso inmediato por e-mail
+            🛡️ Garantia de 7 dias · Acesso imediato por e-mail
           </p>
         </div>
       </div>

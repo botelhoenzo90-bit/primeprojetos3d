@@ -103,10 +103,10 @@ const OfferSection = () => {
                     <span className="text-red-600 font-extrabold line-through text-3xl md:text-4xl block mb-0.5">R$ 97,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
                     <div className="text-5xl md:text-6xl font-extrabold text-green-600">
-                      R$ 19<span className="text-3xl">,90</span>
+                      R$ 27<span className="text-3xl">,90</span>
                     </div>
                     <div className="inline-block bg-green-100 text-green-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
-                      Você economiza R$ 77,10!
+                      Você economiza R$ 69,10!
                     </div>
                   </div>
 
@@ -151,7 +151,7 @@ const OfferSection = () => {
                       href="https://pay.cakto.com.br/36cgyiw_840628"
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 19.90, 'Receitas na Airfryer - Premium')}
+                      onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 27.90, 'Receitas na Airfryer - Premium')}
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-4 cursor-pointer"

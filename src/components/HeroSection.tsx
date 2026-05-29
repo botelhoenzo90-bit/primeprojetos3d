@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, ShieldCheck, Flame } from "lucide-react";
-import heroImg from "@/assets/hero-airfryer.png";
+import heroImg from "@/assets/hero-airfryer-new.png";
 
 const HeroSection = () => {
   return (

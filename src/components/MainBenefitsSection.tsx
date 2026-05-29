@@ -21,7 +21,7 @@ const MainBenefitsSection = () => {
           </span>
           <h2 className="text-[22px] md:text-5xl font-black text-green-title leading-[1.1] mb-2 max-w-[340px] md:max-w-none mx-auto px-2">
             Tudo o que você vai encontrar <br className="hidden md:block" />
-            neste <span className="text-cta">receituário de airfryer</span>
+            <span className="text-cta">nas receitas de airfryer</span>
           </h2>
           <p className="text-green-title text-base md:text-xl font-medium max-w-2xl mx-auto mb-8">
             Receitas práticas para facilitar sua rotina e variar seu cardápio com muito sabor.

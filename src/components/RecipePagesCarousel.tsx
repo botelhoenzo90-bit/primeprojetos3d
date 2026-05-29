@@ -6,8 +6,9 @@ import page4 from "@/assets/recipe-guide-4.png";
 import page5 from "@/assets/recipe-guide-5.png";
 import page6 from "@/assets/recipe-guide-6.png";
 import page7 from "@/assets/recipe-guide-7.png";
+import page8 from "@/assets/recipe-guide-8.png";
 
-const pages = [page1, page2, page3, page4, page5, page6, page7];
+const pages = [page1, page2, page3, page4, page5, page6, page7, page8];
 const doubled = [...pages, ...pages, ...pages, ...pages];
 
 const RecipePagesCarousel = () => {

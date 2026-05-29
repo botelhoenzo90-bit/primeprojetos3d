@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { CheckCircle2 } from "lucide-react";
 
 const names = [
-  "Ana Silva", "Maria Santos", "Juliana Alves", "Carla Oliveira", "Fernanda Lima", "Patrícia Costa", "Camila Rocha",
-  "Beatriz Martins", "Luciana Souza", "Amanda Ferreira", "Renata Nunes", "Larissa Mendes", "Priscila Barbosa", "Tatiane Ribeiro",
-  "Rafaela Castro", "Débora Cardoso", "Vanessa Teixeira", "Bruna Moreira", "Natália Dias", "Gabriela Araújo",
+  "Ana Silva - São Paulo, SP", "Maria Santos - Rio de Janeiro, RJ", "Juliana Alves - Belo Horizonte, MG", "Carla Oliveira - Curitiba, PR", "Fernanda Lima - Salvador, BA", "Patrícia Costa - Fortaleza, CE", "Camila Rocha - Brasília, DF",
+  "Beatriz Martins - Recife, PE", "Luciana Souza - Porto Alegre, RS", "Amanda Ferreira - Goiânia, GO", "Renata Nunes - Manaus, AM", "Larissa Mendes - Belém, PA", "Priscila Barbosa - Vitória, ES", "Tatiane Ribeiro - Campo Grande, MS",
+  "Rafaela Castro - Florianópolis, SC", "Débora Cardoso - Natal, RN", "Vanessa Teixeira - São Luís, MA", "Bruna Moreira - Maceió, AL", "Natália Dias - Teresina, PI", "Gabriela Araújo - João Pessoa, PB",
 ];
 
 const SalesNotification = () => {

@@ -258,7 +258,7 @@ const OfferSection = () => {
                       Pacote Básico
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-600 mt-1 mb-2">
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
                     Receitas na Airfryer
                   </h2>
 
@@ -272,15 +272,15 @@ const OfferSection = () => {
 
                   <div className="border-t border-dashed border-gray-300 my-3" />
 
-                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
+                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
                     O que você vai receber:
                   </h3>
                   <div className="flex justify-center mb-3">
                     <ul className="space-y-2 inline-flex flex-col">
                       {basicReceberItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-3.5 h-3.5 text-gray-600" />
+                          <div className="w-5 h-5 rounded-full bg-orange-500/15 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3.5 h-3.5 text-cta" />
                           </div>
                           <span className="text-sm text-foreground">{item}</span>
                         </li>
@@ -298,15 +298,15 @@ const OfferSection = () => {
 
                   <div className="border-t border-dashed border-gray-300 my-3" />
 
-                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
+                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
                     Bônus: Não Inclusos
                   </h3>
                   <div className="flex justify-center mb-4">
                     <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-red-600" />
+                          <div className="w-6 h-6 rounded-full bg-orange-500/15 flex items-center justify-center flex-shrink-0">
+                            <Gift className="w-3.5 h-3.5 text-cta" />
                           </div>
                           <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
@@ -319,7 +319,7 @@ const OfferSection = () => {
                       <button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
-                        className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-lg shadow-gray-300 transition-all uppercase tracking-wide cursor-pointer"
+                        className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         QUERO O PACOTE BÁSICO
                       </button>
@@ -504,14 +504,12 @@ const OfferSection = () => {
                 <X className="w-3.5 h-3.5" />
               </button>
 
-              <div className="bg-cta text-white py-2.5 px-4 text-center flex-shrink-0">
-                <div className="inline-flex items-center gap-1.5 mb-0.5">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span className="text-[10px] font-black uppercase tracking-wider">Oferta Exclusiva</span>
+              <div className="bg-gradient-to-r from-red-600 to-cta text-white py-2.5 px-4 text-center flex-shrink-0">
+                <div className="inline-flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4" />
+                  <span className="text-sm md:text-base font-black uppercase tracking-wider">Oferta Exclusiva Relâmpago!</span>
+                  <Sparkles className="w-4 h-4" />
                 </div>
-                <h3 className="text-base font-black uppercase leading-tight">
-                  Espere! Leve o Premium Completo
-                </h3>
               </div>
 
               <div className="px-4 py-3 overflow-y-auto flex-1">
@@ -551,7 +549,7 @@ const OfferSection = () => {
                 <h4 className="text-center font-extrabold text-cta text-[11px] uppercase tracking-wider mb-1.5 mt-2">
                   🎁 + Bônus Exclusivos:
                 </h4>
-                <ul className="space-y-1 mb-1">
+                <ul className="space-y-1 mb-2">
                   {premiumBonusItems.map((item, i) => (
                     <li key={i} className="flex items-center gap-1.5">
                       <Gift className="w-3 h-3 text-orange-500 flex-shrink-0" />
@@ -559,6 +557,24 @@ const OfferSection = () => {
                     </li>
                   ))}
                 </ul>
+
+                <img
+                  src={paymentMethods}
+                  alt="Métodos de pagamento aceitos"
+                  className="w-full max-w-[220px] mx-auto mt-1"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="mt-2 border border-green-500/40 rounded-xl p-2 text-center bg-green-500/10">
+                  <p className="text-[11px] font-bold text-green-600 flex items-center justify-center gap-1">
+                    <Zap className="w-3 h-3" />
+                    Acesso imediato após a compra!
+                  </p>
+                  <p className="text-[9px] text-muted-foreground mt-0.5 leading-tight">
+                    Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
+                  </p>
+                </div>
               </div>
 
               <div className="px-4 pb-3 pt-2 border-t border-gray-100 flex-shrink-0">

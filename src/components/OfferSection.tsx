@@ -236,6 +236,85 @@ const OfferSection = () => {
                 </div>
               </div>
             </motion.div>
+
+            {/* PLANO BÁSICO */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <div className="relative bg-gray-50 rounded-3xl shadow-lg border-[3px] border-gray-300 overflow-visible h-full flex flex-col">
+                <div className="p-5 md:p-6 flex flex-col flex-1">
+                  <div className="text-center mb-1">
+                    <span className="inline-block bg-gray-500 text-white text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                      Pacote Básico
+                    </span>
+                  </div>
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-600 mt-1 mb-2">
+                    Receitas na Airfryer
+                  </h2>
+
+                  <div className="text-center mb-4 mt-2">
+                    <span className="text-gray-400 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
+                    <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
+                    <div className="text-5xl md:text-6xl font-extrabold text-gray-600">
+                      R$ 9<span className="text-3xl">,90</span>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-dashed border-gray-300 my-3" />
+
+                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
+                    O que você vai receber:
+                  </h3>
+                  <div className="flex justify-center mb-3">
+                    <ul className="space-y-2 inline-flex flex-col">
+                      {basicReceberItems.map((item, i) => (
+                        <li key={i} className="flex items-center gap-2.5">
+                          <div className="w-5 h-5 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3.5 h-3.5 text-gray-600" />
+                          </div>
+                          <span className="text-sm text-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-dashed border-gray-300 my-3" />
+
+                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
+                    Bônus: <span className="text-red-600">Não Inclusos</span>
+                  </h3>
+                  <div className="flex justify-center mb-4">
+                    <ul className="space-y-2 inline-flex flex-col">
+                      {premiumBonusItems.map((item, i) => (
+                        <li key={i} className="flex items-center gap-2.5">
+                          <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-600" />
+                          </div>
+                          <span className="text-sm font-semibold text-red-600 line-through">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-auto">
+                    <a
+                      href="https://pay.cakto.com.br/kv9j6ie_848142"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', 9.90, 'Receitas na Airfryer - Básico')}
+                      className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-md transition-all uppercase tracking-wide cursor-pointer mb-2"
+                    >
+                      QUERO O PACOTE BÁSICO
+                    </a>
+                    <p className="text-center text-xs text-gray-500 font-semibold">
+                      🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

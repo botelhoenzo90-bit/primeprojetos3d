@@ -251,14 +251,14 @@ const OfferSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <div className="relative bg-white rounded-3xl shadow-lg border-[3px] border-cta/40 overflow-visible h-full flex flex-col">
+              <div className="relative bg-white rounded-3xl shadow-lg border-[3px] border-gray-300 overflow-visible h-full flex flex-col">
                 <div className="p-5 md:p-6 flex flex-col flex-1">
                   <div className="text-center mb-1">
-                    <span className="inline-block bg-cta text-white text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                    <span className="inline-block bg-gray-200 text-gray-600 text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-gray-300">
                       Pacote Básico
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-600 mt-1 mb-2">
                     Receitas na Airfryer
                   </h2>
 
@@ -270,35 +270,43 @@ const OfferSection = () => {
                     </div>
                   </div>
 
-                  <div className="border-t border-dashed border-cta/30 my-3" />
+                  <div className="border-t border-dashed border-gray-300 my-3" />
 
-                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
+                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
                     O que você vai receber:
                   </h3>
                   <div className="flex justify-center mb-3">
                     <ul className="space-y-2 inline-flex flex-col">
                       {basicReceberItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-cta/15 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-3.5 h-3.5 text-cta" />
+                          <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3.5 h-3.5 text-gray-600" />
                           </div>
                           <span className="text-sm text-foreground">{item}</span>
+                        </li>
+                      ))}
+                      {basicMissingItems.map((item, i) => (
+                        <li key={`miss-${i}`} className="flex items-center gap-2.5">
+                          <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-600" />
+                          </div>
+                          <span className="text-sm text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="border-t border-dashed border-cta/30 my-3" />
+                  <div className="border-t border-dashed border-gray-300 my-3" />
 
-                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
+                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
                     Bônus: Não Inclusos
                   </h3>
                   <div className="flex justify-center mb-4">
                     <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-cta flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-white" />
+                          <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-600" />
                           </div>
                           <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
@@ -311,7 +319,7 @@ const OfferSection = () => {
                       <button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
-                        className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide cursor-pointer"
+                        className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-lg shadow-gray-300 transition-all uppercase tracking-wide cursor-pointer"
                       >
                         QUERO O PACOTE BÁSICO
                       </button>

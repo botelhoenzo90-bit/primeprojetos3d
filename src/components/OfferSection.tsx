@@ -560,7 +560,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Receitas na Airfryer - Upsell Premium 19,90')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-3 rounded-full transition-colors animate-pulse-soft w-full text-center uppercase cursor-pointer mb-1.5"
+                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-3 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1.5"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 19,90

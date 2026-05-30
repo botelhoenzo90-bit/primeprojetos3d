@@ -178,18 +178,18 @@ const OfferSection = () => {
                   </div>
 
                   <div className="mt-auto">
-                    <motion.a
-                      href="https://pay.cakto.com.br/36cgyiw_840628"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 27.90, 'Receitas na Airfryer - Premium')}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-4 cursor-pointer animate-pulse-soft"
-                    >
-                      <Zap className="w-5 h-5 inline mr-2" />
-                      SIM! QUERO MINHAS +200 RECEITAS AGORA
-                    </motion.a>
+                    <div className="animate-pulse-soft rounded-full mb-4">
+                      <a
+                        href="https://pay.cakto.com.br/36cgyiw_840628"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 27.90, 'Receitas na Airfryer - Premium')}
+                        className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide cursor-pointer"
+                      >
+                        <Zap className="w-5 h-5 inline mr-2" />
+                        SIM! QUERO MINHAS +200 RECEITAS AGORA
+                      </a>
+                    </div>
                     <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
                       🛡️ Garantia de 7 dias · Acesso imediato por e-mail
                     </p>

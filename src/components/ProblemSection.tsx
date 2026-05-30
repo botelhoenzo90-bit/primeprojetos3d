@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { X } from "lucide-react";
+import { X, ArrowDown } from "lucide-react";
 
 const ProblemSection = () => {
   const problems = [
@@ -14,7 +14,7 @@ const ProblemSection = () => {
     <section className="py-8 md:py-12 bg-cream border-b border-red-100">
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-6">
-          <h2 className="text-2xl md:text-5xl font-black text-green-title leading-tight uppercase tracking-tighter whitespace-nowrap">
+          <h2 className="text-2xl md:text-5xl font-black text-red-500 leading-tight uppercase tracking-tighter whitespace-nowrap">
             ISSO ACONTECE COM VOCÊ?
           </h2>
         </div>
@@ -37,6 +37,17 @@ const ProblemSection = () => {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center mt-8"
+        >
+          <p className="text-green-title font-black text-lg md:text-xl mb-2 text-center">
+            A solução está logo abaixo 👇
+          </p>
+          <ArrowDown className="w-8 h-8 text-cta animate-bounce" />
+        </motion.div>
       </div>
     </section>
   );

@@ -51,6 +51,33 @@ const TestimonialsSection = () => {
         </div>
       </div>
 
+      <div className="container mx-auto px-4 mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-sage/20 px-6 py-5 text-center"
+        >
+          <div className="flex items-baseline justify-center gap-2 mb-2">
+            <span className="text-5xl md:text-6xl font-black text-green-title">4,9</span>
+            <span className="text-base text-muted-foreground font-semibold">/ 5</span>
+          </div>
+          <div className="flex items-center justify-center gap-1 mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 md:w-6 md:h-6 text-[#FFD700] fill-[#FFD700]" />
+            ))}
+          </div>
+          <p className="text-sm md:text-base font-bold text-green-title">
+            Avaliado por <span className="text-cta">+12.847 clientes</span>
+          </p>
+          <p className="text-xs md:text-sm text-muted-foreground mt-1">
+            98% recomendam para amigos e familiares
+          </p>
+        </motion.div>
+      </div>
+
+
+
       <div className="text-center mt-8">
         <motion.a
           href="#oferta"

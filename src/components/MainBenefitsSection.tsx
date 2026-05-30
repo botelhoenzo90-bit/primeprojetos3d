@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import { Zap, ChefHat, Utensils, Clock, Flame, Leaf, Heart, Home } from "lucide-react";
+import { Zap, ChefHat, Utensils, Clock, Flame, Leaf, Heart, Home, Coffee } from "lucide-react";
 
 const benefits = [
   { icon: ChefHat, text: "+200 receitas irresistíveis para toda a família" },
-  { icon: Utensils, text: "Passo a passo fácil para iniciantes" },
+  { icon: Utensils, text: "Passo a passo fácil e ilustrado!" },
   { icon: Zap, text: "Mais praticidade para o seu dia a dia" },
   { icon: Clock, text: "Receitas prontas em até 20 minutos" },
   { icon: Flame, text: "Refeições deliciosas sem perder o sabor" },
   { icon: Leaf, text: "Mais saudável e com menos gordura" },
-  { icon: Home, text: "Menos delivery e mais comida caseira" },
+  { icon: Coffee, text: "Café, almoço, jantar e sobremesas" },
+  { icon: Home, text: "Ideias novas para todos os dias" },
 ];
 
 const MainBenefitsSection = () => {

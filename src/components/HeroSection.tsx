@@ -39,7 +39,7 @@ const HeroSection = () => {
           className="w-full max-w-[360px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-xl p-5 text-center relative overflow-hidden"
         >
           {/* Selo de oferta no topo */}
-          <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-cta text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-md">
+          <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-cta text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-md whitespace-nowrap">
             ⚡ Oferta Relâmpago
           </div>
 
@@ -54,10 +54,6 @@ const HeroSection = () => {
           <div className="mt-2 inline-flex items-center gap-1 bg-green-50 text-green-700 text-[11px] font-bold px-2.5 py-1 rounded-full border border-green-200">
             <span className="font-black">90%</span> OFF · Economize R$ 87,10
           </div>
-
-          <p className="mt-2 text-[10px] font-semibold text-gray-500 uppercase tracking-wide">
-            ou 1x de R$ 9,90 no Pix
-          </p>
         </motion.div>
 
         <div className="flex flex-col items-center w-full">

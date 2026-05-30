@@ -505,28 +505,29 @@ const OfferSection = () => {
                 </p>
               </div>
 
-              <div className="px-3 py-2 flex-1">
-                <div className="flex items-center gap-3 mb-2">
-                  <img
-                    src={produtoImg}
-                    alt="Pacote Premium +200 Receitas na Airfryer"
-                    className="w-[38%] rounded-lg flex-shrink-0"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="text-center flex-1">
-                    <span className="text-red-600 font-extrabold line-through text-sm block leading-tight">R$ 97,00</span>
-                    <p className="text-[9px] text-foreground font-semibold leading-tight">por apenas</p>
-                    <div className="text-3xl font-extrabold text-green-600 leading-none">
-                      R$ 19<span className="text-base">,90</span>
-                    </div>
-                    <div className="inline-block bg-green-100 text-green-700 font-bold text-[9px] px-1.5 py-0.5 rounded-full mt-0.5">
-                      Economize R$ 77,10!
-                    </div>
+              <div className="px-4 py-2 flex-1">
+                <img
+                  src={produtoImg}
+                  alt="Pacote Premium +200 Receitas na Airfryer"
+                  className="w-[42%] mx-auto rounded-xl mb-2"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="text-center mb-2">
+                  <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
+                  <p className="text-[10px] text-foreground font-semibold leading-tight">por apenas</p>
+                  <div className="text-3xl font-extrabold text-green-600 leading-none">
+                    R$ 19<span className="text-lg">,90</span>
+                  </div>
+                  <div className="inline-block bg-green-100 text-green-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
+                    Economize R$ 77,10!
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 mb-1.5">
+                <div className="border-t border-dashed border-cta/40 my-1.5" />
+
+                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5">
                   {premiumReceberItems.map((item, i) => (
                     <div key={i} className="flex items-center gap-1">
                       <Check className="w-2.5 h-2.5 text-green-600 flex-shrink-0" />

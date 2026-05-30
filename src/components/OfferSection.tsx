@@ -195,8 +195,8 @@ const OfferSection = () => {
                         href="https://pay.cakto.com.br/36cgyiw_840628"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 27.90, 'Receitas na Airfryer - Premium')}
-                        className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide cursor-pointer"
+                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Receitas na Airfryer - Premium')}
+                        className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-green-200 transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         SIM! QUERO MINHAS +200 RECEITAS AGORA

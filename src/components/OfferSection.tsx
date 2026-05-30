@@ -506,6 +506,14 @@ const OfferSection = () => {
               </div>
 
               <div className="px-4 py-3 overflow-y-auto flex-1">
+                <img
+                  src={produtoImg}
+                  alt="Pacote Premium +200 Receitas na Airfryer"
+                  className="w-1/2 mx-auto rounded-xl mb-2"
+                  loading="lazy"
+                  decoding="async"
+                />
+
                 <div className="text-center mb-2">
                   <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
                   <p className="text-[10px] text-foreground font-semibold">por apenas</p>

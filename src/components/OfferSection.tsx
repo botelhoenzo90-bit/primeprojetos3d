@@ -22,6 +22,13 @@ const premiumBonusItems = [
   "Sucos Detox",
 ];
 
+const basicReceberItems = [
+  "+100 Receitas Práticas na Airfryer",
+  "Passo a passo de cada receita",
+  "Acesso vitalício e imediato",
+  "Garantia de 7 dias",
+];
+
 const OfferSection = () => {
   const [showUpsell, setShowUpsell] = useState(false);
 

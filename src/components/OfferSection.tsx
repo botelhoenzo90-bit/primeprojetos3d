@@ -319,7 +319,7 @@ const OfferSection = () => {
                       <button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
-                        className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-lg shadow-gray-300 transition-all uppercase tracking-wide cursor-pointer"
+                        className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         QUERO O PACOTE BÁSICO
                       </button>

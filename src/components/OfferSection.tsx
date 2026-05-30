@@ -33,18 +33,48 @@ const OfferSection = () => {
     return () => { document.body.style.overflow = ''; };
   }, [showUpsell]);
 
-  const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, url: string, _value: number, _planName: string) => {
+  const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, url: string, value: number, planName: string) => {
     e.preventDefault();
+
+    // Fire Meta Pixel InitiateCheckout
+    try {
+      // @ts-ignore
+      if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+        // @ts-ignore
+        window.fbq('track', 'InitiateCheckout', {
+          content_name: planName,
+          content_category: 'Receitas Airfryer',
+          value: value,
+          currency: 'BRL',
+          num_items: 1,
+        });
+      }
+    } catch (err) {
+      console.warn('fbq InitiateCheckout failed', err);
+    }
+
+    // Microsoft Clarity custom event
+    try {
+      // @ts-ignore
+      if (typeof window !== 'undefined' && typeof window.clarity === 'function') {
+        // @ts-ignore
+        window.clarity('event', 'InitiateCheckout');
+        // @ts-ignore
+        window.clarity('set', 'plan', planName);
+      }
+    } catch (err) {
+      console.warn('clarity event failed', err);
+    }
 
     const currentUrlParams = new URLSearchParams(window.location.search);
 
     const baseTargetUrl = e.currentTarget.href || url;
     const checkoutUrl = new URL(baseTargetUrl);
-    
+
     currentUrlParams.forEach((v, key) => {
       checkoutUrl.searchParams.set(key, v);
     });
-    
+
     window.location.href = checkoutUrl.toString();
   };
 

@@ -287,26 +287,16 @@ const OfferSection = () => {
                       ))}
                       {basicMissingItems.map((item, i) => (
                         <li key={`miss-${i}`} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-red-600" />
+                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-sm text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
                       ))}
-                    </ul>
-                  </div>
-
-                  <div className="border-t border-dashed border-gray-300 my-3" />
-
-                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
-                    Bônus: Não Inclusos
-                  </h3>
-                  <div className="flex justify-center mb-4">
-                    <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-orange-500/15 flex items-center justify-center flex-shrink-0">
-                            <Gift className="w-3.5 h-3.5 text-cta" />
+                        <li key={`bonus-${i}`} className="flex items-center gap-2.5">
+                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>

@@ -305,7 +305,7 @@ const OfferSection = () => {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="animate-pulse-soft rounded-full mb-4">
+                    <div className="rounded-full mb-4">
                       <button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}

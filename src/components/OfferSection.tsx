@@ -258,7 +258,7 @@ const OfferSection = () => {
                       Pacote Básico
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-600 mt-1 mb-2">
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
                     Receitas na Airfryer
                   </h2>
 

@@ -92,7 +92,7 @@ const OfferSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-center text-green-title mb-4 tracking-tight"
+            className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
           >
             Garanta seu acesso às <span className="text-cta">receitas</span>
           </motion.h2>

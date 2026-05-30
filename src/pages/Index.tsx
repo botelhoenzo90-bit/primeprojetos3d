@@ -34,6 +34,7 @@ const Index = () => {
       <OfferSection />
       <NutriSection />
       <GuaranteeSection />
+      <DeliverySection />
       <FAQSection />
       <FooterSection />
       </div>

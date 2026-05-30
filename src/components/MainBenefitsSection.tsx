@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, ChefHat, Utensils, Clock, Flame, Leaf, Heart, Home } from "lucide-react";
+import { Zap, ChefHat, Utensils, Clock, Flame, Leaf, Heart, Home, Coffee } from "lucide-react";
 
 const benefits = [
   { icon: ChefHat, text: "+200 receitas irresistíveis para toda a família" },

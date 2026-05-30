@@ -198,7 +198,7 @@ const OfferSection = () => {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="animate-pulse-soft rounded-full mb-4">
+                    <div className="rounded-full mb-4">
                       <a
                         href="https://pay.cakto.com.br/36cgyiw_840628"
                         target="_blank"
@@ -305,7 +305,7 @@ const OfferSection = () => {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="animate-pulse-soft rounded-full mb-4">
+                    <div className="rounded-full mb-4">
                       <button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
@@ -437,7 +437,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Receitas na Airfryer - Upsell Premium')}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-cta hover:bg-cta-hover text-cream font-bold text-sm px-4 py-2.5 rounded-xl transition-colors animate-pulse-glow w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
+                  className="block bg-cta hover:bg-cta-hover text-cream font-bold text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
                 >
                   <Zap className="w-4 h-4 inline mr-1" />
                   SIM! Quero por R$ 14,90
@@ -494,65 +494,55 @@ const OfferSection = () => {
                 <X className="w-3.5 h-3.5" />
               </button>
 
-              <div className="bg-gradient-to-r from-red-600 to-cta text-white py-2.5 px-4 text-center flex-shrink-0">
+              <div className="bg-gradient-to-r from-red-600 to-cta text-white py-1.5 px-3 text-center flex-shrink-0">
                 <div className="inline-flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4" />
-                  <span className="text-sm md:text-base font-black uppercase tracking-wider">Oferta Exclusiva Relâmpago!</span>
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span className="text-[13px] font-black uppercase tracking-wider">Oferta Exclusiva Relâmpago!</span>
+                  <Sparkles className="w-3.5 h-3.5" />
                 </div>
-                <p className="text-[11px] md:text-xs font-semibold mt-1 opacity-95">
+                <p className="text-[10px] font-semibold opacity-95 leading-tight">
                   Leve tudo do Plano Premium por apenas:
                 </p>
               </div>
 
-              <div className="px-4 py-3 overflow-y-auto flex-1">
-                <img
-                  src={produtoImg}
-                  alt="Pacote Premium +200 Receitas na Airfryer"
-                  className="w-1/2 mx-auto rounded-xl mb-2"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <div className="text-center mb-2">
-                  <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
-                  <p className="text-[10px] text-foreground font-semibold">por apenas</p>
-                  <div className="text-4xl font-extrabold text-green-600 leading-none">
-                    R$ 19<span className="text-xl">,90</span>
-                  </div>
-                  <div className="inline-block bg-green-100 text-green-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
-                    Economize R$ 77,10!
+              <div className="px-3 py-2 flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <img
+                    src={produtoImg}
+                    alt="Pacote Premium +200 Receitas na Airfryer"
+                    className="w-[38%] rounded-lg flex-shrink-0"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="text-center flex-1">
+                    <span className="text-red-600 font-extrabold line-through text-sm block leading-tight">R$ 97,00</span>
+                    <p className="text-[9px] text-foreground font-semibold leading-tight">por apenas</p>
+                    <div className="text-3xl font-extrabold text-green-600 leading-none">
+                      R$ 19<span className="text-base">,90</span>
+                    </div>
+                    <div className="inline-block bg-green-100 text-green-700 font-bold text-[9px] px-1.5 py-0.5 rounded-full mt-0.5">
+                      Economize R$ 77,10!
+                    </div>
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-cta/40 my-2" />
-
-                <h4 className="text-center font-extrabold text-cta text-[11px] uppercase tracking-wider mb-1.5">
-                  ✨ Tudo incluso:
-                </h4>
-                <ul className="space-y-1 mb-2">
+                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 mb-1.5">
                   {premiumReceberItems.map((item, i) => (
-                    <li key={i} className="flex items-center gap-1.5">
-                      <Check className="w-3 h-3 text-green-600 flex-shrink-0" />
-                      <span className="text-[11px] text-foreground leading-tight">{item}</span>
-                    </li>
+                    <div key={i} className="flex items-center gap-1">
+                      <Check className="w-2.5 h-2.5 text-green-600 flex-shrink-0" />
+                      <span className="text-[10px] text-foreground leading-tight">{item}</span>
+                    </div>
                   ))}
-                </ul>
-
-                <h4 className="text-center font-extrabold text-cta text-[11px] uppercase tracking-wider mb-1.5 mt-2">
-                  🎁 + Bônus Exclusivos:
-                </h4>
-                <ul className="space-y-1 mb-2">
                   {premiumBonusItems.map((item, i) => (
-                    <li key={i} className="flex items-center gap-1.5">
-                      <Gift className="w-3 h-3 text-orange-500 flex-shrink-0" />
-                      <span className="text-[11px] font-semibold text-foreground leading-tight">{item}</span>
-                    </li>
+                    <div key={`b-${i}`} className="flex items-center gap-1">
+                      <Gift className="w-2.5 h-2.5 text-orange-500 flex-shrink-0" />
+                      <span className="text-[10px] font-semibold text-foreground leading-tight">{item}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
 
-              <div className="px-4 pb-3 pt-2 border-t border-gray-100 flex-shrink-0">
+              <div className="px-3 pb-2 pt-1 flex-shrink-0">
                 <motion.a
                   href="https://pay.cakto.com.br/whodr5r_907770"
                   target="_blank"
@@ -560,7 +550,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Receitas na Airfryer - Upsell Premium 19,90')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-3 rounded-full transition-colors animate-pulse-soft w-full text-center uppercase cursor-pointer mb-1.5"
+                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 19,90
@@ -574,32 +564,28 @@ const OfferSection = () => {
                     setShowBasicUpsell(false);
                     handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', 9.90, 'Receitas na Airfryer - Básico');
                   }}
-                  className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[10px] px-3 py-1.5 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300"
+                  className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300 mb-1.5"
                 >
                   Não, quero apenas o Básico — R$ 9,90
                 </a>
 
-                <img
-                  src={paymentMethods}
-                  alt="Métodos de pagamento aceitos"
-                  className="w-full max-w-[200px] mx-auto mt-2"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <div className="mt-2 border border-green-500/40 rounded-xl p-2 text-center bg-green-500/10">
-                  <p className="text-[11px] font-bold text-green-600 flex items-center justify-center gap-1">
-                    <Zap className="w-3 h-3" />
-                    Acesso imediato após a compra!
-                  </p>
-                  <p className="text-[9px] text-muted-foreground mt-0.5 leading-tight">
-                    Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-center gap-1 mt-1.5 text-[9px] text-muted-foreground">
-                  <ShieldCheck className="w-2.5 h-2.5 text-cta" />
-                  <span>Pagamento 100% seguro · Garantia 7 dias</span>
+                <div className="flex items-center justify-center gap-2">
+                  <img
+                    src={paymentMethods}
+                    alt="Métodos de pagamento aceitos"
+                    className="w-[55%] max-w-[160px]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div className="border border-green-500/40 rounded-lg px-1.5 py-1 text-center bg-green-500/10 flex-1">
+                    <p className="text-[9px] font-bold text-green-600 flex items-center justify-center gap-0.5 leading-tight">
+                      <Zap className="w-2.5 h-2.5" />
+                      Acesso imediato!
+                    </p>
+                    <p className="text-[8px] text-muted-foreground leading-tight">
+                      Garantia 7 dias
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>

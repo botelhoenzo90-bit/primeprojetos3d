@@ -31,15 +31,16 @@ const basicReceberItems = [
 
 const OfferSection = () => {
   const [showUpsell, setShowUpsell] = useState(false);
+  const [showBasicUpsell, setShowBasicUpsell] = useState(false);
 
   React.useEffect(() => {
-    if (showUpsell) {
+    if (showUpsell || showBasicUpsell) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
     return () => { document.body.style.overflow = ''; };
-  }, [showUpsell]);
+  }, [showUpsell, showBasicUpsell]);
 
   const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, url: string, value: number, planName: string) => {
     e.preventDefault();
@@ -116,7 +117,7 @@ const OfferSection = () => {
               <div className="relative bg-white rounded-3xl shadow-2xl border-[3px] border-sage overflow-visible h-full flex flex-col">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-max">
                   <div className="bg-cta text-white text-[11px] md:text-xs font-black px-5 py-1.5 rounded-full uppercase shadow-md whitespace-nowrap">
-                    80% de Desconto!
+                    🔥 Mais Vendido!
                   </div>
                 </div>
 
@@ -243,36 +244,36 @@ const OfferSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <div className="relative bg-gray-50 rounded-3xl shadow-lg border-[3px] border-gray-300 overflow-visible h-full flex flex-col">
+              <div className="relative bg-white rounded-3xl shadow-lg border-[3px] border-cta/40 overflow-visible h-full flex flex-col">
                 <div className="p-5 md:p-6 flex flex-col flex-1">
                   <div className="text-center mb-1">
-                    <span className="inline-block bg-gray-500 text-white text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                    <span className="inline-block bg-cta text-white text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
                       Pacote Básico
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-gray-600 mt-1 mb-2">
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
                     Receitas na Airfryer
                   </h2>
 
                   <div className="text-center mb-4 mt-2">
-                    <span className="text-gray-400 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
+                    <span className="text-red-600 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
-                    <div className="text-5xl md:text-6xl font-extrabold text-gray-600">
+                    <div className="text-5xl md:text-6xl font-extrabold text-green-600">
                       R$ 9<span className="text-3xl">,90</span>
                     </div>
                   </div>
 
-                  <div className="border-t border-dashed border-gray-300 my-3" />
+                  <div className="border-t border-dashed border-cta/30 my-3" />
 
-                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
+                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
                     O que você vai receber:
                   </h3>
                   <div className="flex justify-center mb-3">
                     <ul className="space-y-2 inline-flex flex-col">
                       {basicReceberItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-3.5 h-3.5 text-gray-600" />
+                          <div className="w-5 h-5 rounded-full bg-cta/15 flex items-center justify-center flex-shrink-0">
+                            <Check className="w-3.5 h-3.5 text-cta" />
                           </div>
                           <span className="text-sm text-foreground">{item}</span>
                         </li>
@@ -280,37 +281,60 @@ const OfferSection = () => {
                     </ul>
                   </div>
 
-                  <div className="border-t border-dashed border-gray-300 my-3" />
+                  <div className="border-t border-dashed border-cta/30 my-3" />
 
-                  <h3 className="text-center font-extrabold text-gray-600 text-sm uppercase tracking-wider mb-3">
-                    Bônus: <span className="text-red-600">Não Inclusos</span>
+                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
+                    Bônus: Não Inclusos
                   </h3>
                   <div className="flex justify-center mb-4">
                     <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-red-600" />
+                          <div className="w-6 h-6 rounded-full bg-cta flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-white" />
                           </div>
-                          <span className="text-sm font-semibold text-red-600 line-through">{item}</span>
+                          <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="mt-auto">
-                    <a
-                      href="https://pay.cakto.com.br/kv9j6ie_848142"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', 9.90, 'Receitas na Airfryer - Básico')}
-                      className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-md transition-all uppercase tracking-wide cursor-pointer mb-2"
-                    >
-                      QUERO O PACOTE BÁSICO
-                    </a>
-                    <p className="text-center text-xs text-gray-500 font-semibold">
+                    <div className="animate-pulse-soft rounded-full mb-4">
+                      <button
+                        type="button"
+                        onClick={() => setShowBasicUpsell(true)}
+                        className="inline-block w-full bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide cursor-pointer"
+                      >
+                        QUERO O PACOTE BÁSICO
+                      </button>
+                    </div>
+                    <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
                       🛡️ Garantia de 7 dias · Acesso imediato por e-mail
                     </p>
+
+                    <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
+                      <ShieldCheck className="w-4 h-4 text-cta" />
+                      <span>Pagamento 100% seguro via cartão, Pix ou boleto</span>
+                    </div>
+
+                    <img
+                      src={paymentMethods}
+                      alt="Métodos de pagamento aceitos"
+                      className="w-full max-w-md mx-auto mt-3"
+                      loading="lazy"
+                      decoding="async"
+                    />
+
+                    <div className="mt-3 border border-green-500/40 rounded-xl p-2.5 text-center bg-green-500/10">
+                      <p className="text-sm font-bold text-green-600 flex items-center justify-center gap-1.5">
+                        <Zap className="w-4 h-4" />
+                        Acesso imediato após a compra!
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -438,7 +462,142 @@ const OfferSection = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* BASIC → PREMIUM UPSELL POPUP */}
+      <AnimatePresence>
+        {showBasicUpsell && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm overflow-y-auto"
+            onClick={() => setShowBasicUpsell(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85, y: 40 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.85, y: 40 }}
+              transition={{ type: "spring", damping: 22, stiffness: 320 }}
+              className="bg-white rounded-3xl shadow-2xl border-2 border-cta overflow-hidden max-w-md w-full relative my-8"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setShowBasicUpsell(false)}
+                className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/90 hover:bg-white flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors cursor-pointer shadow-md"
+                aria-label="Fechar"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              <div className="bg-gradient-to-br from-cta via-orange-500 to-green-600 text-white py-5 px-5 text-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_20%,white,transparent_50%)]" />
+                <div className="relative">
+                  <div className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm rounded-full px-3 py-1 mb-2">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span className="text-[10px] font-black uppercase tracking-wider">Oferta Exclusiva Liberada</span>
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-black uppercase leading-tight mb-1">
+                    Espere! Leve o<br />Pacote Premium Completo
+                  </h3>
+                  <p className="text-xs opacity-95">Por apenas mais alguns reais, leve tudo!</p>
+                </div>
+              </div>
+
+              <div className="bg-red-600 text-white py-2 px-4 text-center">
+                <p className="text-sm font-extrabold uppercase tracking-wider flex items-center justify-center gap-1.5">
+                  🔥 Promoção Relâmpago — Só Agora!
+                </p>
+              </div>
+
+              <div className="px-5 py-4">
+                <img
+                  src={produtoMockup}
+                  alt="Pacote Premium +200 Receitas na Airfryer"
+                  className="w-full max-w-[180px] mx-auto mb-3 drop-shadow-xl"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="text-center mb-3">
+                  <span className="text-red-600 font-extrabold line-through text-xl block">R$ 97,00</span>
+                  <p className="text-xs text-foreground font-semibold">por apenas</p>
+                  <div className="text-5xl font-extrabold text-green-600 leading-none">
+                    R$ 19<span className="text-2xl">,90</span>
+                  </div>
+                  <div className="inline-block bg-green-100 text-green-700 font-bold text-xs px-3 py-1 rounded-full mt-2">
+                    Você economiza R$ 77,10!
+                  </div>
+                </div>
+
+                <div className="border-t border-dashed border-cta/40 my-3" />
+
+                <h4 className="text-center font-extrabold text-cta text-xs uppercase tracking-wider mb-2">
+                  ✨ Tudo isto incluso:
+                </h4>
+                <ul className="space-y-1.5 mb-3">
+                  {premiumReceberItems.map((item, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                        <Check className="w-3 h-3 text-green-600" />
+                      </div>
+                      <span className="text-xs text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="border-t border-dashed border-cta/40 my-3" />
+
+                <h4 className="text-center font-extrabold text-cta text-xs uppercase tracking-wider mb-2">
+                  🎁 + Bônus Exclusivos:
+                </h4>
+                <ul className="space-y-1.5 mb-4">
+                  {premiumBonusItems.map((item, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                        <Gift className="w-3 h-3 text-white" />
+                      </div>
+                      <span className="text-xs font-semibold text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <motion.a
+                  href="https://pay.cakto.com.br/whodr5r_907770"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Receitas na Airfryer - Upsell Premium 19,90')}
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-sm px-4 py-3.5 rounded-full transition-colors animate-pulse-soft w-full text-center uppercase whitespace-nowrap cursor-pointer mb-2 shadow-lg shadow-green-300"
+                >
+                  <Zap className="w-4 h-4 inline mr-1" />
+                  SIM! Quero o Premium por R$ 19,90
+                </motion.a>
+
+                <a
+                  href="https://pay.cakto.com.br/3bjr73a_907769"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    setShowBasicUpsell(false);
+                    handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', 9.90, 'Receitas na Airfryer - Básico');
+                  }}
+                  className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[11px] px-4 py-2 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300"
+                >
+                  Não, quero apenas o Básico — R$ 9,90
+                </a>
+
+                <div className="flex items-center justify-center gap-1.5 mt-2 text-[10px] text-muted-foreground">
+                  <ShieldCheck className="w-3 h-3 text-cta" />
+                  <span>Pagamento 100% seguro · Garantia de 7 dias</span>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
+
   );
 };
 

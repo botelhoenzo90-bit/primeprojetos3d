@@ -527,19 +527,25 @@ const OfferSection = () => {
 
                 <div className="border-t border-dashed border-cta/40 my-1.5" />
 
-                <div className="grid grid-cols-2 gap-x-3 gap-y-0.5">
-                  {premiumReceberItems.map((item, i) => (
-                    <div key={i} className="flex items-center gap-1">
-                      <Check className="w-2.5 h-2.5 text-green-600 flex-shrink-0" />
-                      <span className="text-[10px] text-foreground leading-tight">{item}</span>
-                    </div>
-                  ))}
-                  {premiumBonusItems.map((item, i) => (
-                    <div key={`b-${i}`} className="flex items-center gap-1">
-                      <Gift className="w-2.5 h-2.5 text-orange-500 flex-shrink-0" />
-                      <span className="text-[10px] font-semibold text-foreground leading-tight">{item}</span>
-                    </div>
-                  ))}
+                <div className="flex justify-center">
+                  <ul className="space-y-1 inline-flex flex-col">
+                    {premiumReceberItems.map((item, i) => (
+                      <li key={i} className="flex items-center gap-1.5">
+                        <div className="w-3.5 h-3.5 rounded-full bg-cta/15 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-2.5 h-2.5 text-cta" />
+                        </div>
+                        <span className="text-[10px] text-foreground">{item}</span>
+                      </li>
+                    ))}
+                    {premiumBonusItems.map((item, i) => (
+                      <li key={`b-${i}`} className="flex items-center gap-1.5">
+                        <div className="w-3.5 h-3.5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                          <Gift className="w-2.5 h-2.5 text-white" />
+                        </div>
+                        <span className="text-[10px] font-semibold text-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 

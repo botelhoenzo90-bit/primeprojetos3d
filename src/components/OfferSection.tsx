@@ -8,6 +8,7 @@ import paymentMethods from "@/assets/payment-methods.jpg";
 const premiumReceberItems = [
   "+200 Receitas Práticas na Airfryer",
   "Receitas completas e variadas",
+  "Lista de ingredientes e utensílios",
   "Passo a passo de cada receita",
   "Tempos e temperaturas indicados",
   "Acesso vitalício e imediato",

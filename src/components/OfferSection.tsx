@@ -287,26 +287,16 @@ const OfferSection = () => {
                       ))}
                       {basicMissingItems.map((item, i) => (
                         <li key={`miss-${i}`} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-red-600" />
+                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-sm text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
                       ))}
-                    </ul>
-                  </div>
-
-                  <div className="border-t border-dashed border-gray-300 my-3" />
-
-                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
-                    Bônus: Não Inclusos
-                  </h3>
-                  <div className="flex justify-center mb-4">
-                    <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-orange-500/15 flex items-center justify-center flex-shrink-0">
-                            <Gift className="w-3.5 h-3.5 text-cta" />
+                        <li key={`bonus-${i}`} className="flex items-center gap-2.5">
+                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
                         </li>
@@ -510,17 +500,12 @@ const OfferSection = () => {
                   <span className="text-sm md:text-base font-black uppercase tracking-wider">Oferta Exclusiva Relâmpago!</span>
                   <Sparkles className="w-4 h-4" />
                 </div>
+                <p className="text-[11px] md:text-xs font-semibold mt-1 opacity-95">
+                  Leve tudo do Plano Premium por apenas:
+                </p>
               </div>
 
               <div className="px-4 py-3 overflow-y-auto flex-1">
-                <img
-                  src={produtoMockup}
-                  alt="Pacote Premium +200 Receitas na Airfryer"
-                  className="w-full max-w-[110px] mx-auto mb-2 drop-shadow-lg"
-                  loading="lazy"
-                  decoding="async"
-                />
-
                 <div className="text-center mb-2">
                   <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
                   <p className="text-[10px] text-foreground font-semibold">por apenas</p>
@@ -557,24 +542,6 @@ const OfferSection = () => {
                     </li>
                   ))}
                 </ul>
-
-                <img
-                  src={paymentMethods}
-                  alt="Métodos de pagamento aceitos"
-                  className="w-full max-w-[220px] mx-auto mt-1"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <div className="mt-2 border border-green-500/40 rounded-xl p-2 text-center bg-green-500/10">
-                  <p className="text-[11px] font-bold text-green-600 flex items-center justify-center gap-1">
-                    <Zap className="w-3 h-3" />
-                    Acesso imediato após a compra!
-                  </p>
-                  <p className="text-[9px] text-muted-foreground mt-0.5 leading-tight">
-                    Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
-                  </p>
-                </div>
               </div>
 
               <div className="px-4 pb-3 pt-2 border-t border-gray-100 flex-shrink-0">
@@ -603,6 +570,24 @@ const OfferSection = () => {
                 >
                   Não, quero apenas o Básico — R$ 9,90
                 </a>
+
+                <img
+                  src={paymentMethods}
+                  alt="Métodos de pagamento aceitos"
+                  className="w-full max-w-[200px] mx-auto mt-2"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="mt-2 border border-green-500/40 rounded-xl p-2 text-center bg-green-500/10">
+                  <p className="text-[11px] font-bold text-green-600 flex items-center justify-center gap-1">
+                    <Zap className="w-3 h-3" />
+                    Acesso imediato após a compra!
+                  </p>
+                  <p className="text-[9px] text-muted-foreground mt-0.5 leading-tight">
+                    Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
+                  </p>
+                </div>
 
                 <div className="flex items-center justify-center gap-1 mt-1.5 text-[9px] text-muted-foreground">
                   <ShieldCheck className="w-2.5 h-2.5 text-cta" />

@@ -36,25 +36,15 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-[320px] md:max-w-[380px] mx-auto mb-5 rounded-2xl overflow-hidden shadow-xl border-2 border-cta"
+          className="w-full max-w-[220px] mx-auto mb-5 rounded-xl bg-white border border-gray-200 shadow-md p-3 text-center"
         >
-          <div className="bg-gradient-to-br from-[#FF4500] to-cta p-1">
-            <div className="bg-[#fff5eb] rounded-xl p-4 text-center">
-              <div className="inline-flex items-center gap-1.5 bg-red-100 text-red-600 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full mb-3">
-                <Zap className="w-3 h-3" /> Apenas hoje
-              </div>
-              <p className="text-[13px] font-bold text-gray-700 mb-1">
-                De <span className="text-gray-400 line-through font-black">R$ 97,00</span>
-              </p>
-              <p className="text-[11px] text-gray-500 font-semibold mb-1">por apenas</p>
-              <p className="text-4xl font-black text-cta leading-none mb-1">
-                R$ 9,90
-              </p>
-              <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wide">
-                Acesso vitalício + Garantia de 7 dias
-              </p>
-            </div>
-          </div>
+          <p className="text-[12px] font-bold text-gray-700 mb-0.5">
+            Apenas hoje de <span className="text-red-600 line-through font-black">R$ 97,00</span>
+          </p>
+          <p className="text-[11px] text-gray-600 font-semibold">por apenas</p>
+          <p className="text-2xl font-black text-green-600 leading-none mt-0.5">
+            R$ 9,90
+          </p>
         </motion.div>
 
         <div className="flex flex-col items-center w-full">

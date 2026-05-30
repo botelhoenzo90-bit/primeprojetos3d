@@ -60,6 +60,21 @@ const BonusSection = () => {
           ))}
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto mt-8 bg-gradient-to-r from-[#FFD700]/20 via-orange-100 to-[#FFD700]/20 border-2 border-dashed border-[#FF4500] rounded-2xl px-6 py-4 text-center"
+        >
+          <p className="text-base md:text-xl font-black text-[#022C22] uppercase tracking-wide flex items-center justify-center gap-2 flex-wrap">
+            🎁 Todos esses bônus exclusivos <span className="text-[#FF4500]">100% GRÁTIS!</span>
+          </p>
+          <p className="text-xs md:text-sm text-[#064E3B] font-semibold mt-1">
+            Você leva tudo isso na sua compra de hoje — sem pagar nada a mais.
+          </p>
+        </motion.div>
+
+
         <div className="text-center mt-8 flex flex-col items-center">
           <motion.a
             href="#oferta"

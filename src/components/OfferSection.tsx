@@ -121,7 +121,12 @@ const OfferSection = () => {
                 </div>
 
                 <div className="p-5 md:p-6 flex flex-col flex-1">
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-green-600 mt-2 mb-2">
+                  <div className="text-center mb-1">
+                    <span className="inline-block bg-green-600 text-white text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                      Pacote Premium
+                    </span>
+                  </div>
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-green-600 mt-1 mb-2">
                     Receitas na Airfryer
                   </h2>
 

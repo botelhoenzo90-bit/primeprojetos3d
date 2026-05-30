@@ -116,7 +116,7 @@ const OfferSection = () => {
               <div className="relative bg-white rounded-3xl shadow-2xl border-[3px] border-sage overflow-visible h-full flex flex-col">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-max">
                   <div className="bg-cta text-white text-[11px] md:text-xs font-black px-5 py-1.5 rounded-full uppercase shadow-md whitespace-nowrap">
-                    80% de Desconto!
+                    🔥 Mais Vendido!
                   </div>
                 </div>
 

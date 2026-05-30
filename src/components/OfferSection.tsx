@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, ShieldCheck, Zap, Gift, X, Sparkles, Crown } from "lucide-react";
 import produtoImg from "@/assets/produto-oferta-new.png";
 import produtoMockup from "@/assets/produto-mockup.png";
-import paymentMethods from "@/assets/payment-methods.jpg";
+import paymentMethods from "@/assets/payment-methods.png";
 
 const premiumReceberItems = [
   "+200 Receitas Práticas na Airfryer",

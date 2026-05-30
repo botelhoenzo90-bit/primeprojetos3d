@@ -287,18 +287,18 @@ const OfferSection = () => {
                       ))}
                       {basicMissingItems.map((item, i) => (
                         <li key={`miss-${i}`} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-white" />
+                          <div className="w-5 h-5 rounded-full bg-red-500/15 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-500" />
                           </div>
-                          <span className="text-sm text-foreground line-through decoration-red-600 decoration-2">{item}</span>
+                          <span className="text-sm text-foreground line-through decoration-red-400 decoration-1">{item}</span>
                         </li>
                       ))}
                       {premiumBonusItems.map((item, i) => (
                         <li key={`bonus-${i}`} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-white" />
+                          <div className="w-5 h-5 rounded-full bg-red-500/15 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-500" />
                           </div>
-                          <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
+                          <span className="text-sm font-semibold text-foreground line-through decoration-red-400 decoration-1">{item}</span>
                         </li>
                       ))}
                     </ul>

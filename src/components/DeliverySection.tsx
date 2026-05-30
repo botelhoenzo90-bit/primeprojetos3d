@@ -44,6 +44,9 @@ const DeliverySection = () => {
           <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mt-4">
             Como você vai <span className="text-cta">RECEBER</span>:
           </h2>
+          <p className="text-muted-foreground font-bold text-base md:text-lg mt-2">
+            ✨ Acesso liberado na hora no seu email cadastrado
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">

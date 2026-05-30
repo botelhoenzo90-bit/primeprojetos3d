@@ -12,6 +12,7 @@ import ProblemSection from "@/components/ProblemSection";
 import OfferSection from "@/components/OfferSection";
 import NutriSection from "@/components/NutriSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
+import DeliverySection from "@/components/DeliverySection";
 import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import SalesNotification from "@/components/SalesNotification";

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { X, ArrowDown } from "lucide-react";
+import { X } from "lucide-react";
 
 const ProblemSection = () => {
   const problems = [
@@ -7,6 +7,7 @@ const ProblemSection = () => {
     "Você se cansou de improvisar refeições todos os dias",
     "Acaba comendo besteira pela praticidade",
     "Tenta comer melhor, mas nunca consegue manter",
+    "Faz sempre as mesmas receitas na airfryer",
   ];
 
   return (
@@ -17,7 +18,7 @@ const ProblemSection = () => {
             ISSO ACONTECE COM VOCÊ?
           </h2>
         </div>
-        <div className="space-y-4 mb-10">
+        <div className="space-y-4">
           {problems.map((problem, index) => (
             <motion.div
               key={index}
@@ -36,52 +37,6 @@ const ProblemSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="text-center space-y-6"
-        >
-          <div className="flex flex-col items-center gap-2">
-            <h3 className="text-xl md:text-2xl font-black text-green-title uppercase tracking-tight">
-              Então você precisa disto
-            </h3>
-            <motion.div
-              animate={{ y: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ArrowDown className="w-8 h-8 text-cta" />
-            </motion.div>
-          </div>
-
-          <motion.div
-            whileHover={{ scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="relative bg-gradient-to-br from-green-title via-green-800 to-green-900 p-8 md:p-12 rounded-[2rem] shadow-2xl shadow-green-900/40 border border-cta/30 overflow-hidden"
-          >
-            <div className="absolute -top-16 -right-16 w-56 h-56 bg-cta/30 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute -bottom-16 -left-16 w-56 h-56 bg-cta/15 rounded-full blur-3xl" />
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-cta to-transparent" />
-
-            <div className="relative">
-              <span className="inline-flex items-center gap-1.5 bg-cta text-white text-[10px] md:text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 shadow-lg shadow-cta/40">
-                ✨ A Solução 🔥
-              </span>
-              <h2 className="text-2xl md:text-4xl font-black text-white leading-tight drop-shadow-lg">
-                🍗 Receitas Práticas na Airfryer <br className="hidden md:block" />
-                <span className="bg-gradient-to-r from-cta to-yellow-300 bg-clip-text text-transparent">
-                  para todos os momentos ✨
-                </span>
-              </h2>
-              <div className="w-16 h-1 bg-cta/70 rounded-full mx-auto my-4" />
-              <p className="text-white/90 text-sm md:text-lg font-medium">
-                +200 receitas prontas em até 20 minutos para o seu dia a dia.
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

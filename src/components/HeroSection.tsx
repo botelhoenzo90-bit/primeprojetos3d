@@ -36,13 +36,27 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-[340px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-md p-5 text-center"
+          className="w-full max-w-[360px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-xl p-5 text-center relative overflow-hidden"
         >
-          <p className="text-[15px] font-bold text-gray-700 mb-1">
+          {/* Selo de oferta no topo */}
+          <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-cta text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-md">
+            ⚡ Oferta Relâmpago
+          </div>
+
+          <p className="text-[14px] font-bold text-gray-700 mt-4 mb-1">
             Apenas hoje de <span className="text-red-600 line-through font-black">R$ 97,00</span>
           </p>
-          <p className="text-[15px] font-bold text-gray-700">
-            por apenas <span className="text-green-600 font-black text-3xl align-middle">R$ 9,90</span>
+          <p className="text-[15px] font-bold text-gray-700 flex items-baseline justify-center gap-1.5 flex-wrap">
+            por apenas
+            <span className="text-green-600 font-black text-4xl leading-none">R$ 9,90</span>
+          </p>
+
+          <div className="mt-2 inline-flex items-center gap-1 bg-green-50 text-green-700 text-[11px] font-bold px-2.5 py-1 rounded-full border border-green-200">
+            <span className="font-black">90%</span> OFF · Economize R$ 87,10
+          </div>
+
+          <p className="mt-2 text-[10px] font-semibold text-gray-500 uppercase tracking-wide">
+            ou 1x de R$ 9,90 no Pix
           </p>
         </motion.div>
 

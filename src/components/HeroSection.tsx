@@ -36,13 +36,13 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-[280px] mx-auto mb-5 rounded-xl bg-white border border-gray-200 shadow-md p-4 text-center"
+          className="w-full max-w-[340px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-md p-5 text-center"
         >
-          <p className="text-[14px] font-bold text-gray-700 mb-1">
+          <p className="text-[15px] font-bold text-gray-700 mb-1">
             Apenas hoje de <span className="text-red-600 line-through font-black">R$ 97,00</span>
           </p>
-          <p className="text-[14px] font-bold text-gray-700">
-            por apenas <span className="text-green-600 font-black text-2xl align-middle">R$ 9,90</span>
+          <p className="text-[15px] font-bold text-gray-700">
+            por apenas <span className="text-green-600 font-black text-3xl align-middle">R$ 9,90</span>
           </p>
         </motion.div>
 

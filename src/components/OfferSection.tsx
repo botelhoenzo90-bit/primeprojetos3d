@@ -198,7 +198,7 @@ const OfferSection = () => {
                   </div>
 
                   <div className="mt-auto">
-                    <div className="animate-pulse-soft rounded-full mb-4">
+                    <div className="rounded-full mb-4">
                       <a
                         href="https://pay.cakto.com.br/36cgyiw_840628"
                         target="_blank"

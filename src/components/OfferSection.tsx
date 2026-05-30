@@ -31,15 +31,16 @@ const basicReceberItems = [
 
 const OfferSection = () => {
   const [showUpsell, setShowUpsell] = useState(false);
+  const [showBasicUpsell, setShowBasicUpsell] = useState(false);
 
   React.useEffect(() => {
-    if (showUpsell) {
+    if (showUpsell || showBasicUpsell) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
     return () => { document.body.style.overflow = ''; };
-  }, [showUpsell]);
+  }, [showUpsell, showBasicUpsell]);
 
   const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, url: string, value: number, planName: string) => {
     e.preventDefault();

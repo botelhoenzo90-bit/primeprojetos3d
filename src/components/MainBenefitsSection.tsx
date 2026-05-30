@@ -20,9 +20,10 @@ const MainBenefitsSection = () => {
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
             <Zap className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> O QUE VOCÊ VAI ENCONTRAR:
           </span>
-          <h2 className="text-[22px] md:text-5xl font-black text-green-title leading-[1.1] mb-2 max-w-[340px] md:max-w-none mx-auto px-2">
-            Tudo o que você vai encontrar <br className="hidden md:block" />
-            <span className="text-cta">nas receitas de airfryer</span>
+          <h2 className="text-[26px] md:text-[56px] font-black text-green-title leading-[1.1] mb-2 max-w-[340px] md:max-w-none mx-auto px-2">
+            Tudo o que você <br className="hidden md:block" />
+            vai encontrar nas <br className="hidden md:block" />
+            <span className="text-cta">receitas de airfryer</span>
           </h2>
           <p className="text-green-title text-base md:text-xl font-medium max-w-2xl mx-auto mb-8">
             Receitas práticas para facilitar sua rotina e variar seu cardápio com muito sabor.

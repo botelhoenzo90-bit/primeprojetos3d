@@ -21,7 +21,7 @@ const RecipePagesCarousel = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-2xl md:text-4xl font-black text-green-title leading-tight mb-3 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3 tracking-tight">
             Veja o <span className="text-cta">guia por dentro:</span>
           </h2>
           <p className="text-green-title text-sm md:text-lg font-medium max-w-2xl mx-auto">

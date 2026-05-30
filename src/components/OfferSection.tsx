@@ -29,6 +29,13 @@ const basicReceberItems = [
   "Garantia de 7 dias",
 ];
 
+const basicMissingItems = [
+  "Receitas completas e variadas",
+  "Lista de ingredientes e utensílios",
+  "Tempos e temperaturas indicados",
+  "Atualizações futuras",
+];
+
 const OfferSection = () => {
   const [showUpsell, setShowUpsell] = useState(false);
   const [showBasicUpsell, setShowBasicUpsell] = useState(false);

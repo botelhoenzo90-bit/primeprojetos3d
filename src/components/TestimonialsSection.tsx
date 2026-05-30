@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
             <Star className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Resultados Reais
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
             Veja quem já <span className="text-cta">transformou a rotina</span> com nossas receitas
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-medium">

@@ -60,7 +60,7 @@ const FAQSection = () => {
             href="#oferta"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="inline-block bg-cta hover:bg-cta-hover text-cream font-bold text-sm md:text-lg px-6 md:px-8 py-4 rounded-xl transition-colors whitespace-nowrap mb-2"
+            className="inline-block bg-cta hover:bg-cta-hover text-cream font-bold text-sm md:text-lg px-6 md:px-8 py-4 rounded-xl transition-colors whitespace-nowrap mb-2 animate-pulse-soft"
           >
             AINDA TEM DÚVIDAS? COMPRE SEM RISCO! 🔥
           </motion.a>

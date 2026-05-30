@@ -204,7 +204,7 @@ const OfferSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Receitas na Airfryer - Premium')}
-                        className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center shadow-lg shadow-green-200 transition-all uppercase tracking-wide cursor-pointer"
+                        className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         SIM! QUERO MINHAS +200 RECEITAS AGORA
@@ -287,18 +287,18 @@ const OfferSection = () => {
                       ))}
                       {basicMissingItems.map((item, i) => (
                         <li key={`miss-${i}`} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-white" />
+                          <div className="w-5 h-5 rounded-full bg-red-500/15 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-500" />
                           </div>
-                          <span className="text-sm text-foreground line-through decoration-red-600 decoration-2">{item}</span>
+                          <span className="text-sm text-foreground line-through decoration-red-400 decoration-1">{item}</span>
                         </li>
                       ))}
                       {premiumBonusItems.map((item, i) => (
                         <li key={`bonus-${i}`} className="flex items-center gap-2.5">
-                          <div className="w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0">
-                            <X className="w-3.5 h-3.5 text-white" />
+                          <div className="w-5 h-5 rounded-full bg-red-500/15 flex items-center justify-center flex-shrink-0">
+                            <X className="w-3.5 h-3.5 text-red-500" />
                           </div>
-                          <span className="text-sm font-semibold text-foreground line-through decoration-red-600 decoration-2">{item}</span>
+                          <span className="text-sm font-semibold text-foreground line-through decoration-red-400 decoration-1">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -506,6 +506,14 @@ const OfferSection = () => {
               </div>
 
               <div className="px-4 py-3 overflow-y-auto flex-1">
+                <img
+                  src={produtoImg}
+                  alt="Pacote Premium +200 Receitas na Airfryer"
+                  className="w-1/2 mx-auto rounded-xl mb-2"
+                  loading="lazy"
+                  decoding="async"
+                />
+
                 <div className="text-center mb-2">
                   <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
                   <p className="text-[10px] text-foreground font-semibold">por apenas</p>
@@ -552,7 +560,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Receitas na Airfryer - Upsell Premium 19,90')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-3 rounded-full transition-colors animate-pulse-soft w-full text-center uppercase cursor-pointer mb-1.5 shadow-lg shadow-green-300"
+                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-3 rounded-full transition-colors animate-pulse-soft w-full text-center uppercase cursor-pointer mb-1.5"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 19,90

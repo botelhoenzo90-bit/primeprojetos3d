@@ -549,7 +549,7 @@ const OfferSection = () => {
                 <h4 className="text-center font-extrabold text-cta text-[11px] uppercase tracking-wider mb-1.5 mt-2">
                   🎁 + Bônus Exclusivos:
                 </h4>
-                <ul className="space-y-1 mb-1">
+                <ul className="space-y-1 mb-2">
                   {premiumBonusItems.map((item, i) => (
                     <li key={i} className="flex items-center gap-1.5">
                       <Gift className="w-3 h-3 text-orange-500 flex-shrink-0" />
@@ -557,6 +557,24 @@ const OfferSection = () => {
                     </li>
                   ))}
                 </ul>
+
+                <img
+                  src={paymentMethods}
+                  alt="Métodos de pagamento aceitos"
+                  className="w-full max-w-[220px] mx-auto mt-1"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div className="mt-2 border border-green-500/40 rounded-xl p-2 text-center bg-green-500/10">
+                  <p className="text-[11px] font-bold text-green-600 flex items-center justify-center gap-1">
+                    <Zap className="w-3 h-3" />
+                    Acesso imediato após a compra!
+                  </p>
+                  <p className="text-[9px] text-muted-foreground mt-0.5 leading-tight">
+                    Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
+                  </p>
+                </div>
               </div>
 
               <div className="px-4 pb-3 pt-2 border-t border-gray-100 flex-shrink-0">

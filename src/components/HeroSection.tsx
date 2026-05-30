@@ -36,14 +36,14 @@ const HeroSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="w-full max-w-[360px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-xl p-5 text-center relative overflow-hidden"
+          className="w-full max-w-[360px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-xl p-5 pt-6 text-center relative overflow-hidden"
         >
-          {/* Selo de oferta no topo */}
-          <div className="absolute -top-0 left-1/2 -translate-x-1/2 bg-cta text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-b-lg shadow-md whitespace-nowrap">
+          {/* Selo de oferta no meio da borda superior */}
+          <div className="absolute -top-[13px] left-1/2 -translate-x-1/2 bg-cta text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-md whitespace-nowrap border-2 border-cta z-10">
             ⚡ Oferta Relâmpago
           </div>
 
-          <p className="text-[14px] font-bold text-gray-700 mt-4 mb-1">
+          <p className="text-[16px] font-bold text-gray-700 mt-2 mb-1">
             Apenas hoje de <span className="text-red-600 line-through font-black">R$ 97,00</span>
           </p>
           <p className="text-[15px] font-bold text-gray-700 flex items-baseline justify-center gap-1.5 flex-wrap">

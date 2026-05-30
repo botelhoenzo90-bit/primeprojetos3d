@@ -504,14 +504,12 @@ const OfferSection = () => {
                 <X className="w-3.5 h-3.5" />
               </button>
 
-              <div className="bg-cta text-white py-2.5 px-4 text-center flex-shrink-0">
-                <div className="inline-flex items-center gap-1.5 mb-0.5">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span className="text-[10px] font-black uppercase tracking-wider">Oferta Exclusiva</span>
+              <div className="bg-gradient-to-r from-red-600 to-cta text-white py-2.5 px-4 text-center flex-shrink-0">
+                <div className="inline-flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4" />
+                  <span className="text-sm md:text-base font-black uppercase tracking-wider">Oferta Exclusiva Relâmpago!</span>
+                  <Sparkles className="w-4 h-4" />
                 </div>
-                <h3 className="text-base font-black uppercase leading-tight">
-                  Espere! Leve o Premium Completo
-                </h3>
               </div>
 
               <div className="px-4 py-3 overflow-y-auto flex-1">

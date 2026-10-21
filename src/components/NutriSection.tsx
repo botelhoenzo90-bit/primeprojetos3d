@@ -4,7 +4,7 @@ import nutriImg from "@/assets/nutri-juliana.png";
 
 const NutriSection = () => {
   return (
-    <section className="py-8 bg-[#22c55e]/10">
+    <section className="py-8 bg-[#EFF7FF]">
       <div className="container mx-auto px-4 max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const NutriSection = () => {
           >
             <img
               src={nutriImg}
-              alt="Nutricionista Juliana Alves apresentando receitas para airfryer"
+              alt="Biblioteca digital para makers e impressão 3D"
               className="w-full max-w-sm rounded-3xl shadow-2xl border-4 border-primary object-cover"
               loading="lazy"
               decoding="async"

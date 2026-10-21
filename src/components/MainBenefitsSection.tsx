@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Zap, ChefHat, Utensils, Clock, Flame, Leaf, Heart, Home, Coffee } from "lucide-react";
 
 const benefits = [
-  { icon: ChefHat, text: "+200 receitas irresistíveis para toda a família" },
-  { icon: Utensils, text: "Passo a passo fácil e ilustrado!" },
-  { icon: Zap, text: "Mais praticidade para o seu dia a dia" },
-  { icon: Clock, text: "Receitas prontas em até 20 minutos" },
-  { icon: Flame, text: "Refeições deliciosas sem perder o sabor" },
-  { icon: Leaf, text: "Mais saudável e com menos gordura" },
-  { icon: Coffee, text: "Café, almoço, jantar e sobremesas" },
-  { icon: Home, text: "Ideias novas para todos os dias" },
+  { icon: ChefHat, text: "+100 mil arquivos STL para explorar diferentes nichos" },
+  { icon: Utensils, text: "Modelos organizados para encontrar arquivos com mais facilidade" },
+  { icon: Zap, text: "Mais tempo criando e menos tempo procurando" },
+  { icon: Clock, text: "Arquivos digitais para preparar sua próxima impressão" },
+  { icon: Flame, text: "Ideias para decoração, colecionáveis, utilidades e presentes" },
+  { icon: Leaf, text: "Opções para makers iniciantes e experientes" },
+  { icon: Coffee, text: "Animes, articulados, chaveiros, veículos e muito mais" },
+  { icon: Home, text: "Novas possibilidades para imprimir, personalizar e vender" },
 ];
 
 const MainBenefitsSection = () => {
@@ -18,15 +18,15 @@ const MainBenefitsSection = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-6">
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-            <Zap className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> O QUE VOCÊ VAI ENCONTRAR:
+            <Zap className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> EXPLORE A BIBLIOTECA 3D:
           </span>
           <h2 className="text-[26px] md:text-[56px] font-black text-green-title leading-[1.1] mb-2 max-w-[340px] md:max-w-none mx-auto px-2">
             Tudo o que você <br className="hidden md:block" />
-            vai encontrar nas <br className="hidden md:block" />
-            <span className="text-cta">receitas de airfryer</span>
+            pode criar com uma <br className="hidden md:block" />
+            <span className="text-cta">biblioteca de arquivos STL</span>
           </h2>
           <p className="text-green-title text-base md:text-xl font-medium max-w-2xl mx-auto mb-8">
-            Receitas práticas para facilitar sua rotina e variar seu cardápio com muito sabor.
+            Uma coleção digital para explorar modelos, testar ideias e manter sua impressora 3D com novos projetos.
           </p>
         </div>
 
@@ -59,10 +59,10 @@ const MainBenefitsSection = () => {
             whileTap={{ scale: 0.98 }}
             className="inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-2 animate-pulse-soft"
           >
-            QUERO MINHAS RECEITAS DE AIRFRYER AGORA! 🔥
+            QUERO EXPLORAR OS MODELOS 3D!
           </motion.a>
           <p className="text-xs md:text-sm text-green-title font-semibold flex items-center justify-center gap-1.5">
-            🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+            🛡️ Garantia de 7 dias · Acesso digital imediato
           </p>
         </div>
       </div>

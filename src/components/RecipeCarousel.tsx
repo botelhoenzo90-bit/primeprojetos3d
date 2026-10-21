@@ -28,7 +28,7 @@ const doubled = [...images, ...images];
 
 const RecipeCarousel = () => {
   return (
-    <section className="py-8 bg-[#22c55e]/10 overflow-hidden">
+    <section className="py-8 bg-[#EFF7FF] overflow-hidden">
       <div className="container mx-auto px-4 mb-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,14 +57,14 @@ const RecipeCarousel = () => {
               <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
                 <img
                   src={img.src}
-                  alt={img.label}
+                  alt={`Modelo de impressão 3D: ${img.label}`}
                   className="w-64 h-64 object-cover"
                   loading="lazy"
                   decoding="async"
                 />
                 <div className="p-3 text-center">
                   <p className="font-bold text-green-title text-sm">{img.label}</p>
-                  <p className="text-muted-foreground text-xs mt-0.5">⏱️ Pronto em {img.time}</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">⏱️ Modelo para seu próximo projeto</p>
                   <span className="inline-block text-xs bg-cta/10 text-cta font-semibold px-2 py-0.5 rounded-full mt-1">
                     🔥 {img.badge}
                   </span>

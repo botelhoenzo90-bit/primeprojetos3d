@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
         >
           <div className="flex items-baseline justify-center gap-2 mb-2">
             <span className="text-5xl md:text-6xl font-black text-green-title">4,9</span>
-            <span className="text-base text-muted-foreground font-semibold">/ 5</span>
+            <span className="text-base text-muted-foreground font-semibold"></span>
           </div>
           <div className="flex items-center justify-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (

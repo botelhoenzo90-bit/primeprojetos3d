@@ -6,34 +6,34 @@ import produtoMockup from "@/assets/produto-mockup.png";
 import paymentMethods from "@/assets/payment-methods.png";
 
 const premiumReceberItems = [
-  "+200 Receitas Práticas na Airfryer",
-  "Receitas completas e variadas",
-  "Lista de ingredientes e utensílios",
-  "Passo a passo de cada receita",
-  "Tempos e temperaturas indicados",
-  "Acesso vitalício e imediato",
-  "Atualizações futuras",
+  "+100.000 arquivos STL para impressão 3D",
+  "Biblioteca com categorias variadas de modelos",
+  "Arquivos digitais para diferentes projetos",
+  "Acesso organizado por categorias",
+  "Modelos para explorar, fatiar e imprimir",
+  "Acesso digital após a confirmação",
+  "Variedade para novos projetos",
   "Garantia de 7 dias",
 ];
 
 const premiumBonusItems = [
-  "+250 Receitas com Whey Protein",
-  "Marmitas Fit",
-  "Sucos Detox",
+  "Pack de Veículos 3D",
+  "Chaveiros Personalizados 3D",
+  "Modelos Flexíveis e Articulados",
 ];
 
 const basicReceberItems = [
-  "+100 Receitas Práticas na Airfryer",
-  "Passo a passo de cada receita",
-  "Acesso vitalício e imediato",
+  "+50.000 arquivos STL",
+  "Acesso organizado por categorias",
+  "Acesso digital após a confirmação",
   "Garantia de 7 dias",
 ];
 
 const basicMissingItems = [
-  "Receitas completas e variadas",
-  "Lista de ingredientes e utensílios",
-  "Tempos e temperaturas indicados",
-  "Atualizações futuras",
+  "Biblioteca com categorias variadas de modelos",
+  "Arquivos digitais para diferentes projetos",
+  "Modelos para explorar, fatiar e imprimir",
+  "Variedade para novos projetos",
 ];
 
 const OfferSection = () => {
@@ -109,10 +109,10 @@ const OfferSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
           >
-            Garanta seu acesso às <span className="text-cta">receitas</span>
+            Garanta seu acesso à <span className="text-cta">biblioteca STL</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
-            ☕ Por menos do que você gasta em um café, você tem acesso a <span className="font-extrabold text-cta">+200 receitas</span> que vão facilitar sua rotina para <span className="underline">sempre</span>.
+            🚀 Acesse uma coleção digital de modelos STL para explorar novas ideias, ampliar seu acervo e manter sua impressora 3D com projetos variados.
           </p>
           <div className="max-w-2xl mx-auto grid grid-cols-1 gap-6">
             {/* PLANO PREMIUM */}
@@ -135,16 +135,16 @@ const OfferSection = () => {
                     </span>
                   </div>
                   <h2 className="text-center text-2xl md:text-3xl font-extrabold text-green-600 mt-1 mb-2">
-                    Receitas na Airfryer
+                    Biblioteca STL 3D
                   </h2>
 
                   <p className="text-center text-sm text-foreground font-semibold mb-3">
-                    Restam apenas <span className="font-extrabold underline text-red-600">03 vagas</span> com desconto!
+                    Oferta digital por tempo limitado, conforme disponibilidade no checkout.
                   </p>
 
                   <img
                     src={produtoImg}
-                      alt="Produto de receitas na airfryer"
+                      alt="Biblioteca digital de arquivos STL para impressão 3D"
                     className="w-1/2 mx-auto rounded-xl mb-4"
                     loading="lazy"
                     decoding="async"
@@ -203,15 +203,15 @@ const OfferSection = () => {
                         href="https://pay.cakto.com.br/36cgyiw_840628"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Receitas na Airfryer - Premium')}
+                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Biblioteca STL 3D - Premium')}
                         className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
-                        SIM! QUERO MINHAS +200 RECEITAS AGORA
+                        SIM! QUERO ACESSAR A BIBLIOTECA STL
                       </a>
                     </div>
                     <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
-                      🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+                      🛡️ Garantia de 7 dias · Acesso digital
                     </p>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
@@ -237,7 +237,7 @@ const OfferSection = () => {
                         Acesso imediato após a compra!
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
-                        Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
+                        Após a confirmação, confira as instruções de acesso e comece a explorar os arquivos.
                       </p>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ const OfferSection = () => {
                     </span>
                   </div>
                   <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
-                    Receitas na Airfryer
+                    Biblioteca STL 3D
                   </h2>
 
                   <div className="text-center mb-4 mt-2">
@@ -315,7 +315,7 @@ const OfferSection = () => {
                       </button>
                     </div>
                     <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
-                      🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+                      🛡️ Garantia de 7 dias · Acesso digital
                     </p>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
@@ -337,7 +337,7 @@ const OfferSection = () => {
                         Acesso imediato após a compra!
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
-                        Finalizou o pedido? Confira seu e-mail e acesse agora mesmo.
+                        Após a confirmação, confira as instruções de acesso e comece a explorar os arquivos.
                       </p>
                     </div>
                   </div>
@@ -390,7 +390,7 @@ const OfferSection = () => {
               <div className="px-4 py-2">
                 <img
                   src={produtoMockup}
-                  alt="Pacote +200 Receitas na Airfryer com bônus"
+                  alt="Pacote +200 Biblioteca STL 3D com bônus"
                   className="w-full max-w-[140px] mx-auto mb-1.5"
                   loading="lazy"
                   decoding="async"
@@ -434,7 +434,7 @@ const OfferSection = () => {
                   href="https://pay.cakto.com.br/etagmjj_848143"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Receitas na Airfryer - Upsell Premium')}
+                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Biblioteca STL 3D - Upsell Premium')}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   className="block bg-cta hover:bg-cta-hover text-cream font-bold text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
@@ -449,7 +449,7 @@ const OfferSection = () => {
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     setShowUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', 9.90, 'Receitas na Airfryer - Básico');
+                    handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', 9.90, 'Biblioteca STL 3D - Básico');
                   }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
@@ -508,7 +508,7 @@ const OfferSection = () => {
               <div className="px-4 py-2 flex-1">
                 <img
                   src={produtoImg}
-                  alt="Pacote Premium +200 Receitas na Airfryer"
+                  alt="Pacote Premium +200 Biblioteca STL 3D"
                   className="w-[42%] mx-auto rounded-xl mb-2"
                   loading="lazy"
                   decoding="async"
@@ -554,7 +554,7 @@ const OfferSection = () => {
                   href="https://pay.cakto.com.br/whodr5r_907770"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Receitas na Airfryer - Upsell Premium 19,90')}
+                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Biblioteca STL 3D - Upsell Premium 19,90')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
@@ -569,7 +569,7 @@ const OfferSection = () => {
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     setShowBasicUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', 9.90, 'Receitas na Airfryer - Básico');
+                    handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', 9.90, 'Biblioteca STL 3D - Básico');
                   }}
                   className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300 mb-1.5"
                 >

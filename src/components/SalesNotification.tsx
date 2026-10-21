@@ -1,36 +1,39 @@
 import { useState, useEffect } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, PackageCheck } from "lucide-react";
 
-const names = [
-  "Ana Silva - São Paulo, SP", "Maria Santos - Rio de Janeiro, RJ", "Juliana Alves - Belo Horizonte, MG", "Carla Oliveira - Curitiba, PR", "Fernanda Lima - Salvador, BA", "Patrícia Costa - Fortaleza, CE", "Camila Rocha - Brasília, DF",
-  "Beatriz Martins - Recife, PE", "Luciana Souza - Porto Alegre, RS", "Amanda Ferreira - Goiânia, GO", "Renata Nunes - Manaus, AM", "Larissa Mendes - Belém, PA", "Priscila Barbosa - Vitória, ES", "Tatiane Ribeiro - Campo Grande, MS",
-  "Rafaela Castro - Florianópolis, SC", "Débora Cardoso - Natal, RN", "Vanessa Teixeira - São Luís, MA", "Bruna Moreira - Maceió, AL", "Natália Dias - Teresina, PI", "Gabriela Araújo - João Pessoa, PB",
+const examples = [
+  { name: "Maria S.", city: "Recife - PE" },
+  { name: "Carlos R.", city: "São Paulo - SP" },
+  { name: "Ana P.", city: "Curitiba - PR" },
+  { name: "Juliana M.", city: "Belo Horizonte - MG" },
+  { name: "Rafael L.", city: "Fortaleza - CE" },
 ];
 
 const SalesNotification = () => {
   const [show, setShow] = useState(false);
-  const [name, setName] = useState("");
-
+  const [item, setItem] = useState(examples[0]);
   useEffect(() => {
     const showNotification = () => {
-      const randomName = names[Math.floor(Math.random() * names.length)];
-      setName(randomName);
+      setItem(examples[Math.floor(Math.random() * examples.length)]);
       setShow(true);
-      setTimeout(() => setShow(false), 4000);
+      window.setTimeout(() => setShow(false), 4300);
     };
-    const interval = setInterval(showNotification, 10000);
-    const initial = setTimeout(showNotification, 4000);
-    return () => { clearInterval(interval); clearTimeout(initial); };
+    const interval = window.setInterval(showNotification, 12000);
+    const initial = window.setTimeout(showNotification, 5000);
+    return () => { window.clearInterval(interval); window.clearTimeout(initial); };
   }, []);
 
   return (
-    <div className={`fixed bottom-4 left-4 z-50 ${show ? "animate-slide-in-notification" : "animate-slide-out-notification"}`} style={{ pointerEvents: "none" }}>
-      <div className="bg-gradient-to-r from-green-700 to-green-500 text-white px-4 py-3 rounded-2xl shadow-[0_8px_30px_rgba(22,163,74,0.28)] flex items-center gap-3 max-w-[280px] backdrop-blur-sm border border-green-300/40">
-        <div className="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0"><CheckCircle2 className="w-5 h-5 text-white" /></div>
-        <div className="text-sm leading-tight"><span className="font-bold">{name}</span><p className="text-green-50 text-xs mt-0.5">acabou de acessar a biblioteca STL! ✨</p></div>
+    <div className={`fixed bottom-4 left-4 z-50 transition-all duration-500 ${show ? "translate-x-0 opacity-100" : "-translate-x-[120%] opacity-0"}`} style={{ pointerEvents: "none" }} aria-live="polite">
+      <div className="bg-white text-slate-800 px-4 py-3 rounded-2xl shadow-[0_8px_30px_rgba(22,163,74,0.22)] flex items-start gap-3 w-[285px] border border-green-200">
+        <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center shrink-0"><CheckCircle2 className="w-5 h-5 text-green-700" /></div>
+        <div className="text-sm leading-tight min-w-0">
+          <p className="font-extrabold text-slate-900">{item.name}</p>
+          <p className="text-slate-500 text-xs mt-0.5">{item.city}</p>
+          <p className="text-green-700 text-xs font-bold mt-2 flex items-center gap-1"><PackageCheck className="w-3.5 h-3.5 shrink-0" /> Pack de Projetos 3D • acesso digital 🎉</p>
+        </div>
       </div>
     </div>
   );
 };
-
 export default SalesNotification;

@@ -390,7 +390,7 @@ const OfferSection = () => {
               <div className="px-4 py-2">
                 <img
                   src={produtoMockup}
-                  alt="Pacote +200 Biblioteca STL 3D com bônus"
+                  alt="Pacote Premium de Arquivos STL 3D com bônus"
                   className="w-full max-w-[140px] mx-auto mb-1.5"
                   loading="lazy"
                   decoding="async"
@@ -508,7 +508,7 @@ const OfferSection = () => {
               <div className="px-4 py-2 flex-1">
                 <img
                   src={produtoImg}
-                  alt="Pacote Premium +200 Biblioteca STL 3D"
+                  alt="Pacote Premium de Arquivos STL 3D"
                   className="w-[42%] mx-auto rounded-xl mb-2"
                   loading="lazy"
                   decoding="async"

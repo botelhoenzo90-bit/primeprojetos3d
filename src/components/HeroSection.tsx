@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, Flame, CarFront, House, KeyRound, ToyBrick } from "lucide-react";
+import { Star, ShieldCheck, Flame, Download, CheckCircle2, TrendingUp, Zap, Printer, CarFront, House, KeyRound, ToyBrick } from "lucide-react";
 
 const categories = [
   { icon: CarFront, title: "Veículos", color: "bg-blue-50" },
@@ -9,45 +9,58 @@ const categories = [
 ];
 
 const HeroSection = () => (
-  <section className="relative overflow-hidden bg-[#EFF7FF] pt-8 pb-8 md:pt-14">
-    <div className="max-w-5xl mx-auto px-4 relative z-10 text-center flex flex-col items-center">
-      <div className="inline-flex items-center gap-1.5 bg-[#DCEBFF] text-[#17324D] text-[10px] md:text-sm font-black uppercase tracking-wider mb-5 px-4 py-2 rounded-full shadow-sm border border-[#BFDBFE]">
-        <Flame className="w-4 h-4 text-[#FF4500]" /> +100 MIL MODELOS STL • ACESSO DIGITAL
-      </div>
-      <h1 className="text-[30px] md:text-6xl font-black text-[#17324D] leading-[1.05] mb-4 max-w-4xl tracking-tight">
-        SUA PRÓXIMA GRANDE IMPRESSÃO <span className="text-cta">COMEÇA AQUI.</span>
-      </h1>
-      <p className="text-[#334155] text-base md:text-2xl font-semibold mb-6 max-w-3xl mx-auto leading-snug">
-        Tenha mais de 100 mil modelos STL para explorar — sem perder horas procurando o que imprimir.
-      </p>
-      <div className="w-full max-w-[520px] mx-auto mb-5 rounded-3xl border border-blue-100 bg-white p-4 md:p-5 shadow-xl">
-        <div className="grid grid-cols-2 gap-3">
-          {categories.map((item) => {
+  <section className="relative overflow-hidden bg-gradient-to-b from-[#EFF7FF] via-white to-[#F6FAFF] pt-8 pb-10 md:pt-12 md:pb-14">
+    <div className="max-w-6xl mx-auto px-4 relative z-10">
+      <div className="flex flex-col items-center text-center">
+        <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white px-4 py-2 shadow-sm mb-4">
+          <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
+          <span className="text-sm md:text-base font-black text-[#17324D]">4,98 <span className="font-bold text-slate-500">(5286 AVALIAÇÕES)</span></span>
+        </div>
+        <div className="inline-flex items-center gap-1.5 bg-[#DCEBFF] text-[#17324D] text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-[#BFDBFE]">
+          <Flame className="w-4 h-4 text-[#FF4500]" /> PACK COM +100 MIL PROJETOS 3D
+        </div>
+        <h1 className="text-[30px] md:text-6xl font-black text-[#17324D] leading-[1.04] mb-4 max-w-5xl tracking-tight">
+          TRANSFORME SUA IMPRESSORA 3D EM UMA <span className="text-blue-700">MÁQUINA DE LUCRO</span> COM +DE 100 MIL PROJETOS!
+        </h1>
+        <p className="text-[#334155] text-base md:text-xl font-semibold mb-6 max-w-3xl mx-auto leading-snug">
+          Com esse PACK, você tem acesso imediato a milhares de modelos prontos para explorar, imprimir e transformar em oportunidades.
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-5xl mb-6 text-left">
+          {[
+            { icon: Download, text: "Não precisa criar do zero: baixe e prepare para imprimir." },
+            { icon: CheckCircle2, text: "Arquivos organizados para facilitar sua busca por nicho." },
+            { icon: TrendingUp, text: "Explore ideias de produtos com potencial comercial." },
+            { icon: Zap, text: "Acesso digital após a confirmação do pagamento." },
+          ].map((item, i) => {
             const Icon = item.icon;
-            return <div key={item.title} className={item.color + " rounded-2xl p-4 md:p-5 flex flex-col items-center justify-center gap-2 min-h-28"}><Icon className="w-9 h-9 md:w-11 md:h-11 text-blue-800" strokeWidth={1.7} /><span className="font-extrabold text-sm md:text-base text-[#17324D]">{item.title}</span></div>;
+            return <motion.div key={i} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }} className="rounded-2xl border border-blue-100 bg-white p-4 shadow-sm">
+              <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50"><Icon className="h-5 w-5 text-blue-700" /></div>
+              <p className="text-sm font-bold leading-snug text-[#17324D]">{item.text}</p>
+            </motion.div>;
           })}
         </div>
-        <p className="text-center text-xs md:text-sm text-slate-500 font-semibold mt-3">Uma amostra das categorias que você pode explorar</p>
-      </div>
-      <div className="w-full max-w-[360px] mx-auto mb-5 rounded-2xl bg-white border-2 border-cta shadow-xl p-5 text-center">
-        <p className="text-xs md:text-sm font-black text-[#17324D] uppercase tracking-wider mb-2">Oferta especial • último dia</p>
-        <p className="text-sm font-bold text-gray-700">Acesso digital a partir de</p>
-        <p className="text-4xl md:text-5xl font-black text-blue-700 leading-tight">R$ 9,90</p>
-        <p className="text-xs font-bold text-gray-600 mt-1">Pagamento único • sem mensalidade</p>
-        <p className="text-xs text-red-600 font-extrabold mt-3">PROMOÇÃO VÁLIDA ATÉ 21/10/2026</p>
-      </div>
-      <div className="flex flex-col items-center w-full">
-        <motion.a href="#oferta" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-8 md:px-10 py-5 rounded-full text-center transition-all uppercase tracking-wide mb-2">
-          QUERO ACESSAR OS MODELOS STL
-        </motion.a>
-        <p className="text-xs md:text-sm text-[#17324D] font-semibold mb-4 flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-green-600" /> Garantia de 7 dias • Acesso após confirmação</p>
-        <div className="flex items-center gap-1 mb-2">
-          <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[#FFD700] text-[#D4A900]" />)}</div>
-          <span className="text-[10px] md:text-xs font-bold text-gray-600 uppercase">Explore milhares de possibilidades em 3D</span>
+        <div className="w-full max-w-3xl mx-auto mb-6 rounded-3xl border border-blue-100 bg-white p-4 md:p-6 shadow-xl">
+          <div className="flex items-center justify-between gap-3 mb-4">
+            <div className="text-left"><p className="text-xs uppercase tracking-wider font-black text-blue-700">Biblioteca de projetos</p><h2 className="text-lg md:text-2xl font-black text-[#17324D]">Um universo de ideias para imprimir</h2></div>
+            <div className="hidden sm:flex items-center gap-2 rounded-full bg-green-50 text-green-700 px-3 py-2 text-xs font-extrabold"><ShieldCheck className="w-4 h-4" /> Acesso digital</div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {categories.map((item) => {
+              const Icon = item.icon;
+              return <div key={item.title} className={item.color + " rounded-2xl p-4 md:p-5 flex flex-col items-center justify-center gap-2 min-h-28 border border-white"}>
+                <Icon className="w-9 h-9 md:w-11 md:h-11 text-blue-800" strokeWidth={1.7} />
+                <span className="font-extrabold text-sm md:text-base text-[#17324D]">{item.title}</span>
+              </div>;
+            })}
+          </div>
+          <p className="text-center text-xs md:text-sm text-slate-500 font-semibold mt-3">Exemplos de categorias para inspirar seu próximo projeto</p>
         </div>
+        <motion.a href="#oferta" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block w-full md:w-auto bg-[#FF4500] hover:bg-[#E63E00] text-white font-black text-sm md:text-xl px-8 md:px-10 py-5 rounded-full text-center shadow-lg transition-all uppercase tracking-wide mb-2">
+          QUERO ACESSAR O PACK AGORA
+        </motion.a>
+        <p className="text-xs md:text-sm text-[#17324D] font-semibold flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-green-600" /> Garantia de 7 dias • Acesso após confirmação</p>
       </div>
     </div>
   </section>
 );
-
 export default HeroSection;

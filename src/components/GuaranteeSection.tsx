@@ -12,7 +12,7 @@ const GuaranteeSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto text-center"
         >
-          <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
+          <span className="inline-flex items-center gap-1.5 bg-[#DCEBFF] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm border border-[#BFDBFE]">
             <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Risco Zero para você
           </span>
           <motion.img

@@ -4,7 +4,7 @@ import garantiaSelo from "@/assets/garantia-selo.png";
 
 const GuaranteeSection = () => {
   return (
-    <section className="py-12 md:py-16 bg-[#22c55e]/10">
+    <section className="py-12 md:py-16 bg-[#EFF7FF]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,9 +27,7 @@ const GuaranteeSection = () => {
             Garantia de <span className="text-cta">7 dias</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Se em até 7 dias você sentir que o conteúdo não é para você, basta
-            enviar um e-mail e devolvemos 100% do seu investimento. Sem perguntas,
-            sem burocracia. O risco é todo nosso!
+            Você tem 7 dias para explorar o material. Se a compra não fizer sentido para você, solicite o reembolso conforme as condições da plataforma e receba 100% do valor elegível. Uma forma de conhecer o conteúdo com mais tranquilidade.
           </p>
           <motion.a
             href="#oferta"
@@ -37,7 +35,7 @@ const GuaranteeSection = () => {
             whileTap={{ scale: 0.98 }}
             className="inline-block w-full md:w-auto bg-[#FF4500] hover:bg-[#E63E00] text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-2 animate-pulse-soft"
           >
-            TESTAR SEM RISCO POR 7 DIAS! →
+            QUERO ACESSAR COM GARANTIA! →
           </motion.a>
           <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5 justify-center">
             🛡️ Garantia de 7 dias · Acesso imediato por e-mail

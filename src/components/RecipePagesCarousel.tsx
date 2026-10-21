@@ -57,10 +57,10 @@ const RecipePagesCarousel = () => {
           whileTap={{ scale: 0.98 }}
           className="inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide cursor-pointer animate-pulse-soft"
         >
-          QUERO TODAS AS RECEITAS AGORA! 🔥
+          QUERO EXPLORAR A BIBLIOTECA STL! 🔥
         </motion.a>
         <p className="text-xs md:text-sm text-green-title font-semibold mt-2 flex items-center justify-center gap-1.5">
-          🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+          🛡️ Garantia de 7 dias · Acesso digital imediato
         </p>
       </div>
     </section>

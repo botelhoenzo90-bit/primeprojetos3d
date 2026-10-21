@@ -30,7 +30,7 @@ const items = [
 
 const DeliverySection = () => {
   return (
-    <section className="py-12 md:py-16 bg-cream border-b border-green-100">
+    <section className="py-12 md:py-16 bg-cream border-b border-blue-100">
       <div className="container mx-auto px-4 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ const DeliverySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-white rounded-2xl p-6 border border-green-100 shadow-sm text-center flex flex-col items-center"
+              className="bg-white rounded-2xl p-6 border border-blue-100 shadow-sm text-center flex flex-col items-center"
             >
               <div className="text-4xl mb-3">{item.emoji}</div>
               <h3 className="text-base md:text-lg font-extrabold text-green-title mb-1">

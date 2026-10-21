@@ -3,11 +3,11 @@ import { X, ArrowDown } from "lucide-react";
 
 const ProblemSection = () => {
   const problems = [
-    "Sem tempo para preparar comida saudável",
-    "Você se cansou de improvisar refeições todos os dias",
-    "Acaba comendo besteira pela praticidade",
-    "Tenta comer melhor, mas nunca consegue manter",
-    "Faz sempre as mesmas receitas na airfryer",
+    "Perde horas procurando arquivos STL em sites e grupos",
+    "Encontra modelos incompletos, mal organizados ou difíceis de localizar",
+    "Gasta com arquivos avulsos sem montar uma biblioteca diversificada",
+    "Fica sem ideias para novos produtos, presentes ou colecionáveis",
+    "Deixa a impressora parada porque não sabe o que imprimir",
   ];
 
   return (
@@ -44,7 +44,7 @@ const ProblemSection = () => {
           className="flex flex-col items-center mt-8"
         >
           <p className="text-green-title font-black text-lg md:text-xl mb-2 text-center">
-            A solução está logo abaixo 👇
+            Sua próxima ideia pode estar na biblioteca 👇
           </p>
           <ArrowDown className="w-8 h-8 text-cta animate-bounce" />
         </motion.div>

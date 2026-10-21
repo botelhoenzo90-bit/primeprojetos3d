@@ -24,10 +24,10 @@ const TestimonialsSection = () => {
             <Star className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Experiências com arquivos digitais
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
-            Veja quem já <span className="text-cta">descobriu novas possibilidades</span> com impressão 3D
+            Inspire-se para <span className="text-cta">criar seu próximo projeto</span> em 3D
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-medium">
-            Explore as possibilidades de uma biblioteca com modelos para diferentes projetos:
+            Veja ideias e exemplos visuais para explorar diferentes tipos de impressão.
           </p>
         </motion.div>
       </div>
@@ -68,10 +68,10 @@ const TestimonialsSection = () => {
             ))}
           </div>
           <p className="text-sm md:text-base font-bold text-green-title">
-            Modelos para explorar <span className="text-cta">diferentes categorias</span>
+            Modelos STL para explorar <span className="text-cta">novas categorias</span>
           </p>
           <p className="text-xs md:text-sm text-muted-foreground mt-1">
-            Encontre inspiração para seus próximos projetos
+            Descubra possibilidades para suas próximas impressões
           </p>
         </motion.div>
       </div>

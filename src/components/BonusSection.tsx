@@ -52,7 +52,7 @@ const BonusSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">{b.desc}</p>
 
                 <div className="mt-auto flex flex-col items-center gap-1">
-                  <span className="text-red-500 font-bold line-through text-lg">R$ 67,00</span>
+                  <span className="text-red-500 font-bold line-through text-lg">Bônus incluído</span>
                   <span className="text-emerald-600 font-extrabold text-xl bg-emerald-50 px-4 py-1 rounded-full">GRÁTIS</span>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const BonusSection = () => {
             QUERO TUDO ISSO AGORA! 🎁
           </motion.a>
           <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5">
-            🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+            🛡️ Garantia de 7 dias · Acesso digital imediato
           </p>
         </div>
       </div>

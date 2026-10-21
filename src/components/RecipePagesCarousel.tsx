@@ -13,7 +13,7 @@ const doubled = [...pages, ...pages, ...pages, ...pages];
 
 const RecipePagesCarousel = () => {
   return (
-    <section className="pb-8 md:pb-12 bg-[#22c55e]/10 overflow-hidden">
+    <section className="pb-8 md:pb-12 bg-[#EFF7FF] overflow-hidden">
       <div className="container mx-auto px-4 mb-6 mt-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ const RecipePagesCarousel = () => {
               <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
                 <img
                   src={img}
-                  alt={`Página de receita ${(i % pages.length) + 1}`}
+                  alt={`Prévia da biblioteca STL ${(i % pages.length) + 1}`}
                   className="w-64 h-auto object-cover"
                   loading="lazy"
                   decoding="async"

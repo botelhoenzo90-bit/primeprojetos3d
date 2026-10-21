@@ -30,7 +30,7 @@ const SalesNotification = () => {
         <div className="text-sm leading-tight min-w-0">
           <p className="font-extrabold text-slate-900">{item.name}</p>
           <p className="text-slate-500 text-xs mt-0.5">{item.city}</p>
-          <p className="text-green-700 text-xs font-bold mt-2 flex items-center gap-1"><PackageCheck className="w-3.5 h-3.5 shrink-0" /> Pack de Projetos 3D • acesso digital 🎉</p>
+          <p className="text-green-700 text-xs font-bold mt-2 flex items-center gap-1"><PackageCheck className="w-3.5 h-3.5 shrink-0" /> Adquiriu o Pack de Projetos 3D! 🎉</p><p className="text-[9px] text-slate-400 mt-1">Exemplo visual — conecte às vendas reais</p>
         </div>
       </div>
     </div>

@@ -13,10 +13,10 @@ const NutriSection = () => {
           className="text-center"
         >
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-            <Leaf className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Receitas da Nutri
+            <Leaf className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> PARA QUEM CRIA EM 3D
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-6 tracking-tight">
-            Juliana <span className="text-cta">Alves</span>
+            Sua impressora <span className="text-cta">pode ir além</span>
           </h2>
 
           <motion.div
@@ -35,7 +35,7 @@ const NutriSection = () => {
           </motion.div>
 
           <p className="text-green-title text-base md:text-xl font-medium leading-relaxed max-w-2xl mx-auto px-2">
-            Minhas receitas de <span className="font-bold text-cta">airfryer</span> sempre fizeram sucesso na internet. Decidi reunir mais de <span className="font-bold text-cta">200 receitas práticas</span> em um só lugar para te ajudar a cozinhar melhor, mais rápido e com muito sabor.
+            Uma boa biblioteca digital ajuda você a explorar diferentes ideias sem começar cada projeto do zero. Tenha mais variedade para imprimir, personalizar, colecionar e avaliar quais tipos de peças fazem sentido para seus objetivos.
           </p>
         </motion.div>
       </div>

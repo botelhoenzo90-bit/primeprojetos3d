@@ -3,16 +3,16 @@ import { UtensilsCrossed, ChefHat, Flame, Timer, ListChecks, Gift, PiggyBank, Co
 import geladeiraImg from "@/assets/produto-mockup.png";
 
 const benefits = [
-  { icon: UtensilsCrossed, title: "+200 receitas práticas na airfryer" },
-  { icon: ChefHat, title: "Pratos completos para almoço, jantar e sobremesa" },
-  { icon: CookingPot, title: "Receitas econômicas e fáceis de fazer" },
-  { icon: Flame, title: "Variações para não enjoar do cardápio" },
-  { icon: Timer, title: "Prontas em até 20 minutos" },
-  { icon: ListChecks, title: "Passo a passo do preparo" },
-  { icon: Gift, title: "3 Bônus inclusos" },
-  { icon: PiggyBank, title: "Economizar dinheiro evitando delivery" },
-  { icon: Smile, title: "Mais praticidade para a sua rotina" },
-  { icon: Heart, title: "Nunca mais ficar sem ideias para cozinhar" },
+  { icon: UtensilsCrossed, title: "+100 mil arquivos STL organizados por categorias" },
+  { icon: ChefHat, title: "Modelos para decoração, colecionáveis, utilidades e presentes" },
+  { icon: CookingPot, title: "Ideias para imprimir, personalizar e explorar novos nichos" },
+  { icon: Flame, title: "Variedade para sua impressora não ficar sem projetos" },
+  { icon: Timer, title: "Arquivos digitais prontos para preparar no fatiador" },
+  { icon: ListChecks, title: "Categorias para facilitar a busca por modelos" },
+  { icon: Gift, title: "Coleções bônus inclusas no plano Premium" },
+  { icon: PiggyBank, title: "Reduzir o tempo gasto procurando arquivos avulsos" },
+  { icon: Smile, title: "Mais praticidade para planejar suas impressões" },
+  { icon: Heart, title: "Tenha novas ideias para imprimir durante o ano" },
 ];
 
 const container = {
@@ -39,7 +39,7 @@ const BenefitsSection = () => {
             <BookOpen className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Guia de Aprendizado
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3 tracking-tight">
-            O que você vai <span className="text-cta">aprender:</span>
+            O que você vai <span className="text-cta">encontrar:</span>
           </h2>
         </motion.div>
 
@@ -72,7 +72,7 @@ const BenefitsSection = () => {
         >
             <img
               src={geladeiraImg}
-              alt="Mockup do produto de receitas na airfryer"
+              alt="Biblioteca digital de arquivos STL 3D"
               className="w-full max-w-md rounded-2xl shadow-xl border-4 border-primary"
             loading="lazy"
           />
@@ -85,7 +85,7 @@ const BenefitsSection = () => {
             whileTap={{ scale: 0.98 }}
             className="inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-2 animate-pulse-soft"
           >
-            QUERO COZINHAR NA AIRFRYER! 🍊
+            QUERO EXPLORAR A BIBLIOTECA STL!
           </motion.a>
           <p className="text-xs md:text-sm text-green-title font-semibold flex items-center justify-center gap-1.5">
             🛡️ Garantia de 7 dias · Acesso imediato por e-mail

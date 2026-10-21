@@ -20,6 +20,9 @@ const premiumBonusItems = [
   "Pack de Veículos 3D",
   "Chaveiros Personalizados 3D",
   "Modelos Flexíveis e Articulados",
+  "Coleção de Decoração e Utilidades",
+  "Colecionáveis e Personagens",
+  "Ideias Criativas para Presentes",
 ];
 
 const basicReceberItems = [
@@ -109,10 +112,10 @@ const OfferSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
           >
-            Garanta seu acesso à <span className="text-cta">biblioteca STL</span>
+            Garanta sua biblioteca STL <span className="text-cta">com 6 bônus extras</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
-            🚀 Acesse uma coleção digital de modelos STL para explorar novas ideias, ampliar seu acervo e manter sua impressora 3D com projetos variados.
+            🚀 Tenha mais de 100 mil modelos STL para explorar e leve 6 coleções bônus no pacote Premium. Escolha seu plano e confira todos os detalhes antes de finalizar.
           </p>
           <div className="max-w-2xl mx-auto grid grid-cols-1 gap-6">
             {/* PLANO PREMIUM */}
@@ -139,7 +142,7 @@ const OfferSection = () => {
                   </h2>
 
                   <p className="text-center text-sm text-foreground font-semibold mb-3">
-                    Oferta digital por tempo limitado, conforme disponibilidade no checkout.
+                    Último dia da promoção: 21/10/2026. Confira as condições do plano no checkout.
                   </p>
 
                   <img
@@ -182,7 +185,7 @@ const OfferSection = () => {
                   <div className="border-t border-dashed border-sage my-3" />
 
                   <h3 className="text-center font-extrabold text-green-title text-sm uppercase tracking-wider mb-3">
-                    Bônus Inclusos:
+                    6 Bônus Inclusos:
                   </h3>
                   <div className="flex justify-center mb-4">
                     <ul className="space-y-2 inline-flex flex-col">

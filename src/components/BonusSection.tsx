@@ -12,7 +12,7 @@ const bonuses = [
 
 const BonusSection = () => {
   return (
-    <section className="py-12 md:py-16 bg-[#22c55e]/10">
+    <section className="py-12 md:py-16 bg-[#EFF7FF]">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,10 +23,10 @@ const BonusSection = () => {
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
             <Gift className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> BÔNUS EXCLUSIVOS
           </span>
-          <h2 className="text-4xl md:text-6xl font-black text-[#022C22] leading-tight tracking-tight mb-3">
+          <h2 className="text-4xl md:text-6xl font-black text-[#17324D] leading-tight tracking-tight mb-3">
             Além da biblioteca principal, <span className="text-[#16a34a]">leve coleções extras!</span>
           </h2>
-          <p className="text-[#064E3B] text-base md:text-xl font-medium max-w-2xl mx-auto">
+          <p className="text-[#334155] text-base md:text-xl font-medium max-w-2xl mx-auto">
             Coleções complementares para explorar novos estilos, criar variedade e ampliar seu acervo 3D.
           </p>
         </motion.div>
@@ -45,7 +45,7 @@ const BonusSection = () => {
               <img src={b.img} alt={b.title} className="w-full aspect-square object-cover object-top" loading="lazy" decoding="async" width={512} height={512} />
 
               <div className="p-5 text-center flex flex-col flex-1">
-                <span className="inline-block bg-green-highlight text-white font-extrabold text-xs px-3 py-1 rounded-full mb-2 tracking-wide">
+                <span className="inline-block bg-blue-700 text-white font-extrabold text-xs px-3 py-1 rounded-full mb-2 tracking-wide">
                   BÔNUS
                 </span>
                 <h3 className="font-bold text-lg text-green-title mb-1">{b.title}</h3>
@@ -53,7 +53,7 @@ const BonusSection = () => {
 
                 <div className="mt-auto flex flex-col items-center gap-1">
                   <span className="text-red-500 font-bold line-through text-lg">Bônus incluído</span>
-                  <span className="text-emerald-600 font-extrabold text-xl bg-emerald-50 px-4 py-1 rounded-full">GRÁTIS</span>
+                  <span className="text-blue-700 font-extrabold text-xl bg-blue-50 px-4 py-1 rounded-full">GRÁTIS</span>
                 </div>
               </div>
             </motion.div>
@@ -66,10 +66,10 @@ const BonusSection = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto mt-8 bg-gradient-to-r from-[#FFD700]/20 via-orange-100 to-[#FFD700]/20 border-2 border-dashed border-[#FF4500] rounded-2xl px-6 py-4 text-center"
         >
-          <p className="text-base md:text-xl font-black text-[#022C22] uppercase tracking-wide flex items-center justify-center gap-2 flex-wrap">
+          <p className="text-base md:text-xl font-black text-[#17324D] uppercase tracking-wide flex items-center justify-center gap-2 flex-wrap">
             🎁 Todos esses bônus <span className="text-[#FF4500]">100% GRÁTIS!</span>
           </p>
-          <p className="text-xs md:text-sm text-[#064E3B] font-semibold mt-1">
+          <p className="text-xs md:text-sm text-[#334155] font-semibold mt-1">
             Os bônus incluídos no plano Premium são liberados junto com o acesso, sem cobrança adicional.
           </p>
         </motion.div>
@@ -84,7 +84,7 @@ const BonusSection = () => {
           >
             QUERO TUDO ISSO AGORA! 🎁
           </motion.a>
-          <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5">
+          <p className="text-xs md:text-sm text-[#334155] font-semibold flex items-center justify-center gap-1.5">
             🛡️ Garantia de 7 dias · Acesso digital imediato
           </p>
         </div>

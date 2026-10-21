@@ -20,11 +20,11 @@ const BonusSection = () => {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
+          <span className="inline-flex items-center gap-1.5 bg-[#DCEBFF] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm border border-[#BFDBFE]">
             <Gift className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> BÔNUS EXCLUSIVOS
           </span>
           <h2 className="text-4xl md:text-6xl font-black text-[#17324D] leading-tight tracking-tight mb-3">
-            Além da biblioteca principal, <span className="text-[#16a34a]">leve coleções extras!</span>
+            Além da biblioteca principal, <span className="text-blue-700">leve coleções extras!</span>
           </h2>
           <p className="text-[#334155] text-base md:text-xl font-medium max-w-2xl mx-auto">
             Coleções complementares para explorar novos estilos, criar variedade e ampliar seu acervo 3D.

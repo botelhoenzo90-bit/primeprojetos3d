@@ -6,19 +6,19 @@ const items = [
     icon: Smartphone,
     emoji: "📱",
     title: "No Celular",
-    desc: "Acesse onde estiver",
+    desc: "Consulte sua coleção onde estiver",
   },
   {
     icon: Monitor,
     emoji: "💻",
     title: "No Computador",
-    desc: "Tela grande pra cozinhar",
+    desc: "Organize e encontre modelos",
   },
   {
     icon: Printer,
     emoji: "🖨️",
     title: "Para Imprimir",
-    desc: "Seu caderno de receitas",
+    desc: "Arquivos STL para fatiar e imprimir",
   },
   {
     icon: Zap,
@@ -39,13 +39,13 @@ const DeliverySection = () => {
           className="text-center mb-10"
         >
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-            ✨ Acesso Imediato
+            ACESSO DIGITAL
           </span>
           <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mt-4">
-            Como você vai <span className="text-cta">RECEBER</span>:
+            Como você vai <span className="text-cta">ACESSAR</span>:
           </h2>
           <p className="text-muted-foreground font-bold text-base md:text-lg mt-2">
-            ✨ Acesso liberado na hora no seu email cadastrado
+            Receba as instruções de acesso após a confirmação do pagamento
           </p>
         </motion.div>
 

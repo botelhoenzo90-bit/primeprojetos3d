@@ -59,7 +59,7 @@ const OfferSection = () => {
         // @ts-ignore
         window.fbq('track', 'InitiateCheckout', {
           content_name: planName,
-          content_category: 'Receitas Airfryer',
+          content_category: 'Arquivos STL 3D',
           value: value,
           currency: 'BRL',
           num_items: 1,
@@ -100,7 +100,7 @@ const OfferSection = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-              <Crown className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Oferta Exclusiva
+              <Crown className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Oferta Especial
             </span>
           </div>
           <motion.h2
@@ -134,7 +134,7 @@ const OfferSection = () => {
                       Pacote Premium
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-green-600 mt-1 mb-2">
+                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-blue-700 mt-1 mb-2">
                     Biblioteca STL 3D
                   </h2>
 
@@ -153,10 +153,10 @@ const OfferSection = () => {
                   <div className="text-center mb-4">
                     <span className="text-red-600 font-extrabold line-through text-3xl md:text-4xl block mb-0.5">R$ 97,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
-                    <div className="text-5xl md:text-6xl font-extrabold text-green-600">
+                    <div className="text-5xl md:text-6xl font-extrabold text-blue-700">
                       R$ 29<span className="text-3xl">,90</span>
                     </div>
-                    <div className="inline-block bg-green-100 text-green-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
+                    <div className="inline-block bg-blue-50 text-blue-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
                       Você economiza R$ 67,10!
                     </div>
                   </div>
@@ -171,7 +171,7 @@ const OfferSection = () => {
                       {premiumReceberItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
                           <div className="w-5 h-5 rounded-full bg-green-500/15 flex items-center justify-center flex-shrink-0">
-                            <Check className="w-3.5 h-3.5 text-green-600" />
+                            <Check className="w-3.5 h-3.5 text-blue-700" />
                           </div>
                           <span className="text-sm text-foreground">{item}</span>
                         </li>
@@ -204,7 +204,7 @@ const OfferSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Biblioteca STL 3D - Premium')}
-                        className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
+                        className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         SIM! QUERO ACESSAR A BIBLIOTECA STL
@@ -231,8 +231,8 @@ const OfferSection = () => {
                       e muito mais...
                     </p>
 
-                    <div className="mt-3 border border-green-500/40 rounded-xl p-2.5 text-center bg-green-500/10">
-                      <p className="text-sm font-bold text-green-600 flex items-center justify-center gap-1.5">
+                    <div className="mt-3 border border-blue-500/40 rounded-xl p-2.5 text-center bg-blue-500/10">
+                      <p className="text-sm font-bold text-blue-700 flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
                         Acesso imediato após a compra!
                       </p>
@@ -255,7 +255,7 @@ const OfferSection = () => {
                 <div className="p-5 md:p-6 flex flex-col flex-1">
                   <div className="text-center mb-1">
                     <span className="inline-block bg-gray-200 text-gray-600 text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-gray-300">
-                      Pacote Básico
+                      Pacote Inicial
                     </span>
                   </div>
                   <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
@@ -265,7 +265,7 @@ const OfferSection = () => {
                   <div className="text-center mb-4 mt-2">
                     <span className="text-red-600 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
-                    <div className="text-5xl md:text-6xl font-extrabold text-green-600">
+                    <div className="text-5xl md:text-6xl font-extrabold text-blue-700">
                       R$ 9<span className="text-3xl">,90</span>
                     </div>
                   </div>
@@ -331,8 +331,8 @@ const OfferSection = () => {
                       decoding="async"
                     />
 
-                    <div className="mt-3 border border-green-500/40 rounded-xl p-2.5 text-center bg-green-500/10">
-                      <p className="text-sm font-bold text-green-600 flex items-center justify-center gap-1.5">
+                    <div className="mt-3 border border-blue-500/40 rounded-xl p-2.5 text-center bg-blue-500/10">
+                      <p className="text-sm font-bold text-blue-700 flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
                         Acesso imediato após a compra!
                       </p>
@@ -497,7 +497,7 @@ const OfferSection = () => {
               <div className="bg-gradient-to-r from-red-600 to-cta text-white py-1.5 px-3 text-center flex-shrink-0">
                 <div className="inline-flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span className="text-[13px] font-black uppercase tracking-wider">Oferta Exclusiva Relâmpago!</span>
+                  <span className="text-[13px] font-black uppercase tracking-wider">Oferta Especial Relâmpago!</span>
                   <Sparkles className="w-3.5 h-3.5" />
                 </div>
                 <p className="text-[10px] font-semibold opacity-95 leading-tight">
@@ -517,10 +517,10 @@ const OfferSection = () => {
                 <div className="text-center mb-2">
                   <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
                   <p className="text-[10px] text-foreground font-semibold leading-tight">por apenas</p>
-                  <div className="text-3xl font-extrabold text-green-600 leading-none">
+                  <div className="text-3xl font-extrabold text-blue-700 leading-none">
                     R$ 19<span className="text-lg">,90</span>
                   </div>
-                  <div className="inline-block bg-green-100 text-green-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
+                  <div className="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
                     Economize R$ 77,10!
                   </div>
                 </div>
@@ -557,7 +557,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Biblioteca STL 3D - Upsell Premium 19,90')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
+                  className="block bg-blue-600 hover:bg-blue-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 19,90
@@ -584,8 +584,8 @@ const OfferSection = () => {
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="border border-green-500/40 rounded-lg px-1.5 py-1 text-center bg-green-500/10 flex-1">
-                    <p className="text-[9px] font-bold text-green-600 flex items-center justify-center gap-0.5 leading-tight">
+                  <div className="border border-blue-500/40 rounded-lg px-1.5 py-1 text-center bg-blue-500/10 flex-1">
+                    <p className="text-[9px] font-bold text-blue-700 flex items-center justify-center gap-0.5 leading-tight">
                       <Zap className="w-2.5 h-2.5" />
                       Acesso imediato!
                     </p>

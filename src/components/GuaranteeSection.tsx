@@ -38,7 +38,7 @@ const GuaranteeSection = () => {
             QUERO ACESSAR COM GARANTIA! →
           </motion.a>
           <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5 justify-center">
-            🛡️ Garantia de 7 dias · Acesso imediato por e-mail
+            🛡️ Garantia de 7 dias · Acesso digital imediato
           </p>
         </motion.div>
       </div>

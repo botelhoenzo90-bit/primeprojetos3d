@@ -48,10 +48,10 @@ const HeroSection = () => {
           </p>
           <p className="text-[17px] font-bold text-gray-700 flex items-baseline justify-center gap-1.5 flex-wrap">
             por apenas
-            <span className="text-green-600 font-black text-4xl leading-none">R$ 9,90</span>
+            <span className="text-blue-700 font-black text-4xl leading-none">R$ 9,90</span>
           </p>
 
-          <div className="mt-2 inline-flex items-center gap-1 bg-green-50 text-green-700 text-[11px] font-bold px-2.5 py-1 rounded-full border border-green-200">
+          <div className="mt-2 inline-flex items-center gap-1 bg-blue-50 text-blue-700 text-[11px] font-bold px-2.5 py-1 rounded-full border border-blue-200">
             <span className="font-black">Acesso</span> digital · pagamento único
           </div>
         </motion.div>

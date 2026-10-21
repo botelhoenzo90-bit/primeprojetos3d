@@ -1,83 +1,36 @@
-import recipe1 from "@/assets/airfryer-recipe-1.png";
-import recipe2 from "@/assets/airfryer-recipe-2.png";
-import recipe3 from "@/assets/airfryer-recipe-3.png";
-import recipe4 from "@/assets/airfryer-recipe-4.png";
-import recipe5 from "@/assets/airfryer-recipe-5.png";
-import recipe6 from "@/assets/airfryer-recipe-6.png";
-import recipe7 from "@/assets/airfryer-recipe-7.png";
-import recipe8 from "@/assets/airfryer-recipe-8.png";
-import recipe9 from "@/assets/airfryer-recipe-9.png";
-import recipe10 from "@/assets/airfryer-recipe-10.png";
 import { motion } from "framer-motion";
-import { ChefHat } from "lucide-react";
+import { CarFront, House, KeyRound, ToyBrick, Gamepad2, Lamp, Sparkles, Box } from "lucide-react";
 
-const images = [
-  { src: recipe1, label: "Bife com batatas douradas", time: "20 min", badge: "Douradinho sem sujar" },
-  { src: recipe2, label: "Omelete cremoso recheado", time: "18 min", badge: "Perfeito para um jantar rápido" },
-  { src: recipe3, label: "Salmão com legumes", time: "17 min", badge: "Suculento por dentro" },
-  { src: recipe4, label: "Frango cítrico crocante", time: "22 min", badge: "Casquinha crocante" },
-  { src: recipe5, label: "Costelinha barbecue", time: "25 min", badge: "Finalização caramelizada" },
-  { src: recipe6, label: "Berinjela gratinada", time: "19 min", badge: "Gratinada e prática" },
-  { src: recipe7, label: "Frango com abóbora assada", time: "20 min", badge: "Refeição completa" },
-  { src: recipe8, label: "Pão caseiro crocante", time: "25 min", badge: "Casca dourada por fora" },
-  { src: recipe9, label: "Bolo de chocolate", time: "22 min", badge: "Úmido e fofinho" },
-  { src: recipe10, label: "Lasanha gratinada", time: "30 min", badge: "Queijo derretido perfeito" },
+const models = [
+  { icon: CarFront, title: "Veículos", desc: "Carros, motos e muito mais", color: "from-blue-100 to-sky-50" },
+  { icon: House, title: "Decoração", desc: "Detalhes para seus espaços", color: "from-orange-100 to-amber-50" },
+  { icon: KeyRound, title: "Chaveiros", desc: "Peças para personalizar", color: "from-violet-100 to-purple-50" },
+  { icon: ToyBrick, title: "Articulados", desc: "Modelos com movimento", color: "from-emerald-100 to-green-50" },
+  { icon: Gamepad2, title: "Colecionáveis", desc: "Para montar sua coleção", color: "from-rose-100 to-pink-50" },
+  { icon: Lamp, title: "Utilidades", desc: "Ideias úteis para o dia a dia", color: "from-yellow-100 to-amber-50" },
+  { icon: Sparkles, title: "Presentes criativos", desc: "Projetos com personalidade", color: "from-cyan-100 to-blue-50" },
+  { icon: Box, title: "Novas ideias", desc: "Descubra o que imprimir", color: "from-slate-100 to-gray-50" },
 ];
+const doubled = [...models, ...models];
 
-const doubled = [...images, ...images];
-
-const RecipeCarousel = () => {
-  return (
-    <section className="py-8 bg-[#EFF7FF] overflow-hidden">
-      <div className="container mx-auto px-4 mb-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="text-center">
-            <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
-              <ChefHat className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> Modelos para Impressão 3D
-            </span>
-            <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3 tracking-tight">
-              Veja algumas das possibilidades que <span className="text-cta">você pode imprimir:</span>
-            </h2>
-            <p className="text-green-title text-base md:text-xl font-medium max-w-2xl mx-auto">
-              Explore diferentes estilos de modelos digitais para inspirar suas próximas impressões.
-            </p>
-          </div>
-        </motion.div>
+const RecipeCarousel = () => (
+  <section className="py-8 md:py-10 bg-[#EFF7FF] overflow-hidden">
+    <div className="container mx-auto px-4 mb-5">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+        <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-1.5 rounded-full border border-[#FFD700]">MODELOS PARA IMPRESSÃO 3D</span>
+        <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3">O que você pode <span className="text-cta">criar em 3D?</span></h2>
+        <p className="text-[#334155] text-base md:text-lg font-medium max-w-2xl mx-auto">Explore categorias, encontre inspiração e escolha seu próximo projeto.</p>
+      </motion.div>
+    </div>
+    <div className="relative">
+      <div className="flex animate-marquee" style={{ width: `${doubled.length * 240}px` }}>
+        {doubled.map((model, i) => {
+          const Icon = model.icon;
+          return <div key={i} className="flex-shrink-0 w-56 mx-2"><div className="rounded-2xl overflow-hidden shadow-lg bg-white border border-blue-100"><div className={`h-44 bg-gradient-to-br ${model.color} flex items-center justify-center`}><div className="w-24 h-24 rounded-3xl bg-white/80 shadow-md flex items-center justify-center"><Icon className="w-14 h-14 text-blue-700" strokeWidth={1.6} /></div></div><div className="p-4 text-center"><p className="font-extrabold text-[#17324D] text-base">{model.title}</p><p className="text-slate-500 text-xs mt-1">{model.desc}</p></div></div></div>;
+        })}
       </div>
-
-      <div className="relative">
-        <div className="flex animate-marquee" style={{ width: `${doubled.length * 280}px` }}>
-          {doubled.map((img, i) => (
-            <div key={i} className="flex-shrink-0 w-64 mx-2">
-              <div className="rounded-2xl overflow-hidden shadow-lg bg-white">
-                <img
-                  src={img.src}
-                  alt={`Modelo de impressão 3D: ${img.label}`}
-                  className="w-64 h-64 object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="p-3 text-center">
-                  <p className="font-bold text-green-title text-sm">{img.label}</p>
-                  <p className="text-muted-foreground text-xs mt-0.5">⏱️ Modelo para seu próximo projeto</p>
-                  <span className="inline-block text-xs bg-cta/10 text-cta font-semibold px-2 py-0.5 rounded-full mt-1">
-                    🔥 {img.badge}
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default RecipeCarousel;

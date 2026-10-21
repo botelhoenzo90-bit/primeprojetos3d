@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, Flame, Download, CheckCircle2, TrendingUp, Zap, Printer, CarFront, House, KeyRound, ToyBrick } from "lucide-react";
+import { Star, ShieldCheck, Flame, Download, CheckCircle2, TrendingUp, Zap, CarFront, House, KeyRound, ToyBrick } from "lucide-react";
 
 const categories = [
   { icon: CarFront, title: "Veículos", color: "bg-blue-50" },
@@ -29,7 +29,7 @@ const HeroSection = () => (
           {[
             { icon: Download, text: "Não precisa criar do zero: baixe e prepare para imprimir." },
             { icon: CheckCircle2, text: "Arquivos organizados para facilitar sua busca por nicho." },
-            { icon: TrendingUp, text: "Explore ideias de produtos com potencial comercial." },
+            { icon: TrendingUp, text: "Encontre ideias para testar e anunciar em marketplaces como Shopee e OLX." },
             { icon: Zap, text: "Acesso digital após a confirmação do pagamento." },
           ].map((item, i) => {
             const Icon = item.icon;

@@ -14,7 +14,7 @@ const HeroSection = () => (
       <div className="flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white px-4 py-2 shadow-sm mb-4">
           <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
-          <span className="text-sm md:text-base font-black text-[#17324D]">4,98 <span className="font-bold text-slate-500">(5286 AVALIAÇÕES)</span></span>
+          <span className="text-sm md:text-base font-black text-[#17324D]">IDEIAS PARA SUA PRÓXIMA IMPRESSÃO</span>
         </div>
         <div className="inline-flex items-center gap-1.5 bg-[#DCEBFF] text-[#17324D] text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-[#BFDBFE]">
           <Flame className="w-4 h-4 text-[#FF4500]" /> BIBLIOTECA DIGITAL • +100 MIL MODELOS 3D

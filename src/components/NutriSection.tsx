@@ -23,15 +23,15 @@ const NutriSection = () => {
     <section className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
-          <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 text-xs md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-blue-100">POR DENTRO DA PLATAFORMA</span>
-          <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3">Explore a biblioteca <span className="text-blue-700">na prática.</span></h2>
-          <p className="text-slate-600 text-base md:text-xl max-w-2xl mx-auto">Clique nas categorias ou pesquise para ver uma demonstração interativa de como os modelos podem ser organizados.</p>
+          <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 text-xs md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-blue-100">BIBLIOTECA ORGANIZADA</span>
+          <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3">Entre, escolha uma categoria e encontre <span className="text-blue-700">sua próxima ideia.</span></h2>
+          <p className="text-slate-600 text-base md:text-xl max-w-2xl mx-auto">Esta prévia interativa ilustra como navegar por categorias e filtrar ideias de produtos com mais facilidade.</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-5xl mx-auto rounded-3xl border border-blue-100 bg-[#F4F8FC] p-3 md:p-6 shadow-2xl">
           <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white">
             <div className="flex items-center gap-2 px-4 py-3 bg-[#17324D] text-white">
               <span className="w-2.5 h-2.5 rounded-full bg-red-400" /><span className="w-2.5 h-2.5 rounded-full bg-yellow-300" /><span className="w-2.5 h-2.5 rounded-full bg-green-400" />
-              <span className="ml-2 text-xs md:text-sm font-bold">Demonstração visual • Biblioteca de Projetos 3D</span>
+              <span className="ml-2 text-xs md:text-sm font-bold">Prévia ilustrativa • Prime Projetos 3D</span>
             </div>
             <div className="grid md:grid-cols-[210px_1fr]">
               <aside className="p-3 md:p-4 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-200">

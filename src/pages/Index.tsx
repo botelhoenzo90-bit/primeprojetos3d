@@ -25,10 +25,10 @@ const Index = () => (
       <RecipeCarousel />
       <RecipePagesCarousel />
       <ProblemSection />
-      <NutriSection />
       <VSLSection />
-      <TestimonialsSection />
       <BonusSection />
+      <NutriSection />
+      <TestimonialsSection />
       <OfferSection />
       <GuaranteeSection />
       <DeliverySection />

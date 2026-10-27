@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, Eye, Package, ChartNoAxesColumn, ArrowRight } from "lucide-react";
+import { Search, Eye, Package, BarChart3, ArrowRight } from "lucide-react";
 
 const researchSteps = [
   { icon: Eye, number: "01", title: "Observe", desc: "Veja como produtos semelhantes são apresentados em marketplaces." },

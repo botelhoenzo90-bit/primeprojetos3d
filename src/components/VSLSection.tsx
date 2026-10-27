@@ -5,7 +5,7 @@ const researchSteps = [
   { icon: Eye, number: "01", title: "Observe", desc: "Veja como produtos semelhantes são apresentados em marketplaces." },
   { icon: Search, number: "02", title: "Compare", desc: "Observe fotos, variações, avaliações e dúvidas que aparecem nas ofertas." },
   { icon: Package, number: "03", title: "Escolha", desc: "Selecione um modelo que faça sentido para seu equipamento, tempo e custo." },
-  { icon: ChartNoAxesColumn, number: "04", title: "Teste", desc: "Produza uma pequena quantidade e avalie a resposta do seu público antes de ampliar." },
+  { icon: BarChart3, number: "04", title: "Teste", desc: "Produza uma pequena quantidade e avalie a resposta do seu público antes de ampliar." },
 ];
 
 const VSLSection = () => (

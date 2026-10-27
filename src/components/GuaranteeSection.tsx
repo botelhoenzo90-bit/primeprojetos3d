@@ -27,7 +27,7 @@ const GuaranteeSection = () => {
             Garantia de <span className="text-cta">7 dias</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Você tem 7 dias para avaliar o conteúdo adquirido. Se não for o que esperava, poderá solicitar o reembolso dentro do prazo, conforme as condições da compra e da plataforma de pagamento.
+            Você tem 7 dias para conhecer a biblioteca, explorar as categorias e avaliar os arquivos incluídos no plano. Se o conteúdo não for adequado para você, poderá solicitar o reembolso dentro do prazo, conforme as condições da compra e da plataforma de pagamento.
           </p>
           <motion.a
             href="#oferta"

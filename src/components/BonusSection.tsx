@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Gift, CarFront, KeyRound, ToyBrick, House, Gamepad2, Sparkles, Lamp, Trophy, Coffee, Castle, Heart, Box, Bike, PawPrint } from "lucide-react";
+import { Gift, CarFront, KeyRound, ToyBrick, House, Gamepad2, Sparkles, Lamp, Trophy, Coffee, Castle, Heart, Box, PawPrint } from "lucide-react";
 
 const bonuses = [
   { icon: CarFront, title: "Pack de Veículos 3D", desc: "Miniaturas de carros e outros veículos para explorar o nicho de colecionáveis." },

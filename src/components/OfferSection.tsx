@@ -18,11 +18,24 @@ const premiumReceberItems = [
 
 const premiumBonusItems = [
   "Pack de Veículos 3D",
-  "Chaveiros Personalizados 3D",
+  "Coleção de Heróis",
+  "Pack de Chaveiros",
   "Modelos Flexíveis e Articulados",
-  "Coleção de Decoração e Utilidades",
-  "Colecionáveis e Personagens",
-  "Ideias Criativas para Presentes",
+  "Clássicos dos Desenhos",
+  "Cosplay 3D e Máscaras",
+  "Coleção Pokémon",
+  "Coleção de Natal",
+  "Coleção Copa do Mundo",
+  "Mascotes Esportivos",
+  "Mais de 250 Luminárias 3D",
+  "Bichinhos Amigurumi 3D",
+  "Coleção estilo LEGO",
+  "Universo Minecraft",
+  "Porta-copos Monster",
+  "Canecas de Times",
+  "Réplicas de Estádios",
+  "Caneca Estilo Moletom",
+  "Canecas de Games",
 ];
 
 const basicReceberItems = [
@@ -112,10 +125,10 @@ const OfferSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
           >
-            Garanta sua biblioteca STL <span className="text-cta">com 6 bônus extras</span>
+            Encontre sua próxima ideia para imprimir <span className="text-cta">com 19 bônus no Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
-            🚀 Tenha mais de 100 mil modelos STL para explorar e leve 6 coleções bônus no pacote Premium. Escolha seu plano e confira todos os detalhes antes de finalizar.
+            🚀 Explore uma biblioteca organizada por categorias, descubra modelos para testar e amplie suas possibilidades de impressão. O Premium inclui 19 coleções bônus temáticas.
           </p>
           <div className="max-w-2xl mx-auto grid grid-cols-1 gap-6">
             {/* PLANO PREMIUM */}
@@ -142,7 +155,7 @@ const OfferSection = () => {
                   </h2>
 
                   <p className="text-center text-sm text-foreground font-semibold mb-3">
-                    Último dia da promoção: 21/10/2026. Confira as condições do plano no checkout.
+                    Pagamento único • Acesso digital após a confirmação
                   </p>
 
                   <img
@@ -185,7 +198,7 @@ const OfferSection = () => {
                   <div className="border-t border-dashed border-sage my-3" />
 
                   <h3 className="text-center font-extrabold text-green-title text-sm uppercase tracking-wider mb-3">
-                    6 Bônus Inclusos:
+                    19 Bônus Inclusos:
                   </h3>
                   <div className="flex justify-center mb-4">
                     <ul className="space-y-2 inline-flex flex-col">
@@ -210,7 +223,7 @@ const OfferSection = () => {
                         className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
-                        SIM! QUERO ACESSAR A BIBLIOTECA STL
+                        QUERO ACESSAR A BIBLIOTECA
                       </a>
                     </div>
                     <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">

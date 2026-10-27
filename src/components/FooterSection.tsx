@@ -6,7 +6,7 @@ const FooterSection = () => (
       </p>
       <div className="w-12 h-px bg-cream/20 mx-auto my-4"></div>
       <p className="text-cream/90 text-sm font-bold font-body">
-        © 2026 Biblioteca STL 3D. Todos os direitos reservados.
+        © 2026 Prime Projetos 3D. Todos os direitos reservados.
       </p>
     </div>
   </footer>

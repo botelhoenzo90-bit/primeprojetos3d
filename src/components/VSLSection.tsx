@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Search, Eye, PackageCheck, BarChart3 } from "lucide-react";
+import { Eye, Search, PackageCheck, BarChart3 } from "lucide-react";
 
 const stages = [
-  { icon: Eye, title: "Observe", desc: "Veja como produtos semelhantes são apresentados." },
-  { icon: Search, title: "Pesquise", desc: "Explore categorias, variações e ideias que já existem." },
-  { icon: PackageCheck, title: "Escolha", desc: "Selecione um modelo adequado ao seu equipamento e objetivo." },
-  { icon: BarChart3, title: "Teste", desc: "Produza em pequena escala e avalie a resposta do público." },
+  { icon: Eye, title: "Observe o mercado", desc: "Veja como diferentes produtos são apresentados e quais detalhes chamam atenção." },
+  { icon: Search, title: "Compare as opções", desc: "Explore estilos, categorias e variações antes de escolher seu próximo projeto." },
+  { icon: PackageCheck, title: "Prepare sua impressão", desc: "Confira tamanho, material e configurações para adequar o modelo ao seu equipamento." },
+  { icon: BarChart3, title: "Avalie seus resultados", desc: "Teste em pequena escala, acompanhe a resposta e ajuste seus próximos passos." },
 ];
 
 const VSLSection = () => (
@@ -36,7 +36,6 @@ const VSLSection = () => (
           </motion.div>
         ); })}
       </div>
-      <p className="text-[11px] md:text-xs text-slate-500 text-center mt-7 max-w-3xl mx-auto">A pesquisa ajuda a orientar seus testes, mas não garante vendas. Os resultados dependem de fatores como preço, qualidade, divulgação, demanda e direitos de uso dos modelos.</p>
     </div>
   </section>
 );

@@ -41,11 +41,11 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 max-w-5xl w-full mb-7">
+        <div className="grid grid-cols-6 gap-2 md:gap-3 max-w-5xl w-full mb-7">
           {highlights.map(({ icon: Icon, label }, index) => (
-            <motion.div key={label} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className={`min-h-[122px] flex flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-3 py-4 shadow-sm hover:shadow-md hover:border-amber-200 transition-all ${index < 3 ? "sm:col-span-2" : "sm:col-span-2"} ${index === 3 ? "sm:col-start-2" : ""} ${index === 4 ? "sm:col-start-4" : ""}`}>
+            <motion.div key={label} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className={`min-h-[112px] flex flex-col items-center justify-center gap-2 md:gap-3 rounded-2xl border border-blue-100 bg-white px-1.5 md:px-3 py-3 md:py-4 shadow-sm hover:shadow-md hover:border-amber-200 transition-all ${index < 3 ? "col-span-2" : "col-span-2"} ${index === 3 ? "col-start-2" : ""} ${index === 4 ? "col-start-4" : ""}`}>
               <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-amber-300 bg-amber-50 text-[#17324D] shadow-sm"><Icon className="w-5 h-5" /></span>
-              <span className="text-[#17324D] font-extrabold text-xs md:text-sm leading-snug text-center">{label}</span>
+              <span className="text-[#17324D] font-extrabold text-[10px] sm:text-xs md:text-sm leading-snug text-center">{label}</span>
             </motion.div>
           ))}
         </div>

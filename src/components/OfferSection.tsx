@@ -125,10 +125,10 @@ const OfferSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
           >
-            Encontre sua próxima ideia para imprimir <span className="text-cta">com 19 bônus no Premium</span>
+            Sua próxima impressão começa aqui <span className="text-cta">com a biblioteca 3D Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
-            🚀 Explore uma biblioteca organizada por categorias, descubra modelos para testar e amplie suas possibilidades de impressão. O Premium inclui 19 coleções bônus temáticas.
+            🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.
           </p>
           <div className="max-w-2xl mx-auto grid grid-cols-1 gap-6">
             {/* PLANO PREMIUM */}
@@ -169,10 +169,10 @@ const OfferSection = () => {
                   <div className="text-center mb-4">
                     <span className="text-red-600 font-extrabold line-through text-3xl md:text-4xl block mb-0.5">R$ 97,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
-                    <div className="text-5xl md:text-6xl font-extrabold text-blue-700">
+                    <div className="text-5xl md:text-6xl font-extrabold text-green-700">
                       R$ 29<span className="text-3xl">,90</span>
                     </div>
-                    <div className="inline-block bg-blue-50 text-blue-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
+                    <div className="inline-block bg-green-50 text-green-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
                       Você economiza R$ 67,10!
                     </div>
                   </div>
@@ -220,7 +220,7 @@ const OfferSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Biblioteca STL 3D - Premium')}
-                        className="inline-block w-full bg-blue-600 hover:bg-blue-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
+                        className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         QUERO ACESSAR A BIBLIOTECA

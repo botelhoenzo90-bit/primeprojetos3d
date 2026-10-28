@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, CheckCircle2, Layers3, FolderOpen, Lightbulb, Zap } from "lucide-react";
+import { Star, ShieldCheck, Layers3, FolderOpen, Lightbulb, Zap, Search, Printer } from "lucide-react";
 
 const highlights = [
   { icon: Star, label: "Modelos selecionados" },
@@ -19,13 +19,13 @@ const HeroSection = () => (
         </div>
 
         <h1 className="text-[30px] md:text-6xl font-black text-[#17324D] leading-[1.04] mb-5 max-w-4xl tracking-tight">
-          VOCÊ NÃO COMPROU UMA IMPRESSORA 3D PARA DEIXÁ-LA <span className="text-blue-700">PARADA.</span>
+          VOCÊ NÃO COMPROU UMA IMPRESSORA 3D PARA DEIXÁ-LA <span className="text-[#E0A800]">PARADA.</span>
         </h1>
 
         <p className="text-[#334155] text-base md:text-xl font-medium mb-5 max-w-3xl mx-auto leading-relaxed">
           Acesse uma biblioteca organizada com modelos selecionados e diferentes categorias para descobrir novas ideias, testar produtos e ampliar as possibilidades da sua impressão 3D.
         </p>
-        <p className="text-blue-800 font-black text-base md:text-lg mb-5">Menos tempo procurando STL. Mais tempo testando produtos.</p>
+        <p className="text-[#15803D] font-black text-base md:text-lg mb-5">Menos tempo procurando produtos. Mais tempo vendendo.</p>
 
         <div className="w-full max-w-[340px] mb-6">
           <div className="aspect-[9/16] w-full rounded-2xl md:rounded-3xl border border-blue-200 bg-[#10243A] shadow-2xl overflow-hidden flex items-center justify-center relative">
@@ -41,10 +41,10 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-5xl w-full mb-7">
+        <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 max-w-5xl w-full mb-7">
           {highlights.map(({ icon: Icon, label }, index) => (
-            <motion.div key={label} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className={`min-h-[112px] flex flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-3 py-4 shadow-sm hover:shadow-md hover:border-blue-200 transition-all ${index === 4 ? "col-span-2 sm:col-span-1" : ""}`}>
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-700"><Icon className="w-5 h-5" /></span>
+            <motion.div key={label} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className={`min-h-[122px] flex flex-col items-center justify-center gap-3 rounded-2xl border border-blue-100 bg-white px-3 py-4 shadow-sm hover:shadow-md hover:border-amber-200 transition-all ${index < 3 ? "sm:col-span-2" : "sm:col-span-2"} ${index === 3 ? "sm:col-start-2" : ""} ${index === 4 ? "sm:col-start-4" : ""}`}>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-amber-300 bg-amber-50 text-[#17324D] shadow-sm"><Icon className="w-5 h-5" /></span>
               <span className="text-[#17324D] font-extrabold text-xs md:text-sm leading-snug text-center">{label}</span>
             </motion.div>
           ))}

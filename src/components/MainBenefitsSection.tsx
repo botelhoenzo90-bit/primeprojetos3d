@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck } from "lucide-react";
+import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck, Layers3 } from "lucide-react";
 
 const benefits = [
-  { icon: Lightbulb, title: "Mais ideias para imprimir", desc: "Explore uma grande variedade de modelos para encontrar seu próximo projeto." },
-  { icon: Search, title: "Novos nichos para explorar", desc: "Descubra estilos e categorias que podem inspirar produtos diferentes." },
-  { icon: Printer, title: "Projetos para sua impressora", desc: "Escolha arquivos considerando seu equipamento e materiais disponíveis." },
-  { icon: FolderKanban, title: "Tudo mais organizado", desc: "Navegue por categorias e encontre opções com mais praticidade." },
-  { icon: Timer, title: "Menos tempo procurando", desc: "Tenha mais referências reunidas em uma biblioteca digital." },
-  { icon: PackageCheck, title: "Amplie seu catálogo", desc: "Use novas ideias para planejar testes e desenvolver sua linha de produtos." },
+  { icon: Search, text: "Explore mais de 100 mil modelos 3D organizados por categoria." },
+  { icon: Lightbulb, text: "Descubra novas ideias para ampliar seu catálogo de produtos." },
+  { icon: Layers3, text: "Encontre opções de decoração, utilidades, veículos e colecionáveis." },
+  { icon: Printer, text: "Escolha modelos que façam sentido para sua impressora e seu público." },
+  { icon: Timer, text: "Passe menos tempo procurando arquivos em diferentes sites." },
+  { icon: PackageCheck, text: "Use cada modelo como ponto de partida para planejar seus próximos testes." },
 ];
 
 const MainBenefitsSection = () => (
@@ -22,14 +22,13 @@ const MainBenefitsSection = () => (
         </h2>
         <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto mt-4">Encontre inspiração, explore novas categorias e planeje seus próximos projetos em 3D.</p>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-7 md:gap-x-8 md:gap-y-9 max-w-5xl mx-auto">
-        {benefits.map(({ icon: Icon, title, desc }, index) => (
-          <motion.div key={title} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.06 }} className="flex flex-col items-center text-center px-2 md:px-5">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center mb-3">
-              <Icon className="w-6 h-6 md:w-7 md:h-7 text-cta" strokeWidth={2.2} />
-            </div>
-            <h3 className="text-sm md:text-lg font-black text-green-title leading-snug mb-2">{title}</h3>
-            <p className="text-xs md:text-sm text-slate-600 leading-relaxed max-w-xs">{desc}</p>
+      <div className="max-w-3xl mx-auto flex flex-col gap-3 md:gap-4">
+        {benefits.map(({ icon: Icon, text }, index) => (
+          <motion.div key={text} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="flex items-center gap-3 md:gap-4 rounded-xl border border-blue-100 bg-white/85 px-4 py-3 md:px-5 md:py-3.5 shadow-sm text-left">
+            <span className="flex h-9 w-9 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full border border-blue-200 bg-blue-50 text-[#2677C9]">
+              <Icon className="w-4.5 h-4.5 md:w-5 md:h-5" strokeWidth={2.2} />
+            </span>
+            <p className="text-sm md:text-base font-semibold text-[#17324D] leading-snug">{text}</p>
           </motion.div>
         ))}
       </div>

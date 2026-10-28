@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Gift, CarFront, KeyRound, ToyBrick, House, Gamepad2, Sparkles, Lamp, Trophy, Coffee, Castle, Heart, Box, PawPrint } from "lucide-react";
+import { Gift, CarFront, KeyRound, ToyBrick, House, Gamepad2, Sparkles, Lamp, Trophy, Coffee, Castle, Heart, Box, PawPrint, Image } from "lucide-react";
 
 const bonuses = [
   { icon: CarFront, title: "Pack de Veículos 3D", desc: "Miniaturas de carros e outros veículos para explorar o nicho de colecionáveis." },
@@ -36,7 +36,7 @@ const BonusSection = () => {
       <div className="overflow-hidden w-full">
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
           {loop.map((b, i) => { const Icon = b.icon; return <article key={i} className="w-[260px] md:w-[300px] shrink-0 mx-2 rounded-3xl bg-white p-6 shadow-lg border border-blue-100 text-center flex flex-col items-center min-h-[270px]">
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-4"><Icon className="w-7 h-7 text-blue-700" /></div>
+            <div className="w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-blue-200 bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col items-center justify-center gap-2 mb-4"><Image className="w-8 h-8 text-blue-300" /><span className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Espaço para imagem</span></div>
             <span className="inline-block bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1 rounded-full mb-2 tracking-wide">COLEÇÃO {(i % bonuses.length) + 1}</span>
             <h3 className="font-extrabold text-lg text-[#17324D] mb-2">{b.title}</h3>
             <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>

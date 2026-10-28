@@ -24,9 +24,9 @@ const Index = () => (
       <RecipeCarousel />
       <RecipePagesCarousel />
       <VSLSection />
-      <BonusSection />
       <NutriSection />
       <TestimonialsSection />
+      <BonusSection />
       <OfferSection />
       <GuaranteeSection />
       <DeliverySection />

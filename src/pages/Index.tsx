@@ -1,5 +1,6 @@
 import UrgencyBar from "@/components/UrgencyBar";
 import HeroSection from "@/components/HeroSection";
+import InfoMarquee from "@/components/InfoMarquee";
 import MainBenefitsSection from "@/components/MainBenefitsSection";
 import VSLSection from "@/components/VSLSection";
 import RecipeCarousel from "@/components/RecipeCarousel";
@@ -19,7 +20,7 @@ const Index = () => (
     <UrgencyBar />
     <div className="pt-16 sm:pt-14">
       <HeroSection />
-      <div className="bg-[#FAF9F6] h-px w-full" />
+      <InfoMarquee />
       <MainBenefitsSection />
       <RecipeCarousel />
       <RecipePagesCarousel />

@@ -1,3 +1,4 @@
+import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
 import { CarFront, House, KeyRound, ToyBrick, Gamepad2, Lamp, Sparkles, Box } from "lucide-react";
 
@@ -27,6 +28,7 @@ const RecipePagesCarousel = () => (
           return <div key={i} className="flex-shrink-0 w-56 mx-2"><div className="rounded-2xl overflow-hidden shadow-lg bg-white border border-blue-100"><div className={`h-44 bg-gradient-to-br ${model.color} flex items-center justify-center`}><div className="w-24 h-24 rounded-3xl bg-white/80 shadow-md flex items-center justify-center"><Icon className="w-14 h-14 text-blue-700" strokeWidth={1.6} /></div></div><div className="p-4 text-center"><p className="font-extrabold text-[#17324D] text-base">{model.title}</p><p className="text-slate-500 text-xs mt-1">{model.desc}</p></div></div></div>;
         })}
       </div>
+      <SectionCTA label="QUERO ACESSAR A BIBLIOTECA" />
     </div>
   </section>
 );

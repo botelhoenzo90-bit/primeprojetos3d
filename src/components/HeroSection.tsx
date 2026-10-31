@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, ShieldCheck, Layers3, FolderOpen, Lightbulb, Zap, Search, Printer } from "lucide-react";
-
-const highlights = [
-  { icon: Star, label: "Modelos selecionados" },
-  { icon: Layers3, label: "Diversas categorias para explorar" },
-  { icon: FolderOpen, label: "Biblioteca organizada" },
-  { icon: Lightbulb, label: "Novas ideias de produtos" },
-  { icon: Zap, label: "Acesso rápido aos arquivos" },
-];
+import { Star, ShieldCheck } from "lucide-react";
 
 const HeroSection = () => (
   <section className="relative overflow-hidden bg-gradient-to-b from-[#EFF7FF] via-white to-[#F6FAFF] py-8 md:py-12">
@@ -38,17 +30,6 @@ const HeroSection = () => (
               <p className="text-white font-black text-sm md:text-base uppercase tracking-wider">Sua VSL vertical</p>
               <p className="text-blue-100/80 text-xs mt-2">Espaço reservado para o vídeo em formato vertical (9:16)</p>
             </div>
-          </div>
-        </div>
-
-        <div className="w-full max-w-2xl mb-7 rounded-2xl border border-blue-100 bg-white/80 px-4 py-3 shadow-sm">
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3">
-            {highlights.map(({ icon: Icon, label }, index) => (
-              <motion.div key={label} initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.04 }} className="flex min-w-0 items-center gap-2 text-left">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-blue-200 bg-blue-50 text-[#2677C9]"><Icon className="w-3.5 h-3.5" /></span>
-                <span className="text-[#17324D] font-bold text-[10px] sm:text-xs leading-snug">{label}</span>
-              </motion.div>
-            ))}
           </div>
         </div>
 

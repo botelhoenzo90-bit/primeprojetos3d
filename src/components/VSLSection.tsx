@@ -1,3 +1,4 @@
+import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
 import { Eye, Search, PackageCheck, BarChart3 } from "lucide-react";
 
@@ -36,6 +37,7 @@ const VSLSection = () => (
           </motion.div>
         ); })}
       </div>
+      <SectionCTA label="QUERO TER ESSAS POSSIBILIDADES" />
     </div>
   </section>
 );

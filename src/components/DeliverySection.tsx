@@ -1,3 +1,4 @@
+import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
 import { Smartphone, Monitor, Printer, Zap } from "lucide-react";
 
@@ -23,6 +24,7 @@ const DeliverySection = () => (
           </motion.div>
         ))}
       </div>
+      <SectionCTA label="QUERO LIBERAR MEU ACESSO" />
     </div>
   </section>
 );

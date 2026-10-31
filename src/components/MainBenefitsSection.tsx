@@ -1,3 +1,4 @@
+import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
 import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck, Layers3 } from "lucide-react";
 
@@ -32,6 +33,7 @@ const MainBenefitsSection = () => (
           </motion.div>
         ))}
       </div>
+      <SectionCTA label="QUERO EXPLORAR OS MODELOS" />
     </div>
   </section>
 );

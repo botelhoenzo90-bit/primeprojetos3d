@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { CheckCircle2, Sparkles } from "lucide-react";
+import { CheckCircle2, PackageCheck } from "lucide-react";
 
+// Exemplos demonstrativos de layout. Substitua por dados de pedidos reais antes de publicar.
 const notifications = [
-  { title: "Novas possibilidades para imprimir!", action: "Explore modelos e transforme ideias em produtos." },
-  { title: "Sua próxima ideia pode estar aqui.", action: "Mais de 100 mil modelos em diversas categorias." },
-  { title: "Inspire-se. Imprima. Coloque à venda.", action: "Descubra projetos para testar na sua impressora 3D." },
-  { title: "Biblioteca Prime Projetos 3D", action: "Acesso digital a milhares de ideias para criar." },
+  { name: "Mariana S.", city: "Curitiba - PR" },
+  { name: "Rafael M.", city: "São Paulo - SP" },
+  { name: "Camila R.", city: "Belo Horizonte - MG" },
+  { name: "Lucas A.", city: "Porto Alegre - RS" },
 ];
 
 const SalesNotification = () => {
@@ -16,10 +17,10 @@ const SalesNotification = () => {
     const showNotification = () => {
       setCurrent((value) => (value + 1) % notifications.length);
       setShow(true);
-      window.setTimeout(() => setShow(false), 3800);
+      window.setTimeout(() => setShow(false), 4200);
     };
-    const interval = window.setInterval(showNotification, 22000);
-    const initial = window.setTimeout(showNotification, 8500);
+    const interval = window.setInterval(showNotification, 24000);
+    const initial = window.setTimeout(showNotification, 9000);
     return () => {
       window.clearInterval(interval);
       window.clearTimeout(initial);
@@ -34,17 +35,19 @@ const SalesNotification = () => {
       style={{ pointerEvents: "none" }}
       aria-live="polite"
     >
-      <div className="flex w-[min(285px,calc(100vw-24px))] items-center gap-2.5 rounded-2xl border border-white/20 bg-[#18A957] px-3 py-2.5 text-white shadow-[0_7px_20px_rgba(13,145,69,0.22)]">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/20">
-          <CheckCircle2 className="h-[18px] w-[18px] text-white" strokeWidth={2.3} />
+      <div className="flex w-[min(270px,calc(100vw-24px))] items-center gap-2.5 rounded-[15px] border border-emerald-100 bg-[#18A957] px-2.5 py-2 text-white shadow-[0_6px_18px_rgba(13,145,69,0.2)]">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/35 bg-white/15">
+          <span className="text-[10px] font-black tracking-wide">{notification.name.split(" ").map(part => part[0]).join("")}</span>
         </div>
         <div className="min-w-0 flex-1 leading-tight">
-          <div className="mb-0.5 flex items-center gap-1">
-            <span className="truncate text-[12px] font-extrabold">{notification.title}</span>
-            <Sparkles className="h-3 w-3 shrink-0 text-yellow-200" />
-          </div>
-          <p className="text-[10px] font-medium leading-snug text-white/95">{notification.action}</p>
-          <p className="mt-1 text-[9px] text-white/75">Destaque da biblioteca · conteúdo ilustrativo</p>
+          <div className="truncate text-[12px] font-extrabold">{notification.name}</div>
+          <div className="mt-0.5 text-[9px] font-medium text-white/85">{notification.city}</div>
+          <p className="mt-1 flex items-center gap-1 text-[10px] font-bold leading-snug text-white">
+            <PackageCheck className="h-3 w-3 shrink-0" />
+            Acabou de adquirir o Pacote Premium 3D!
+            <CheckCircle2 className="h-3 w-3 shrink-0" />
+          </p>
+          <p className="mt-1 text-[8px] font-semibold uppercase tracking-wide text-white/75">Exemplo ilustrativo de notificação</p>
         </div>
       </div>
     </div>

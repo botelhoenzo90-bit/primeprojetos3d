@@ -7,11 +7,11 @@ const HeroSection = () => (
       <div className="flex flex-col items-center text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white px-4 py-2 shadow-sm mb-5">
           <Star className="w-4 h-4 fill-amber-400 text-amber-500" />
-          <span className="text-xs md:text-sm font-black uppercase tracking-wide text-[#17324D]">Biblioteca digital com +100 mil modelos 3D</span>
+          <span className="whitespace-nowrap text-[10px] sm:text-xs md:text-sm font-black uppercase tracking-tight text-[#17324D]">Biblioteca digital com +100 mil modelos 3D</span>
         </div>
 
-        <h1 className="text-[30px] md:text-6xl font-black text-[#17324D] leading-[1.04] mb-5 max-w-4xl tracking-tight">
-          VOCÊ NÃO COMPROU UMA IMPRESSORA 3D PARA DEIXÁ-LA <span className="text-[#2677C9]">PARADA.</span>
+        <h1 className="text-[27px] sm:text-[30px] md:text-6xl font-black text-[#17324D] leading-[1.04] mb-5 max-w-4xl tracking-tight">
+          <span className="block md:inline">VOCÊ NÃO COMPROU UMA</span>{" "}<span className="block md:inline">IMPRESSORA 3D PARA</span>{" "}<span className="block md:inline text-[#2677C9]">DEIXÁ-LA PARADA.</span>
         </h1>
 
         <p className="text-[#334155] text-base md:text-xl font-medium mb-5 max-w-3xl mx-auto leading-relaxed">

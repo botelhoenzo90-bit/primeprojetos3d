@@ -1,3 +1,4 @@
+import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
 import { FolderOpen, Zap, ShieldCheck } from "lucide-react";
 
@@ -37,6 +38,7 @@ const NutriSection = () => (
           </motion.div>
         ); })}
       </div>
+      <SectionCTA label="QUERO ENCONTRAR MEUS PRÓXIMOS PROJETOS" />
     </div>
   </section>
 );

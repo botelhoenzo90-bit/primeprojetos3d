@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ShieldCheck, Zap, Gift, X, Sparkles, Crown } from "lucide-react";
-import produtoImg from "@/assets/produto-oferta-new.png";
+const produtoImg = "/imagens/oferta/Imagem do ChatGPT 2 de nov. de 2026, 15_45_11-Photoroom.png";
 import produtoMockup from "@/assets/produto-mockup.png";
 import paymentMethods from "@/assets/payment-methods.png";
 

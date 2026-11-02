@@ -1,27 +1,28 @@
 import { motion } from "framer-motion";
-import { Gift, CarFront, KeyRound, ToyBrick, House, Gamepad2, Sparkles, Lamp, Trophy, Coffee, Castle, Heart, Box, PawPrint, Image } from "lucide-react";
+import { Gift } from "lucide-react";
 
 const bonuses = [
-  { icon: CarFront, title: "Pack de Veículos 3D", desc: "Miniaturas de carros e outros veículos para explorar o nicho de colecionáveis." },
-  { icon: Gamepad2, title: "Coleção de Heróis", desc: "Personagens e figuras para ampliar projetos voltados ao público geek." },
-  { icon: KeyRound, title: "Pack de Chaveiros", desc: "Peças pequenas e variadas para testar produtos rápidos e personalizados." },
-  { icon: ToyBrick, title: "Modelos Articulados", desc: "Modelos flexíveis e articulados para explorar impressões com movimento." },
-  { icon: Sparkles, title: "Clássicos dos Desenhos", desc: "Referências nostálgicas para ampliar a variedade do seu catálogo." },
-  { icon: Trophy, title: "Cosplay 3D", desc: "Peças e máscaras para projetos maiores e de apresentação elaborada." },
-  { icon: Heart, title: "Coleção Pokémon", desc: "Modelos para explorar o público geek e colecionador." },
-  { icon: House, title: "Coleção de Natal", desc: "Decorações sazonais para planejar produtos em épocas comemorativas." },
-  { icon: Trophy, title: "Coleção Copa do Mundo", desc: "Ideias temáticas para planejar impressões ligadas a eventos esportivos." },
-  { icon: Sparkles, title: "Mascotes Esportivos", desc: "Modelos temáticos para explorar públicos de times e comunidades locais." },
-  { icon: Lamp, title: "Luminárias 3D", desc: "Peças decorativas com luz para testar projetos de apresentação diferenciada." },
-  { icon: PawPrint, title: "Bichinhos Amigurumi 3D", desc: "Modelos com visual fofo para decoração, presentes e colecionáveis." },
-  { icon: Box, title: "Coleção estilo LEGO", desc: "Minifiguras, organizadores e peças inspiradas em construções modulares." },
-  { icon: Gamepad2, title: "Universo Minecraft", desc: "Personagens, blocos e objetos com estética pixelada para projetos temáticos." },
-  { icon: Coffee, title: "Porta-copos Monster", desc: "Peças decorativas com visual marcante para ampliar as opções de utilidades." },
-  { icon: Coffee, title: "Canecas de Times", desc: "Modelos temáticos para explorar ideias voltadas a torcedores." },
-  { icon: Castle, title: "Réplicas de Estádios", desc: "Maquetes e miniaturas para decoração e colecionadores de futebol." },
-  { icon: Coffee, title: "Caneca Estilo Moletom", desc: "Um conceito criativo de design para testar projetos diferenciados." },
-  { icon: Gamepad2, title: "Canecas de Games", desc: "Modelos temáticos para explorar o universo gamer e a cultura geek." },
+  { image: "veiculos.webp", title: "Pack de Veículos 3D", desc: "Miniaturas de carros e outros veículos para explorar o nicho de colecionáveis." },
+  { image: "herois.webp", title: "Coleção de Heróis", desc: "Personagens e figuras para ampliar projetos voltados ao público geek." },
+  { image: "chaveiros.webp", title: "Pack de Chaveiros", desc: "Peças pequenas e variadas para testar produtos rápidos e personalizados." },
+  { image: "articulados.webp", title: "Modelos Articulados", desc: "Modelos flexíveis e articulados para explorar impressões com movimento." },
+  { image: "desenhos.webp", title: "Clássicos dos Desenhos", desc: "Referências nostálgicas para ampliar a variedade do seu catálogo." },
+  { image: "cosplay.webp", title: "Cosplay 3D", desc: "Peças e máscaras para projetos maiores e de apresentação elaborada." },
+  { image: "pokemon.webp", title: "Coleção Pokémon", desc: "Modelos para explorar o público geek e colecionador." },
+  { image: "natal.webp", title: "Coleção de Natal", desc: "Decorações sazonais para planejar produtos em épocas comemorativas." },
+  { image: "copa.webp", title: "Coleção Copa do Mundo", desc: "Ideias temáticas para planejar impressões ligadas a eventos esportivos." },
+  { image: "mascotes.webp", title: "Mascotes Esportivos", desc: "Modelos temáticos para explorar públicos de times e comunidades locais." },
+  { image: "luminarias_bonus.webp", title: "Luminárias 3D", desc: "Peças decorativas com luz para testar projetos diferenciados." },
+  { image: "amigurumi.webp", title: "Bichinhos Amigurumi 3D", desc: "Modelos com visual fofo para decoração, presentes e colecionáveis." },
+  { image: "lego_bonus.webp", title: "Coleção estilo LEGO", desc: "Minifiguras, organizadores e peças inspiradas em construções modulares." },
+  { image: "minecraft_bonus.webp", title: "Universo Minecraft", desc: "Personagens, blocos e objetos com estética pixelada." },
+  { image: "MLWW9d1.png", title: "Coleção especial 15", desc: "Mais modelos para ampliar suas possibilidades de impressão." },
+  { image: "VcahILv.png", title: "Coleção especial 16", desc: "Uma seleção extra de projetos para explorar novas ideias." },
+  { image: "gg0YzCN.png", title: "Coleção especial 17", desc: "Conteúdos adicionais para diversificar seu catálogo." },
+  { image: "kMoygo7.png", title: "Coleção especial 18", desc: "Mais referências visuais para seus próximos projetos." },
+  { image: "zuajik7.png", title: "Coleção especial 19", desc: "Uma coleção extra incluída no acesso Premium." },
 ];
+
 const BonusSection = () => {
   const loop = [...bonuses, ...bonuses];
   return (
@@ -35,13 +36,17 @@ const BonusSection = () => {
       </div>
       <div className="overflow-hidden w-full">
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-          {loop.map((b, i) => { const Icon = b.icon; return <article key={i} className="w-[260px] md:w-[300px] shrink-0 mx-2 rounded-3xl bg-white p-6 shadow-lg border border-blue-100 text-center flex flex-col items-center min-h-[270px]">
-            <div className="w-full aspect-[4/3] rounded-2xl border-2 border-dashed border-blue-200 bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col items-center justify-center gap-2 mb-4"><Image className="w-8 h-8 text-blue-300" /><span className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Espaço para imagem</span></div>
-            <span className="inline-block bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1 rounded-full mb-2 tracking-wide">COLEÇÃO {(i % bonuses.length) + 1}</span>
-            <h3 className="font-extrabold text-lg text-[#17324D] mb-2">{b.title}</h3>
-            <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
-            <span className="mt-auto pt-4 text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">INCLUSO NO PREMIUM</span>
-          </article>; })}
+          {loop.map((b, i) => (
+            <article key={i} className="w-[260px] md:w-[300px] shrink-0 mx-2 rounded-3xl bg-white p-4 shadow-lg border border-blue-100 text-center flex flex-col min-h-[330px]">
+              <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-50 mb-4">
+                <img src={`/imagens/bonus/${b.image}`} alt={b.title} loading="lazy" decoding="async" className="w-full h-full object-contain" />
+              </div>
+              <span className="inline-block self-center bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1 rounded-full mb-2 tracking-wide">COLEÇÃO {(i % bonuses.length) + 1}</span>
+              <h3 className="font-extrabold text-lg text-[#17324D] mb-2">{b.title}</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
+              <span className="mt-auto pt-4 text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">INCLUSO NO PREMIUM</span>
+            </article>
+          ))}
         </div>
       </div>
       <div className="container mx-auto px-4">

@@ -7,6 +7,7 @@ import RecipeCarousel from "@/components/RecipeCarousel";
 import RecipePagesCarousel from "@/components/RecipePagesCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BonusSection from "@/components/BonusSection";
+import ResearchMarketSection from "@/components/ResearchMarketSection";
 import OfferSection from "@/components/OfferSection";
 import NutriSection from "@/components/NutriSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
@@ -26,6 +27,7 @@ const Index = () => (
       <RecipePagesCarousel />
       <VSLSection />
       <NutriSection />
+      <ResearchMarketSection />
       <TestimonialsSection />
       <BonusSection />
       <OfferSection />

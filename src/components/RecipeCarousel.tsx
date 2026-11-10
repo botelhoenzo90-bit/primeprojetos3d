@@ -23,6 +23,7 @@ import enfeitesNatal from "@/assets/categorias/enfeites-de-natal.webp.asset.json
 import papaiNoel from "@/assets/categorias/papai-noel-articulado.webp.asset.json";
 import biscoito from "@/assets/categorias/biscoito-articulado.webp.asset.json";
 import bonecoNeve from "@/assets/categorias/boneco-de-neve.webp.asset.json";
+import colecaoReligiosa from "@/assets/categorias/colecao-religiosa.webp.asset.json";
 
 const models = [
   { img: organizadores.url, title: "Organizadores", desc: "Suportes e organizadores funcionais" },
@@ -48,6 +49,7 @@ const models = [
   { img: papaiNoel.url, title: "Papai Noel Articulado", desc: "Uma figura natalina com movimento" },
   { img: biscoito.url, title: "Biscoito Articulado", desc: "Personagem natalino para presentear" },
   { img: bonecoNeve.url, title: "Boneco de Neve", desc: "Modelo articulado para o Natal" },
+  { img: colecaoReligiosa.url, title: "Coleção Religiosa", desc: "Santos, anjos e artigos de fé" },
 ];
 // Coprime steps spread seasonal images among the other categories without changing on render.
 const rows = [7, 11].map((step, row) =>

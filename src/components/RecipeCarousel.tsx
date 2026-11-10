@@ -8,6 +8,15 @@ import personagens from "@/assets/categorias/personagens.webp.asset.json";
 import copa2026 from "@/assets/categorias/copa-2026.webp.asset.json";
 import natal from "@/assets/categorias/natal.webp.asset.json";
 import pontosTuristicos from "@/assets/categorias/pontos-turisticos.webp.asset.json";
+import brinquedos from "@/assets/categorias/brinquedos.webp.asset.json";
+import decoracaoSala from "@/assets/categorias/decoracao-sala.webp.asset.json";
+import veiculos from "@/assets/categorias/veiculos.webp.asset.json";
+import canecas from "@/assets/categorias/canecas.webp.asset.json";
+import mascotesFutebol from "@/assets/categorias/mascotes-futebol.webp.asset.json";
+import utensiliosCozinha from "@/assets/categorias/utensilios-cozinha.webp.asset.json";
+import aeromodelos from "@/assets/categorias/aeromodelos.webp.asset.json";
+import armasFicticias from "@/assets/categorias/armas-ficticias.webp.asset.json";
+import funkos from "@/assets/categorias/funkos.webp.asset.json";
 
 const models = [
   { img: organizadores.url, title: "Organizadores", desc: "Suportes e organizadores funcionais" },
@@ -18,6 +27,15 @@ const models = [
   { img: copa2026.url, title: "Copa 2026", desc: "Coleção Copa do Mundo 2026" },
   { img: natal.url, title: "Natal", desc: "Decorações para o fim de ano" },
   { img: pontosTuristicos.url, title: "Pontos Turísticos", desc: "Minimundo de monumentos" },
+  { img: brinquedos.url, title: "Brinquedos Coloridos", desc: "Figuras fofas para presentear" },
+  { img: decoracaoSala.url, title: "Decoração de Sala", desc: "Luminárias, vasos e enfeites" },
+  { img: veiculos.url, title: "Veículos", desc: "Carros, caminhões e motos" },
+  { img: canecas.url, title: "Canecas Personalizadas", desc: "Canecas diferenciadas para vender" },
+  { img: mascotesFutebol.url, title: "Mascotes do Futebol", desc: "Mascotes dos times brasileiros" },
+  { img: utensiliosCozinha.url, title: "Utensílios de Cozinha", desc: "Suportes e organizadores práticos" },
+  { img: aeromodelos.url, title: "Aeromodelos", desc: "Aviões, drones e planadores" },
+  { img: armasFicticias.url, title: "Armas Fictícias", desc: "Peças decorativas para cosplay" },
+  { img: funkos.url, title: "Funkos 3D", desc: "Heróis e personagens geek" },
 ];
 const doubled = [...models, ...models];
 const CARD_W = 272;

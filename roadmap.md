@@ -4,3 +4,4 @@
 - [x] Mix all category photos into two stacked carousels and keep one button below them.
 - [x] Make bonus photos fill equal-size image areas.
 - [x] Verify the carousels and bonus images on mobile and desktop.
+- [x] Add the religious collection photo to the carousels.

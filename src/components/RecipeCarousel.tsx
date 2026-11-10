@@ -1,18 +1,26 @@
 import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
-import { CarFront, House, KeyRound, ToyBrick, Gamepad2, Lamp, Sparkles, Box } from "lucide-react";
+import organizadores from "@/assets/categorias/organizadores.webp.asset.json";
+import vasos from "@/assets/categorias/vasos.webp.asset.json";
+import chaveiros from "@/assets/categorias/chaveiros.webp.asset.json";
+import articulados from "@/assets/categorias/articulados.webp.asset.json";
+import personagens from "@/assets/categorias/personagens.webp.asset.json";
+import copa2026 from "@/assets/categorias/copa-2026.webp.asset.json";
+import natal from "@/assets/categorias/natal.webp.asset.json";
+import pontosTuristicos from "@/assets/categorias/pontos-turisticos.webp.asset.json";
 
 const models = [
-  { icon: CarFront, title: "Veículos", desc: "Carros, motos e muito mais", color: "from-blue-100 to-sky-50" },
-  { icon: House, title: "Decoração", desc: "Detalhes para seus espaços", color: "from-orange-100 to-amber-50" },
-  { icon: KeyRound, title: "Chaveiros", desc: "Peças para personalizar", color: "from-violet-100 to-purple-50" },
-  { icon: ToyBrick, title: "Articulados", desc: "Modelos com movimento", color: "from-emerald-100 to-green-50" },
-  { icon: Gamepad2, title: "Colecionáveis", desc: "Para montar sua coleção", color: "from-rose-100 to-pink-50" },
-  { icon: Lamp, title: "Utilidades", desc: "Ideias úteis para o dia a dia", color: "from-yellow-100 to-amber-50" },
-  { icon: Sparkles, title: "Presentes criativos", desc: "Projetos com personalidade", color: "from-cyan-100 to-blue-50" },
-  { icon: Box, title: "Novas ideias", desc: "Descubra o que imprimir", color: "from-slate-100 to-gray-50" },
+  { img: organizadores.url, title: "Organizadores", desc: "Suportes e organizadores funcionais" },
+  { img: vasos.url, title: "Vasos Decorativos", desc: "Vasos e cachepôs para seus espaços" },
+  { img: chaveiros.url, title: "Chaveiros", desc: "Escudos de times e personalizados" },
+  { img: articulados.url, title: "Articulados", desc: "Dobráveis com movimento" },
+  { img: personagens.url, title: "Personagens", desc: "Desenhos animados e figuras fictícias" },
+  { img: copa2026.url, title: "Copa 2026", desc: "Coleção Copa do Mundo 2026" },
+  { img: natal.url, title: "Natal", desc: "Decorações para o fim de ano" },
+  { img: pontosTuristicos.url, title: "Pontos Turísticos", desc: "Minimundo de monumentos" },
 ];
 const doubled = [...models, ...models];
+const CARD_W = 272;
 
 const RecipeCarousel = () => (
   <section className="py-8 md:py-10 bg-[#EFF7FF] overflow-hidden">
@@ -24,11 +32,20 @@ const RecipeCarousel = () => (
       </motion.div>
     </div>
     <div className="relative">
-      <div className="flex animate-marquee" style={{ width: `${doubled.length * 240}px` }}>
-        {doubled.map((model, i) => {
-          const Icon = model.icon;
-          return <div key={i} className="flex-shrink-0 w-56 mx-2"><div className="rounded-2xl overflow-hidden shadow-lg bg-white border border-blue-100"><div className={`h-44 bg-gradient-to-br ${model.color} flex items-center justify-center`}><div className="w-24 h-24 rounded-3xl bg-white/80 shadow-md flex items-center justify-center"><Icon className="w-14 h-14 text-blue-700" strokeWidth={1.6} /></div></div><div className="p-4 text-center"><p className="font-extrabold text-[#17324D] text-base">{model.title}</p><p className="text-slate-500 text-xs mt-1">{model.desc}</p></div></div></div>;
-        })}
+      <div className="flex animate-marquee" style={{ width: `${doubled.length * CARD_W}px` }}>
+        {doubled.map((model, i) => (
+          <div key={i} className="flex-shrink-0 w-64 mx-2">
+            <div className="rounded-2xl overflow-hidden shadow-lg bg-white border border-blue-100 h-full flex flex-col">
+              <div className="h-40 bg-slate-100">
+                <img src={model.img} alt={model.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-4 text-center">
+                <p className="font-extrabold text-[#17324D] text-base">{model.title}</p>
+                <p className="text-slate-500 text-xs mt-1">{model.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
       <SectionCTA label="VER TODOS OS MODELOS" />
     </div>

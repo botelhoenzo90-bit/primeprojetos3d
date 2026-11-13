@@ -12,7 +12,7 @@ const CompatibilitySection = () => (
       </motion.div>
       <div className="mt-8 overflow-hidden rounded-3xl border border-slate-700 bg-[#0b0f15] p-2 md:p-3">
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
-          {printers.map((name, i) => <div key={name} className="flex min-h-[58px] items-center justify-center rounded-2xl border border-slate-700 bg-[#11161e] px-2 py-3 text-center text-sm md:text-base font-black text-slate-100">{name}</div>)}
+          {printers.map((name) => <div key={name} className="flex min-h-[58px] items-center justify-center rounded-2xl border border-slate-700 bg-[#11161e] px-2 py-3 text-center text-sm md:text-base font-black text-slate-100">{name}</div>)}
         </div>
       </div>
       <h3 className="mt-9 text-center text-2xl md:text-3xl font-black">Use no seu <span className="text-sky-400">fatiador preferido</span></h3>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, Puzzle, ShoppingBag, Music2, Mail, Users, Box } from "lucide-react";
+import { ShieldCheck, Puzzle, Mail, Users, Box } from "lucide-react";
 
 const marketplaces = [
   { name: "Shopee", className: "bg-[#EE4D2D] text-white", mark: "S" },

@@ -50,10 +50,6 @@ const BonusSection = () => {
         </div>
       </div>
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto mt-8 bg-white border border-green-200 rounded-2xl px-6 py-4 text-center shadow-sm">
-          <p className="text-lg md:text-xl font-black text-[#17324D]">🎁 19 coleções para explorar novos estilos e categorias</p>
-          <p className="text-sm text-slate-600 font-medium mt-1">Mais referências para escolher seus próximos projetos e ampliar seu repertório de impressão.</p>
-        </div>
         <div className="text-center mt-8 flex flex-col items-center">
           <motion.a href="#oferta" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block w-full md:w-auto bg-[#15803D] hover:bg-[#166534] text-white font-black text-sm md:text-xl px-10 py-5 rounded-full text-center shadow-lg transition-all uppercase tracking-wide mb-2">QUERO CONHECER AS 19 COLEÇÕES</motion.a>
           <p className="text-xs md:text-sm text-[#334155] font-semibold">🛡️ Garantia de 7 dias • Acesso digital</p>

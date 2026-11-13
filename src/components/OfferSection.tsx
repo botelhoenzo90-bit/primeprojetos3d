@@ -125,7 +125,7 @@ const OfferSection = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
           >
-            Sua próxima impressão começa aqui <span className="text-cta">com a biblioteca 3D Premium</span>
+            Crie, imprima e explore novas possibilidades <span className="text-cta">com a Biblioteca 3D Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
             🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.

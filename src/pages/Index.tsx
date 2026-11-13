@@ -1,13 +1,15 @@
 import UrgencyBar from "@/components/UrgencyBar";
 import HeroSection from "@/components/HeroSection";
+import DeliveryProofSection from "@/components/DeliveryProofSection";
 import InfoMarquee from "@/components/InfoMarquee";
 import MainBenefitsSection from "@/components/MainBenefitsSection";
-import VSLSection from "@/components/VSLSection";
+import CompatibilitySection from "@/components/CompatibilitySection";
 import RecipeCarousel from "@/components/RecipeCarousel";
+import VSLSection from "@/components/VSLSection";
+import NutriSection from "@/components/NutriSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BonusSection from "@/components/BonusSection";
 import OfferSection from "@/components/OfferSection";
-import NutriSection from "@/components/NutriSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import DeliverySection from "@/components/DeliverySection";
 import FAQSection from "@/components/FAQSection";
@@ -18,8 +20,10 @@ const Index = () => (
     <UrgencyBar />
     <div className="pt-16 sm:pt-14">
       <HeroSection />
+      <DeliveryProofSection />
       <InfoMarquee />
       <MainBenefitsSection />
+      <CompatibilitySection />
       <RecipeCarousel />
       <VSLSection />
       <NutriSection />

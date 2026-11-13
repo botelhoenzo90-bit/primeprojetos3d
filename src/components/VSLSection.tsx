@@ -1,17 +1,10 @@
 import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
-import { Eye, Search, PackageCheck, BarChart3 } from "lucide-react";
 const proofs = [
   { image: "USQ9ivu.png", alt: "Pesquisa de mercado e oportunidades para impressão 3D" },
   { image: "k8NGhmh.png", alt: "Análise de produtos e procura em marketplaces" },
   { image: "proof_1.webp", alt: "Exemplo de pesquisa de mercado" },
   { image: "proof_2.webp", alt: "Exemplo adicional de pesquisa de mercado" },
-];
-const stages = [
-  { icon: Eye, title: "Observe o mercado", desc: "Veja como diferentes produtos são apresentados e quais detalhes chamam atenção." },
-  { icon: Search, title: "Compare as opções", desc: "Explore estilos, categorias e variações antes de escolher seu próximo projeto." },
-  { icon: PackageCheck, title: "Prepare sua impressão", desc: "Confira tamanho, material e configurações para adequar o modelo ao seu equipamento." },
-  { icon: BarChart3, title: "Avalie seus resultados", desc: "Teste em pequena escala, acompanhe a resposta e ajuste seus próximos passos." },
 ];
 const VSLSection = () => (
   <section className="py-12 md:py-16 bg-white overflow-hidden">
@@ -29,14 +22,6 @@ const VSLSection = () => (
         ))}
       </div>
       <div className="text-center"><p className="inline-block rounded-lg bg-[#FFD700] px-4 py-2 text-lg md:text-2xl font-black text-[#17324D]">Pesquise. Escolha. Produza. Venda.</p></div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-7">
-        {stages.map((stage, index) => { const Icon = stage.icon; return (
-          <motion.div key={stage.title} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="flex items-start gap-3 border-t-2 border-blue-100 pt-4">
-            <div className="rounded-xl bg-blue-50 p-2"><Icon className="w-5 h-5 text-blue-700" /></div>
-            <div><h3 className="font-extrabold text-[#17324D]">{stage.title}</h3><p className="text-sm text-slate-600 mt-1">{stage.desc}</p></div>
-          </motion.div>
-        ); })}
-      </div>
       <SectionCTA label="QUERO TER ESSAS POSSIBILIDADES" />
     </div>
   </section>

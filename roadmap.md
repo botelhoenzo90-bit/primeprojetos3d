@@ -14,3 +14,5 @@
 - [x] Add four collection photos and two testimonial screenshots; speed up the first gallery row.
 - [x] Crop circular profile photos, remove blue strip, compact compatibility/access notices and add footer logo.
 - [x] Verify updated layouts on mobile and desktop.
+- [x] Refresh hero headline/subtitle and replace marketplace image; restore compact compatibility carousels and smaller mobile notification.
+- [ ] Confirm customer name/city purchase records and real 4,9/5,0 rating with 4.378 reviews — no invented social proof displayed.

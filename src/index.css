@@ -223,3 +223,7 @@ img, iframe, video {
 }
 
 .category-track.collection-track { animation-duration: 35s; }
+.hero-title-refresh { font-family: 'Arial', sans-serif; font-weight: 900; color: hsl(var(--foreground)); }
+.compatibility-track { animation-duration: 28s; }
+.sales-notification { background: hsl(var(--notification-background)); color: hsl(var(--primary-foreground)); border-color: hsl(var(--notification-background) / .3); }
+:root { --notification-background: 147 73% 38%; }

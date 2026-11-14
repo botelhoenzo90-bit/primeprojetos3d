@@ -3,7 +3,13 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/topo/logo.png.asset.json";
 import marketplaces from "@/assets/topo/marketplaces.webp.asset.json";
 import printer from "@/assets/topo/impressora.webp.asset.json";
-import profiles from "@/assets/topo/perfis.webp.asset.json";
+import perfil1 from "@/assets/perfis/perfil-1.webp.asset.json";
+import perfil2 from "@/assets/perfis/perfil-2.webp.asset.json";
+import perfil3 from "@/assets/perfis/perfil-3.webp.asset.json";
+import perfil4 from "@/assets/perfis/perfil-4.webp.asset.json";
+import perfil5 from "@/assets/perfis/perfil-5.webp.asset.json";
+import perfil6 from "@/assets/perfis/perfil-6.webp.asset.json";
+const profiles = [perfil1, perfil2, perfil3, perfil4, perfil5, perfil6];
 const HeroSection = () => (
   <section className="prime-hero bg-cream text-green-title py-6 md:py-10">
     <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
@@ -13,12 +19,14 @@ const HeroSection = () => (
       </h1>
       <p className="max-w-3xl text-muted-foreground text-base md:text-xl leading-relaxed mb-4">Mais de <strong className="text-green-title">100.000 arquivos STL</strong> para imprimir e explorar novas oportunidades de venda.</p>
       <img src={marketplaces.url} alt="Mercado Livre, Shopee, TikTok Shop e sua cidade" className="w-full max-w-[390px] h-auto mb-5" />
-      <img src={printer.url} alt="Impressora 3D com modelos articulados, vasos, miniaturas e peças decorativas" className="w-full max-w-[620px] aspect-[3/2] object-cover rounded-lg" loading="eager" fetchPriority="high" />
+      <img src={printer.url} alt="Impressora 3D com modelos articulados, vasos, miniaturas e peças decorativas" className="w-full max-w-[620px] aspect-[3/2] object-cover rounded-lg" loading="eager" />
       <Button asChild className="mt-6 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">
         <a href="#oferta">QUERO COMEÇAR AGORA <span aria-hidden="true">↓</span></a>
       </Button>
       <div className="mt-4 flex flex-col items-center gap-2">
-        <img src={profiles.url} alt="Imagem ilustrativa de perfis" className="w-44 h-auto rounded-lg" />
+        <div className="flex justify-center -space-x-2" aria-label="Fotos ilustrativas de perfis">
+          {profiles.map((profile, i) => <img key={profile.asset_id} src={profile.url} alt={`Perfil ilustrativo ${i + 1}`} className="w-11 h-11 rounded-full object-cover border-2 border-background" />)}
+        </div>
         <div className="flex gap-1 text-gold" aria-label="Cinco estrelas decorativas">{Array.from({ length: 5 }, (_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}</div>
       </div>
     </div>

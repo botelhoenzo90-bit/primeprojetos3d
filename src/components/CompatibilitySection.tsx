@@ -1,23 +1,21 @@
-import { motion } from "framer-motion";
+import { Printer, Layers } from "lucide-react";
 const printers = ["Creality", "Anycubic", "Elegoo", "Artillery", "Kingroon", "Prusa", "FlashForge"];
 const slicers = ["PrusaSlicer", "Bambu Studio", "OrcaSlicer", "ChiTuBox", "Simplify3D", "Cura"];
-const MarqueeRow = ({ items, reverse = false }: { items: string[]; reverse?: boolean }) => (
-  <div className="w-full overflow-hidden">
-    <div className={`flex w-max gap-3 py-2 ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}>
-      {[...items, ...items, ...items, ...items].map((name, index) => <div key={`${name}-${index}`} className="flex min-w-[150px] md:min-w-[190px] min-h-[62px] items-center justify-center rounded-2xl border border-blue-200 bg-white px-5 py-3 text-center text-base md:text-lg font-extrabold text-[#17324D] shadow-sm">{name}</div>)}
-    </div>
-  </div>
-);
 const CompatibilitySection = () => (
-  <section className="w-full overflow-hidden bg-cream py-12 md:py-16 text-[#17324D]">
-    <div className="w-full">
-      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mx-auto max-w-6xl px-4 text-center">
-        <h2 className="text-3xl md:text-5xl font-black leading-tight">Compatível com diversas <span className="text-cta">impressoras 3D</span></h2>
-        <p className="mx-auto mt-4 max-w-4xl text-base md:text-xl leading-relaxed text-slate-600">Os arquivos STL podem ser utilizados em diferentes fluxos de impressão 3D. A preparação e a compatibilidade final dependem do fatiador, equipamento e configurações utilizados.</p>
-      </motion.div>
-      <div className="mt-7 w-full"><MarqueeRow items={printers} /></div>
-      <h3 className="mt-8 mb-3 px-4 text-center text-2xl md:text-3xl font-black">Use no seu <span className="text-[#2677C9]">fatiador preferido</span></h3>
-      <div className="w-full"><MarqueeRow items={slicers} reverse /></div>
+  <section className="bg-cream py-6 md:py-8 text-green-title" aria-label="Compatibilidade">
+    <div className="mx-auto max-w-4xl px-4">
+      <h2 className="text-xl md:text-3xl font-black text-center leading-tight">Compatível com diversas <span className="text-cta">impressoras 3D</span></h2>
+      <p className="mt-2 text-xs md:text-sm text-muted-foreground text-center">Arquivos STL para diferentes impressoras. Ajuste no fatiador conforme seu equipamento.</p>
+      <div className="mt-5 grid md:grid-cols-2 gap-4 md:gap-8">
+        <div className="border-t border-border pt-3">
+          <h3 className="flex items-center gap-2 text-sm font-bold mb-2"><Printer className="w-4 h-4 text-primary" /> Impressoras</h3>
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{printers.join(" · ")}</p>
+        </div>
+        <div className="border-t border-border pt-3">
+          <h3 className="flex items-center gap-2 text-sm font-bold mb-2"><Layers className="w-4 h-4 text-primary" /> Fatiadores</h3>
+          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{slicers.join(" · ")}</p>
+        </div>
+      </div>
     </div>
   </section>
 );

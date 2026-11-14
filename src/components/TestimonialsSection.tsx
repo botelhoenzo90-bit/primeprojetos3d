@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
-const testimonials = [
+import canecaPai from "@/assets/depoimentos/caneca-pai.webp.asset.json";
+import canecasMengao from "@/assets/depoimentos/canecas-mengao.webp.asset.json";
+const existingTestimonials = [
   "Comentários sobre pack de modelos 3D.png",
   "Comentários sobre pack de projetos 3D.png",
   "Depoimento sobre Buggy 3D Impresso.png",
@@ -11,6 +13,11 @@ const testimonials = [
   "Depoimentos sobre o Pack 3D.png",
 ];
 
+const testimonials = [
+  ...existingTestimonials.map(file => `/imagens/depoimentos/${encodeURIComponent(file)}`),
+  canecaPai.url,
+  canecasMengao.url,
+];
 const TestimonialsSection = () => {
   const doubled = [...testimonials, ...testimonials];
   return (
@@ -30,7 +37,7 @@ const TestimonialsSection = () => {
         <div className="flex w-max animate-marquee-testimonials" style={{ width: `${doubled.length * 304}px` }}>
           {doubled.map((file, i) => (
             <div key={i} className="flex-shrink-0 w-72 mx-2">
-              <img src={`/imagens/depoimentos/${encodeURIComponent(file)}`} alt={`Depoimento de cliente ${(i % testimonials.length) + 1}`} className="w-72 h-[420px] object-contain bg-white rounded-2xl shadow-xl" loading="lazy" decoding="async" />
+              <img src={file} alt={`Depoimento de cliente ${(i % testimonials.length) + 1}`} className="w-72 h-[420px] object-contain bg-white rounded-2xl shadow-xl" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>

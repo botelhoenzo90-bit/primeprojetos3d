@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { OFFER_PRICES } from "@/lib/offer-prices";
+import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ShieldCheck, Zap, Gift, X, Sparkles, Crown } from "lucide-react";
 const produtoImg = "/imagens/oferta/Imagem do ChatGPT 2 de nov. de 2026, 15_45_11-Photoroom.png";
@@ -123,9 +125,9 @@ const OfferSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-black text-center text-green-title mb-4 tracking-tight"
+            className="offer-title max-w-4xl mx-auto text-3xl md:text-5xl font-black text-center text-green-title mb-4 leading-tight"
           >
-            Crie, imprima e explore novas possibilidades <span className="text-cta">com a Biblioteca 3D Premium</span>
+            Crie, imprima e explore novas possibilidades <span className="text-cta block">com a Biblioteca 3D Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
             🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.
@@ -170,10 +172,10 @@ const OfferSection = () => {
                     <span className="text-red-600 font-extrabold line-through text-3xl md:text-4xl block mb-0.5">R$ 97,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
                     <div className="text-5xl md:text-6xl font-extrabold text-green-700">
-                      R$ 29<span className="text-3xl">,90</span>
+                      R$ 39<span className="text-3xl">,90</span>
                     </div>
                     <div className="inline-block bg-green-50 text-green-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
-                      Você economiza R$ 67,10!
+                      Você economiza R$ 57,10!
                     </div>
                   </div>
 
@@ -219,7 +221,7 @@ const OfferSection = () => {
                         href="https://pay.cakto.com.br/36cgyiw_840628"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', 29.90, 'Biblioteca STL 3D - Premium')}
+                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', OFFER_PRICES.premium, 'Biblioteca STL 3D - Premium')}
                         className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
@@ -227,7 +229,7 @@ const OfferSection = () => {
                       </a>
                     </div>
                     <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
-                      🛡️ Garantia de 7 dias · Acesso digital
+                      🛡️ Garantia de 7 dias · Acesso pelo WhatsApp
                     </p>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
@@ -250,10 +252,10 @@ const OfferSection = () => {
                     <div className="mt-3 border border-blue-500/40 rounded-xl p-2.5 text-center bg-blue-500/10">
                       <p className="text-sm font-bold text-blue-700 flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
-                        Acesso imediato após a compra!
+                        Receba seu acesso pelo WhatsApp e e-mail!
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
-                        Após a confirmação, confira as instruções de acesso e comece a explorar os arquivos.
+                        Após a confirmação do pagamento, enviamos seu acesso pelo WhatsApp e pelo e-mail informado na compra.
                       </p>
                     </div>
                   </div>
@@ -271,7 +273,7 @@ const OfferSection = () => {
                 <div className="p-5 md:p-6 flex flex-col flex-1">
                   <div className="text-center mb-1">
                     <span className="inline-block bg-gray-200 text-gray-600 text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-gray-300">
-                      Pacote Inicial
+                      Pacote Básico
                     </span>
                   </div>
                   <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
@@ -282,7 +284,7 @@ const OfferSection = () => {
                     <span className="text-red-600 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
                     <div className="text-5xl md:text-6xl font-extrabold text-blue-700">
-                      R$ 9<span className="text-3xl">,90</span>
+                      R$ 10<span className="text-3xl">,00</span>
                     </div>
                   </div>
 
@@ -322,16 +324,16 @@ const OfferSection = () => {
 
                   <div className="mt-auto">
                     <div className="rounded-full mb-4">
-                      <button
+                      <Button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
                         className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
                       >
                         QUERO O PACOTE BÁSICO
-                      </button>
+                      </Button>
                     </div>
                     <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
-                      🛡️ Garantia de 7 dias · Acesso digital
+                      🛡️ Garantia de 7 dias · Acesso pelo WhatsApp
                     </p>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
@@ -350,10 +352,10 @@ const OfferSection = () => {
                     <div className="mt-3 border border-blue-500/40 rounded-xl p-2.5 text-center bg-blue-500/10">
                       <p className="text-sm font-bold text-blue-700 flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
-                        Acesso imediato após a compra!
+                        Receba seu acesso pelo WhatsApp e e-mail!
                       </p>
                       <p className="text-xs text-muted-foreground mt-0.5">
-                        Após a confirmação, confira as instruções de acesso e comece a explorar os arquivos.
+                        Após a confirmação do pagamento, enviamos seu acesso pelo WhatsApp e pelo e-mail informado na compra.
                       </p>
                     </div>
                   </div>
@@ -465,13 +467,13 @@ const OfferSection = () => {
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     setShowUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', 9.90, 'Biblioteca STL 3D - Básico');
+                    handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   className="block bg-gray-200 hover:bg-gray-300 text-gray-500 font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer border-2 border-gray-500"
                 >
-                  Não, quero apenas o Básico — R$ 9,90
+                  Não, quero apenas o Básico — R$ 10,00
                 </motion.a>
 
                 <div className="flex items-center justify-center gap-1.5 mt-1.5 text-[10px] text-muted-foreground">
@@ -521,7 +523,7 @@ const OfferSection = () => {
                 </p>
               </div>
 
-              <div className="px-4 py-2 flex-1">
+              <div className="px-4 py-2 flex-1 overflow-y-auto min-h-0">
                 <img
                   src={produtoImg}
                   alt="Pacote Premium de Arquivos STL 3D"
@@ -534,10 +536,10 @@ const OfferSection = () => {
                   <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
                   <p className="text-[10px] text-foreground font-semibold leading-tight">por apenas</p>
                   <div className="text-3xl font-extrabold text-blue-700 leading-none">
-                    R$ 19<span className="text-lg">,90</span>
+                    R$ 29<span className="text-lg">,90</span>
                   </div>
                   <div className="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
-                    Economize R$ 77,10!
+                    Economize R$ 67,10!
                   </div>
                 </div>
 
@@ -570,13 +572,13 @@ const OfferSection = () => {
                   href="https://pay.cakto.com.br/whodr5r_907770"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', 19.90, 'Biblioteca STL 3D - Upsell Premium 19,90')}
+                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
                   className="block bg-blue-600 hover:bg-blue-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
-                  SIM! Quero o Premium por R$ 19,90
+                  SIM! Quero o Premium por R$ 29,90
                 </motion.a>
 
                 <a
@@ -585,11 +587,11 @@ const OfferSection = () => {
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     setShowBasicUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', 9.90, 'Biblioteca STL 3D - Básico');
+                    handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
                   className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300 mb-1.5"
                 >
-                  Não, quero apenas o Básico — R$ 9,90
+                  Não, quero apenas o Básico — R$ 10,00
                 </a>
 
                 <div className="flex items-center justify-center gap-2">
@@ -603,7 +605,7 @@ const OfferSection = () => {
                   <div className="border border-blue-500/40 rounded-lg px-1.5 py-1 text-center bg-blue-500/10 flex-1">
                     <p className="text-[9px] font-bold text-blue-700 flex items-center justify-center gap-0.5 leading-tight">
                       <Zap className="w-2.5 h-2.5" />
-                      Acesso imediato!
+                      WhatsApp e e-mail
                     </p>
                     <p className="text-[8px] text-muted-foreground leading-tight">
                       Garantia 7 dias

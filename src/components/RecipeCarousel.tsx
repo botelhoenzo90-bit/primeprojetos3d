@@ -25,6 +25,21 @@ import biscoito from "@/assets/categorias/biscoito-articulado.webp.asset.json";
 import bonecoNeve from "@/assets/categorias/boneco-de-neve.webp.asset.json";
 import colecaoReligiosa from "@/assets/categorias/colecao-religiosa.webp.asset.json";
 
+import collectionChaveiros from "@/assets/colecoes/chaveiros.webp.asset.json";
+import collectionDecoracao from "@/assets/colecoes/decoracao.webp.asset.json";
+import collectionNatal from "@/assets/colecoes/natal.webp.asset.json";
+import collectionLuminarias from "@/assets/colecoes/luminarias.webp.asset.json";
+import collectionPets from "@/assets/colecoes/pets.webp.asset.json";
+import collectionVasos from "@/assets/colecoes/vasos.webp.asset.json";
+
+const collections = [
+  { image: collectionChaveiros, title: "Chaveiros 3D" },
+  { image: collectionDecoracao, title: "Decoração 3D" },
+  { image: collectionNatal, title: "Enfeites de Natal 3D" },
+  { image: collectionLuminarias, title: "Luminárias Natalinas 3D" },
+  { image: collectionPets, title: "Produtos para Pets 3D" },
+  { image: collectionVasos, title: "Vasos e Cachepôs 3D" },
+];
 const models = [
   { img: organizadores.url, title: "Organizadores", desc: "Suportes e organizadores funcionais" },
   { img: vasos.url, title: "Vasos Decorativos", desc: "Vasos e cachepôs para seus espaços" },
@@ -60,12 +75,19 @@ const RecipeCarousel = () => (
   <section className="category-gallery py-8 md:py-10 overflow-hidden" aria-label="Categorias de projetos 3D">
     <div className="container mx-auto px-4 mb-5">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-        <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-1.5 rounded-full border border-[#FFD700]">IDEIAS PARA SUA PRÓXIMA IMPRESSÃO</span>
-        <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3">O que sua impressora pode <span className="text-blue-700">criar a partir de hoje?</span></h2>
+        <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-1.5 rounded-full border border-[#FFD700]">ARQUIVOS STL PARA IMPRESSÃO 3D</span>
+        <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3">Conheça a Biblioteca 3D: <span className="text-cta">modelos prontos para imprimir</span></h2>
         <p className="text-[#334155] text-base md:text-lg font-medium max-w-2xl mx-auto">De utilidades a peças decorativas e colecionáveis: explore possibilidades para escolher o próximo projeto.</p>
       </motion.div>
     </div>
     <div className="space-y-4">
+      <div className="category-track flex w-max animate-marquee-reverse" aria-label="Carrossel de coleções 3D">
+        {[...collections, ...collections].map((collection, index) => (
+          <div key={index} className="w-44 md:w-52 mx-2 shrink-0">
+            <img src={collection.image.url} alt={collection.title} loading="lazy" decoding="async" className="w-full aspect-[4/5] object-contain rounded-lg" />
+          </div>
+        ))}
+      </div>
       {rows.map((row, rowIndex) => (
       <div key={rowIndex} className={`category-track flex w-max ${rowIndex === 0 ? "animate-marquee" : "animate-marquee-reverse"}`} aria-label={`Carrossel de categorias ${rowIndex + 1}`}>
         {[...row, ...row].map((model, i) => (

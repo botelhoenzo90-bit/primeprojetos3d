@@ -221,3 +221,5 @@ img, iframe, video {
   .animate-marquee, .animate-marquee-reverse, .animate-marquee-testimonials, .animate-pulse-soft { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+.category-track.collection-track { animation-duration: 35s; }

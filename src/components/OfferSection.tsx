@@ -228,9 +228,6 @@ const OfferSection = () => {
                         QUERO ACESSAR A BIBLIOTECA
                       </a>
                     </div>
-                    <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
-                      🛡️ Garantia de 7 dias · Acesso pelo WhatsApp
-                    </p>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
                       <ShieldCheck className="w-4 h-4 text-cta" />
@@ -249,13 +246,13 @@ const OfferSection = () => {
                       e muito mais...
                     </p>
 
-                    <div className="mt-3 border border-blue-500/40 rounded-xl p-2.5 text-center bg-blue-500/10">
-                      <p className="text-sm font-bold text-blue-700 flex items-center justify-center gap-1.5">
+                    <div className="mt-3 border border-primary/30 rounded-lg p-2 text-center bg-primary/5">
+                      <p className="text-xs font-bold text-primary flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
-                        Receba seu acesso pelo WhatsApp e e-mail!
+                        Acesso pelo WhatsApp e e-mail
                       </p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
-                        Após a confirmação do pagamento, enviamos seu acesso pelo WhatsApp e pelo e-mail informado na compra.
+                      <p className="text-[11px] text-muted-foreground mt-0.5">
+                        Enviado após a confirmação do pagamento.
                       </p>
                     </div>
                   </div>
@@ -332,9 +329,6 @@ const OfferSection = () => {
                         QUERO O PACOTE BÁSICO
                       </Button>
                     </div>
-                    <p className="text-center text-xs md:text-sm text-[#064E3B] font-semibold -mt-2 mb-2 flex items-center justify-center gap-1.5">
-                      🛡️ Garantia de 7 dias · Acesso pelo WhatsApp
-                    </p>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
                       <ShieldCheck className="w-4 h-4 text-cta" />
@@ -349,13 +343,13 @@ const OfferSection = () => {
                       decoding="async"
                     />
 
-                    <div className="mt-3 border border-blue-500/40 rounded-xl p-2.5 text-center bg-blue-500/10">
-                      <p className="text-sm font-bold text-blue-700 flex items-center justify-center gap-1.5">
+                    <div className="mt-3 border border-primary/30 rounded-lg p-2 text-center bg-primary/5">
+                      <p className="text-xs font-bold text-primary flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
-                        Receba seu acesso pelo WhatsApp e e-mail!
+                        Acesso pelo WhatsApp e e-mail
                       </p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
-                        Após a confirmação do pagamento, enviamos seu acesso pelo WhatsApp e pelo e-mail informado na compra.
+                      <p className="text-[11px] text-muted-foreground mt-0.5">
+                        Enviado após a confirmação do pagamento.
                       </p>
                     </div>
                   </div>

@@ -32,7 +32,15 @@ import collectionLuminarias from "@/assets/colecoes/luminarias.webp.asset.json";
 import collectionPets from "@/assets/colecoes/pets.webp.asset.json";
 import collectionVasos from "@/assets/colecoes/vasos.webp.asset.json";
 
+import collectionCarros from "@/assets/colecoes/carros.webp.asset.json";
+import collectionAcessorios from "@/assets/colecoes/acessorios.webp.asset.json";
+import collectionBrinquedos from "@/assets/colecoes/brinquedos.webp.asset.json";
+import collectionSensoriais from "@/assets/colecoes/sensoriais.webp.asset.json";
 const collections = [
+  { image: collectionCarros, title: "Carros 3D" },
+  { image: collectionAcessorios, title: "Acessórios e Utilidades 3D" },
+  { image: collectionBrinquedos, title: "Brinquedos Articulados 3D" },
+  { image: collectionSensoriais, title: "Brinquedos Sensoriais 3D" },
   { image: collectionChaveiros, title: "Chaveiros 3D" },
   { image: collectionDecoracao, title: "Decoração 3D" },
   { image: collectionNatal, title: "Enfeites de Natal 3D" },
@@ -81,7 +89,7 @@ const RecipeCarousel = () => (
       </motion.div>
     </div>
     <div className="space-y-4">
-      <div className="category-track flex w-max animate-marquee-reverse" aria-label="Carrossel de coleções 3D">
+      <div className="collection-track category-track flex w-max animate-marquee-reverse" aria-label="Carrossel de coleções 3D">
         {[...collections, ...collections].map((collection, index) => (
           <div key={index} className="w-44 md:w-52 mx-2 shrink-0">
             <img src={collection.image.url} alt={collection.title} loading="lazy" decoding="async" className="w-full aspect-[4/5] object-contain rounded-lg" />

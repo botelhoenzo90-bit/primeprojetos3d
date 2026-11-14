@@ -11,3 +11,6 @@
 - [x] Verify mobile, desktop and the basic-to-premium offer.
 - [ ] Confirm real rating totals and buyer activity before displaying customer statistics or purchase notifications — awaiting real customer data.
 - [ ] Verify the new prices charged by Cakto — checkout links preserved; external product prices require confirmation.
+- [x] Add four collection photos and two testimonial screenshots; speed up the first gallery row.
+- [x] Crop circular profile photos, remove blue strip, compact compatibility/access notices and add footer logo.
+- [x] Verify updated layouts on mobile and desktop.

@@ -148,11 +148,11 @@ const OfferSection = () => {
 
                 <div className="p-5 md:p-6 flex flex-col flex-1">
                   <div className="text-center mb-1">
-                    <span className="inline-block bg-green-600 text-white text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full">
+                    <span className="inline-block bg-green-600 text-white text-xs md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full">
                       Pacote Premium
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-blue-700 mt-1 mb-2">
+                  <h2 className="text-center text-3xl md:text-4xl font-extrabold text-blue-700 mt-2 mb-3">
                     Biblioteca STL 3D
                   </h2>
 
@@ -242,10 +242,7 @@ const OfferSection = () => {
                       decoding="async"
                     />
 
-                    <p className="text-center text-[11px] text-muted-foreground mt-1 italic">
-                      e muito mais...
-                    </p>
-
+                    
                     <div className="mt-3 border border-primary/30 rounded-lg p-2 text-center bg-primary/5">
                       <p className="text-xs font-bold text-primary flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
@@ -273,7 +270,7 @@ const OfferSection = () => {
                       Pacote Básico
                     </span>
                   </div>
-                  <h2 className="text-center text-2xl md:text-3xl font-extrabold text-cta mt-1 mb-2">
+                  <h2 className="text-center text-3xl md:text-4xl font-extrabold text-cta mt-2 mb-3">
                     Biblioteca STL 3D
                   </h2>
 

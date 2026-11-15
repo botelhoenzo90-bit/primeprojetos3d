@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck, Layers3 } from "lucide-react";
 
 const benefits = [
-  { icon: Search, text: "Explore mais de 100 mil modelos 3D organizados por categoria." },
-  { icon: PackageCheck, text: "Encontre ideias de produtos para montar um catálogo mais variado e atrativo." },
-  { icon: Layers3, text: "Tenha opções para datas comemorativas, decoração, utilidades, presentes e colecionáveis." },
-  { icon: Timer, text: "Pare de perder horas procurando arquivos em vários sites: encontre tudo em uma biblioteca organizada." },
-  { icon: Printer, text: "Escolha modelos para testar novas peças, personalizações e possibilidades de venda com sua impressora." },
-  { icon: Lightbulb, text: "Troque experiências, tire dúvidas e compartilhe ideias com uma comunidade gratuita." },
+  { icon: Search, text: "Mais de 100 mil modelos 3D. Tudo organizado por categoria." },
+  { icon: PackageCheck, text: "Amplie seu catálogo com ideias de produtos que chamam atenção." },
+  { icon: Layers3, text: "Modelos para datas especiais, decoração, presentes e muito mais." },
+  { icon: Timer, text: "Chega de buscar em vários sites. Encontre tudo em um só lugar." },
+  { icon: Printer, text: "Crie peças, personalize produtos e descubra novas oportunidades de venda." },
+  { icon: Lightbulb, text: "Participe de uma comunidade gratuita. Tire dúvidas e troque ideias." },
 ];
 
 const MainBenefitsSection = () => (
@@ -25,11 +25,11 @@ const MainBenefitsSection = () => (
       </div>
       <div className="max-w-3xl mx-auto flex flex-col gap-3 md:gap-4">
         {benefits.map(({ icon: Icon, text }, index) => (
-          <motion.div key={text} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="flex items-center gap-3 md:gap-4 rounded-xl border border-blue-100 bg-white/85 px-4 py-3 md:px-5 md:py-3.5 shadow-sm text-left">
-            <span className="flex h-9 w-9 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full border border-blue-200 bg-blue-50 text-[#2677C9]">
+          <motion.div key={text} initial={{ opacity: 0, x: -10 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }} className="flex items-center gap-3 md:gap-4 rounded-xl border border-blue-100 bg-white/85 px-4 py-2.5 md:px-5 md:py-3 shadow-sm text-left">
+            <span className="flex h-8 w-8 md:h-9 md:w-9 shrink-0 items-center justify-center rounded-full border border-blue-200 bg-blue-50 text-[#2677C9]">
               <Icon className="w-4.5 h-4.5 md:w-5 md:h-5" strokeWidth={2.2} />
             </span>
-            <p className="text-sm md:text-base font-semibold text-[#17324D] leading-snug">{text}</p>
+            <p className="text-[13px] md:text-sm font-bold text-[#17324D] leading-snug">{text}</p>
           </motion.div>
         ))}
       </div>

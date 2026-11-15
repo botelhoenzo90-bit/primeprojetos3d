@@ -503,7 +503,7 @@ const OfferSection = () => {
                 <X className="w-3.5 h-3.5" />
               </button>
 
-              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-1.5 px-3 text-center flex-shrink-0">
+              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-1.5 px-3 text-center flex-shrink-0">
                 <div className="inline-flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span className="text-[13px] font-black uppercase tracking-wider">Oferta Especial Relâmpago!</span>
@@ -526,10 +526,10 @@ const OfferSection = () => {
                 <div className="text-center mb-2">
                   <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
                   <p className="text-[10px] text-foreground font-semibold leading-tight">por apenas</p>
-                  <div className="text-3xl font-extrabold text-blue-700 leading-none">
+                  <div className="text-3xl font-extrabold text-green-700 leading-none">
                     R$ 29<span className="text-lg">,90</span>
                   </div>
-                  <div className="inline-block bg-blue-50 text-blue-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
+                  <div className="inline-block bg-green-50 text-green-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
                     Economize R$ 67,10!
                   </div>
                 </div>
@@ -566,7 +566,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
+                  className="block bg-blue-700 hover:bg-blue-800 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 29,90

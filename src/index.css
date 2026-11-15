@@ -237,3 +237,31 @@ img, iframe, video {
   .prime-hero h1 { max-width: 100%; }
   .compatibility-track > div { min-width: 7.5rem; }
 }
+
+
+/* CTAs principais: mais presença, contraste e destaque */
+.prime-cta {
+  position: relative;
+  isolation: isolate;
+  font-weight: 900 !important;
+  border: 2px solid rgba(255,255,255,.35) !important;
+  box-shadow: 0 7px 0 rgba(116, 43, 12, .22), 0 12px 26px rgba(230, 88, 30, .28) !important;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease !important;
+}
+.prime-cta:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.06) saturate(1.08);
+  box-shadow: 0 9px 0 rgba(116, 43, 12, .18), 0 16px 30px rgba(230, 88, 30, .34) !important;
+}
+.prime-cta:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 rgba(116, 43, 12, .2), 0 6px 14px rgba(230, 88, 30, .22) !important;
+}
+.prime-cta:focus-visible {
+  outline: 3px solid #17324D;
+  outline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .prime-cta { transition: none !important; }
+  .prime-cta:hover, .prime-cta:active { transform: none; }
+}

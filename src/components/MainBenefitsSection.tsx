@@ -4,8 +4,8 @@ import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck, Layers3 
 
 const benefits = [
   { icon: Search, text: "Mais de 100 mil modelos 3D. Tudo organizado por categoria." },
-  { icon: PackageCheck, text: "Amplie seu catálogo com ideias de produtos que chamam atenção." },
-  { icon: Layers3, text: "Modelos para datas especiais, decoração, presentes e muito mais." },
+  { icon: PackageCheck, text: "Descubra novos produtos para diversificar suas vendas e atrair clientes." },
+  { icon: Layers3, text: "Explore coleções de decoração, utilidades, presentes e temas sazonais." },
   { icon: Timer, text: "Chega de buscar em vários sites. Encontre tudo em um só lugar." },
   { icon: Printer, text: "Crie peças, personalize produtos e descubra novas oportunidades de venda." },
   { icon: Lightbulb, text: "Participe de uma comunidade gratuita. Tire dúvidas e troque ideias." },

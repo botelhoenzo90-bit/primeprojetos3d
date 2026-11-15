@@ -458,7 +458,7 @@ const OfferSection = () => {
                     setShowUpsell(false);
                     handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
-                  className="block bg-gray-200 hover:bg-gray-300 text-gray-500 font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer border-2 border-gray-500"
+                  className="prime-cta-basic block font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer"
                 >
                   Não, quero apenas o Básico — R$ 10,00
                 </a></Button>
@@ -574,7 +574,7 @@ const OfferSection = () => {
                     setShowBasicUpsell(false);
                     handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
-                  className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300 mb-1.5"
+                  className="prime-cta-basic block font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer mb-1.5"
                 >
                   Não, quero apenas o Básico — R$ 10,00
                 </a></Button>

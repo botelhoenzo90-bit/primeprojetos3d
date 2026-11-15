@@ -245,17 +245,20 @@ img, iframe, video {
   isolation: isolate;
   font-weight: 900 !important;
   border: 2px solid rgba(255,255,255,.35) !important;
-  box-shadow: 0 7px 0 rgba(116, 43, 12, .22), 0 12px 26px rgba(230, 88, 30, .28) !important;
+  background-color: #16a34a !important;
+  color: #fff !important;
+  box-shadow: 0 7px 0 rgba(10, 90, 42, .28), 0 12px 26px rgba(22, 163, 74, .30) !important;
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease !important;
 }
 .prime-cta:hover {
   transform: translateY(-3px);
   filter: brightness(1.06) saturate(1.08);
-  box-shadow: 0 9px 0 rgba(116, 43, 12, .18), 0 16px 30px rgba(230, 88, 30, .34) !important;
+  background-color: #15803d !important;
+  box-shadow: 0 9px 0 rgba(10, 90, 42, .22), 0 16px 30px rgba(22, 163, 74, .38) !important;
 }
 .prime-cta:active {
   transform: translateY(2px);
-  box-shadow: 0 3px 0 rgba(116, 43, 12, .2), 0 6px 14px rgba(230, 88, 30, .22) !important;
+  box-shadow: 0 3px 0 rgba(10, 90, 42, .24), 0 6px 14px rgba(22, 163, 74, .24) !important;
 }
 .prime-cta:focus-visible {
   outline: 3px solid #17324D;
@@ -265,3 +268,8 @@ img, iframe, video {
   .prime-cta { transition: none !important; }
   .prime-cta:hover, .prime-cta:active { transform: none; }
 }
+
+
+/* Botão do plano básico permanece neutro em cinza */
+.prime-cta-basic { background-color: #64748b !important; color: #fff !important; border: 2px solid rgba(255,255,255,.4) !important; box-shadow: 0 5px 0 rgba(51,65,85,.28), 0 9px 20px rgba(71,85,105,.2) !important; }
+.prime-cta-basic:hover { background-color: #475569 !important; transform: translateY(-2px); }

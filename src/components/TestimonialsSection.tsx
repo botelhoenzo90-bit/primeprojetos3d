@@ -27,8 +27,9 @@ const TestimonialsSection = () => {
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap border border-[#FFD700]">
             <Star className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> DEPOIMENTOS E EXPERIÊNCIAS
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
-            Veja o que estão falando <span className="text-cta">sobre o Pack 3D</span>
+          <h2 className="mx-auto max-w-4xl text-3xl sm:text-4xl md:text-6xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
+            <span className="block">Veja o que estão falando</span>
+            <span className="block text-cta">sobre o Pack 3D</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-medium">Relatos e comentários de quem já conhece os projetos e arquivos 3D.</p>
         </motion.div>

@@ -20,7 +20,7 @@ const MainBenefitsSection = () => (
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-green-title leading-tight max-w-4xl mx-auto">
           Transforme sua impressora em uma <span className="text-heading-highlight">máquina de ideias.</span>
         </h2>
-        <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto mt-4">Encontre inspiração, explore novas categorias e planeje seus próximos projetos em 3D.</p>
+        <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto mt-4"><span className="block">Mais variedade para</span><span className="block">seus próximos projetos.</span></p>
       </div>
       <div className="max-w-3xl mx-auto flex flex-col gap-3 md:gap-4">
         {benefits.map(({ icon: Icon, text }, index) => (

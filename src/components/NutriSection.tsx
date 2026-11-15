@@ -38,7 +38,7 @@ const NutriSection = () => (
           </motion.div>
         ); })}
       </div>
-      <SectionCTA label="QUERO ENCONTRAR MEUS PRÓXIMOS PROJETOS" />
+      <SectionCTA label="QUERO ACESSAR OS ARQUIVOS" />
     </div>
   </section>
 );

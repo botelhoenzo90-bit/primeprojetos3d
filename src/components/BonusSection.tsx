@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Gift } from "lucide-react";
 
@@ -51,7 +52,7 @@ const BonusSection = () => {
       </div>
       <div className="container mx-auto px-4">
         <div className="text-center mt-8 flex flex-col items-center">
-          <motion.a href="#oferta" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block w-full md:w-auto bg-[#15803D] hover:bg-[#166534] text-white font-black text-sm md:text-xl px-10 py-5 rounded-full text-center shadow-lg transition-all uppercase tracking-wide mb-2">QUERO CONHECER AS 19 COLEÇÕES</motion.a>
+          <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-10 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2">QUERO O PREMIUM COMPLETO</a></Button>
           <p className="text-xs md:text-sm text-[#334155] font-semibold">🛡️ Garantia de 7 dias • Acesso digital</p>
         </div>
       </div>

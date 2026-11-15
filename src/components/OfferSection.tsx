@@ -217,7 +217,7 @@ const OfferSection = () => {
 
                   <div className="mt-auto">
                     <div className="rounded-full mb-4">
-                      <a
+                      <Button asChild className="h-auto whitespace-normal"><a
                         href="https://pay.cakto.com.br/36cgyiw_840628"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -225,8 +225,8 @@ const OfferSection = () => {
                         className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover prime-cta text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
-                        QUERO ACESSAR A BIBLIOTECA
-                      </a>
+                        QUERO O PREMIUM COMPLETO
+                      </a></Button>
                     </div>
 
                     <div className="flex items-center justify-center gap-2 mt-3 text-xs text-muted-foreground">
@@ -439,20 +439,18 @@ const OfferSection = () => {
                   </ul>
                 </div>
 
-                <motion.a
+                <Button asChild className="h-auto whitespace-normal"><a
                   href="https://pay.cakto.com.br/etagmjj_848143"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Biblioteca STL 3D - Upsell Premium')}
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.97 }}
                   className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
                 >
                   <Zap className="w-4 h-4 inline mr-1" />
                   SIM! Quero por R$ 14,90
-                </motion.a>
+                </a></Button>
 
-                <motion.a
+                <Button asChild className="h-auto whitespace-normal"><a
                   href="https://pay.cakto.com.br/kv9j6ie_848142"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -460,12 +458,10 @@ const OfferSection = () => {
                     setShowUpsell(false);
                     handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.97 }}
-                  className="block bg-gray-200 hover:bg-gray-300 text-gray-500 font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer border-2 border-gray-500"
+                  className="prime-cta-basic block font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer"
                 >
                   Não, quero apenas o Básico — R$ 10,00
-                </motion.a>
+                </a></Button>
 
                 <div className="flex items-center justify-center gap-1.5 mt-1.5 text-[10px] text-muted-foreground">
                   <ShieldCheck className="w-3 h-3 text-green-700" />
@@ -559,20 +555,18 @@ const OfferSection = () => {
               </div>
 
               <div className="px-3 pb-2 pt-1 flex-shrink-0">
-                <motion.a
+                <Button asChild className="h-auto whitespace-normal"><a
                   href="https://pay.cakto.com.br/whodr5r_907770"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.97 }}
                   className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
-                  SIM! Quero o Premium por R$ 29,90
-                </motion.a>
+                  QUERO O PREMIUM POR R$ 29,90
+                </a></Button>
 
-                <a
+                <Button asChild className="h-auto whitespace-normal"><a
                   href="https://pay.cakto.com.br/3bjr73a_907769"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -580,10 +574,10 @@ const OfferSection = () => {
                     setShowBasicUpsell(false);
                     handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
-                  className="block bg-gray-100 hover:bg-gray-200 text-gray-600 font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer border border-gray-300 mb-1.5"
+                  className="prime-cta-basic block font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer mb-1.5"
                 >
                   Não, quero apenas o Básico — R$ 10,00
-                </a>
+                </a></Button>
 
                 <div className="flex items-center justify-center gap-2">
                   <img

@@ -239,37 +239,50 @@ img, iframe, video {
 }
 
 
-/* CTAs principais: mais presença, contraste e destaque */
-.prime-cta {
+/* Shared purchase-button colors and crisp cartoon shadows. */
+:root {
+  --cta-green: 142 71% 36%;
+  --cta-green-hover: 142 72% 29%;
+  --cta-shadow: 0 0% 0%;
+  --cta-outline: 0 0% 100%;
+  --cta-basic: 215 16% 47%;
+  --cta-basic-hover: 215 19% 35%;
+  --shadow-cta: 0 5px 0 hsl(var(--cta-shadow));
+  --shadow-cta-hover: 0 7px 0 hsl(var(--cta-shadow));
+  --shadow-cta-active: 0 2px 0 hsl(var(--cta-shadow));
+}
+.prime-cta, .prime-cta-basic {
   position: relative;
-  isolation: isolate;
   font-weight: 900 !important;
-  border: 2px solid rgba(255,255,255,.35) !important;
-  background-color: #16a34a !important;
-  color: #fff !important;
-  box-shadow: 0 7px 0 rgba(10, 90, 42, .28), 0 12px 26px rgba(22, 163, 74, .30) !important;
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease !important;
+  border: 2px solid hsl(var(--cta-outline) / .35) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  box-shadow: var(--shadow-cta) !important;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease !important;
+  animation: none !important;
+  letter-spacing: 0;
 }
-.prime-cta:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.06) saturate(1.08);
-  background-color: #15803d !important;
-  box-shadow: 0 9px 0 rgba(10, 90, 42, .22), 0 16px 30px rgba(22, 163, 74, .38) !important;
+.prime-cta { background-color: hsl(var(--cta-green)) !important; }
+.prime-cta-basic { background-color: hsl(var(--cta-basic)) !important; }
+.prime-cta:hover, .prime-cta-basic:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-cta-hover) !important;
 }
-.prime-cta:active {
-  transform: translateY(2px);
-  box-shadow: 0 3px 0 rgba(10, 90, 42, .24), 0 6px 14px rgba(22, 163, 74, .24) !important;
+.prime-cta:hover { background-color: hsl(var(--cta-green-hover)) !important; }
+.prime-cta-basic:hover { background-color: hsl(var(--cta-basic-hover)) !important; }
+.prime-cta:active, .prime-cta-basic:active {
+  transform: translateY(3px);
+  box-shadow: var(--shadow-cta-active) !important;
 }
-.prime-cta:focus-visible {
-  outline: 3px solid #17324D;
-  outline-offset: 4px;
+.prime-cta:focus-visible, .prime-cta-basic:focus-visible {
+  outline: 3px solid hsl(var(--foreground));
+  outline-offset: 5px;
+}
+.prime-page > div > section { padding-top: 2rem; padding-bottom: 2rem; }
+.prime-page .prime-hero { padding-top: .25rem !important; padding-bottom: 1.5rem !important; }
+@media (min-width: 768px) {
+  .prime-page > div > section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .prime-cta { transition: none !important; }
-  .prime-cta:hover, .prime-cta:active { transform: none; }
+  .prime-cta, .prime-cta-basic { transition: none !important; }
+  .prime-cta:hover, .prime-cta:active, .prime-cta-basic:hover, .prime-cta-basic:active { transform: none; }
 }
-
-
-/* Botão do plano básico permanece neutro em cinza */
-.prime-cta-basic { background-color: #64748b !important; color: #fff !important; border: 2px solid rgba(255,255,255,.4) !important; box-shadow: 0 5px 0 rgba(51,65,85,.28), 0 9px 20px rgba(71,85,105,.2) !important; }
-.prime-cta-basic:hover { background-color: #475569 !important; transform: translateY(-2px); }

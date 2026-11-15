@@ -7,3 +7,5 @@
 - Keep the gallery in the second section with a separate uploaded portrait-collection row above two deterministic mixed category rows and one shared CTA — preserves image proportions and predictable ordering.
 
 - Keep offer prices in a shared pricing module for display and checkout tracking — prevents price/event drift.
+
+- Main purchase CTAs share semantic green and crisp black-shadow tokens through the button component; the basic plan keeps its neutral variant to preserve consistent styling.

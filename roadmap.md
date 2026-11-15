@@ -1,5 +1,9 @@
 # Tasks
 
+- [ ] Strengthen hero subtitle and enlarge main image; balance desktop headings and show offers side by side.
+- [ ] Extend compatibility loops edge to edge and change green heading accents to orange.
+- [ ] Repair missing offer/testimonial images and verify mobile/desktop rendering.
+
 - [x] Add the six uploaded images to the category collection.
 - [x] Mix all category photos into two stacked carousels and keep one button below them.
 - [x] Make bonus photos fill equal-size image areas.

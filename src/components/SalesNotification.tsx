@@ -26,12 +26,12 @@ const SalesNotification = () => {
   }, []);
   const person = demoNotifications[current];
   return <div className={`fixed bottom-3 left-3 z-50 transition-all duration-500 ${show ? "translate-x-0 opacity-100" : "-translate-x-[120%] opacity-0"}`} style={{ pointerEvents: "none" }} aria-live="polite">
-    <div className="sales-notification flex w-[min(290px,calc(100vw-24px))] sm:w-[340px] items-center gap-3 rounded-xl border px-3 py-3 sm:px-4 sm:py-3.5">
-      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-foreground/35 bg-primary-foreground/15"><UserRound className="h-6 w-6" /></div>
+    <div className="sales-notification flex w-[min(250px,calc(100vw-24px))] sm:w-[300px] items-center gap-2.5 rounded-xl border px-2.5 py-2.5 sm:px-3 sm:py-3">
+      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-foreground/35 bg-primary-foreground/15"><UserRound className="h-5 w-5" /></div>
       <div className="min-w-0 flex-1 leading-tight">
-        <div className="text-sm sm:text-base font-extrabold">{person.name}</div>
-        <p className="text-[11px] sm:text-xs opacity-90">{person.city}</p>
-        <p className="mt-1 text-xs sm:text-sm font-semibold leading-snug">Acabou de adquirir a Biblioteca de Projetos 3D!</p>
+        <div className="text-xs sm:text-sm font-extrabold">{person.name}</div>
+        <p className="text-[10px] sm:text-[11px] opacity-90">{person.city}</p>
+        <p className="mt-1 text-[11px] sm:text-xs font-semibold leading-snug">Acabou de adquirir a Biblioteca de Projetos 3D!</p>
       </div>
     </div>
   </div>;

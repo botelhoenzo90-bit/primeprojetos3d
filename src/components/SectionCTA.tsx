@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const SectionCTA = ({ label = "QUERO CONHECER A BIBLIOTECA", dark = false }: { label?: string; dark?: boolean }) => (
   <div className="mt-7 md:mt-9 flex flex-col items-center text-center">
-    <Button asChild className="h-auto w-full max-w-sm whitespace-normal rounded-xl bg-[#E85D25] hover:bg-[#CF4D1B] px-6 py-4 text-sm md:text-base font-black uppercase text-white shadow-md">
+    <Button asChild className="h-auto w-full max-w-sm whitespace-normal rounded-xl bg-[#E85D25] hover:bg-[#CF4D1B] prime-cta px-6 py-4 text-sm md:text-base font-black uppercase text-white shadow-md">
       <a href="#oferta" className="flex items-center justify-center gap-2 text-center leading-tight">{label} <ArrowRight className="h-5 w-5 shrink-0" /></a>
     </Button>
     <p className={`mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] sm:text-xs font-bold leading-tight ${dark ? "text-white" : "text-slate-700"}`}>

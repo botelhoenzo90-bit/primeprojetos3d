@@ -566,7 +566,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-blue-700 hover:bg-blue-800 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
+                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 29,90

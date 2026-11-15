@@ -107,7 +107,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 40s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 
 @keyframes marquee-reverse {
@@ -116,7 +116,7 @@
 }
 
 .animate-marquee-reverse {
-  animation: marquee-reverse 40s linear infinite;
+  animation: marquee-reverse 22s linear infinite;
 }
 
 .animate-marquee:hover,
@@ -166,7 +166,7 @@ display: none !important;
 
 .category-gallery { background-color: hsl(var(--gallery-surface)); }
 .category-card { background-color: hsl(var(--gallery-card)); }
-.category-track { animation-duration: 105s; }
+.category-track { animation-duration: 48s; }
 
 @media (prefers-reduced-motion: reduce) {
   .category-gallery .category-track { animation: none; }
@@ -222,8 +222,8 @@ img, iframe, video {
   html { scroll-behavior: auto; }
 }
 
-.category-track.collection-track { animation-duration: 35s; }
+.category-track.collection-track { animation-duration: 25s; }
 .hero-title-refresh { font-family: 'Arial', sans-serif; font-weight: 900; color: hsl(var(--foreground)); }
-.compatibility-track { animation-duration: 28s; }
+.compatibility-track { animation-duration: 16s; }
 .sales-notification { background: hsl(var(--notification-background)); color: hsl(var(--primary-foreground)); border-color: hsl(var(--notification-background) / .3); }
 :root { --notification-background: 147 73% 38%; }

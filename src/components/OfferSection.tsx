@@ -3,7 +3,7 @@ import { OFFER_PRICES } from "@/lib/offer-prices";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ShieldCheck, Zap, Gift, X, Sparkles, Crown } from "lucide-react";
-import produtoAsset from "@/assets/oferta/biblioteca-premium.webp.asset.json";
+import produtoAsset from "@/assets/oferta/biblioteca-prime-3d.webp.asset.json";
 const produtoImg = produtoAsset.url;
 const produtoMockup = produtoAsset.url;
 import paymentMethods from "@/assets/payment-methods.png";
@@ -164,7 +164,7 @@ const OfferSection = () => {
                   <img
                     src={produtoImg}
                       alt="Biblioteca digital de arquivos STL para impressão 3D"
-                    className="w-full max-w-[300px] aspect-square object-contain mx-auto rounded-lg mb-4"
+                    className="w-full h-auto object-contain mx-auto rounded-lg mb-4"
                     loading="lazy"
                     decoding="async"
                   />

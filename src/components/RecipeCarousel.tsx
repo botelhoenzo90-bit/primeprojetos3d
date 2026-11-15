@@ -91,8 +91,8 @@ const RecipeCarousel = () => (
     <div className="space-y-4">
       <div className="collection-track category-track flex w-max animate-marquee-reverse" aria-label="Carrossel de coleções 3D">
         {[...collections, ...collections].map((collection, index) => (
-          <div key={index} className="w-44 md:w-52 mx-2 shrink-0">
-            <img src={collection.image.url} alt={collection.title} loading="lazy" decoding="async" className="w-full aspect-[4/5] object-contain rounded-lg" />
+          <div key={index} className="w-52 md:w-64 mx-2 shrink-0">
+            <img src={collection.image.url} alt={collection.title} loading="lazy" decoding="async" className="w-full aspect-[4/5] object-contain rounded-xl shadow-md" />
           </div>
         ))}
       </div>

@@ -9,3 +9,4 @@
 - Keep offer prices in a shared pricing module for display and checkout tracking — prevents price/event drift.
 
 - Main purchase CTAs share semantic green and crisp black-shadow tokens through the button component; the basic plan keeps its neutral variant to preserve consistent styling.
+- Proxy the CDN asset path to the hosted app in local Vite development — local previews must render the same images as hosted pages.

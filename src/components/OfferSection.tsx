@@ -128,7 +128,7 @@ const OfferSection = () => {
             viewport={{ once: true }}
             className="offer-title max-w-4xl mx-auto text-[1.45rem] leading-[1.16] sm:text-3xl md:text-5xl font-black text-center text-green-title mb-4 tracking-tight px-2"
           >
-            Crie, imprima e explore novas possibilidades <span className="text-cta">com a Biblioteca 3D Premium</span>
+            Crie, imprima e explore novas possibilidades <span className="text-[#f97316]">com a Biblioteca 3D Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
             🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.
@@ -149,7 +149,7 @@ const OfferSection = () => {
 
                 <div className="p-5 md:p-6 flex flex-col flex-1">
                   <div className="text-center mb-1">
-                    <span className="inline-block bg-green-600 text-white text-xs md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full">
+                    <span className="inline-block bg-orange-500 text-white text-xs md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full">
                       Pacote Premium
                     </span>
                   </div>

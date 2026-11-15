@@ -206,7 +206,7 @@ const OfferSection = () => {
                     <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
+                          <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
                             <Gift className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-sm font-semibold text-foreground">{item}</span>
@@ -222,7 +222,7 @@ const OfferSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', OFFER_PRICES.premium, 'Biblioteca STL 3D - Premium')}
-                        className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
+                        className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         QUERO ACESSAR A BIBLIOTECA

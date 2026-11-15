@@ -10,10 +10,14 @@ const CompatibilityCarousel = ({ title, items, icon: Icon, duration }: { title: 
       {title}
     </h3>
     <div className="compatibility-marquee w-full overflow-hidden" aria-label={title}>
-      <div className="compatibility-marquee-track flex w-max gap-3" style={{ animationDuration: duration }}>
-        {[...items, ...items].map((name, index) => (
-          <div key={`${name}-${index}`} aria-hidden={index >= items.length} className="flex min-h-[58px] w-[138px] shrink-0 items-center justify-center rounded-xl border border-blue-200 bg-blue-50/70 px-3 py-3 text-center text-sm font-extrabold leading-tight text-[#17324D] sm:w-[158px]">
-            {name}
+      <div className="compatibility-marquee-track flex w-max" style={{ animationDuration: duration }}>
+        {[0, 1].map((copy) => (
+          <div key={copy} aria-hidden={copy === 1} className="flex shrink-0 gap-3 pr-3">
+            {items.map((name) => (
+              <div key={name} className="flex min-h-[58px] w-[138px] shrink-0 items-center justify-center rounded-xl border border-blue-200 bg-blue-50/70 px-3 py-3 text-center text-sm font-extrabold leading-tight text-[#17324D] sm:w-[158px]">
+                {name}
+              </div>
+            ))}
           </div>
         ))}
       </div>

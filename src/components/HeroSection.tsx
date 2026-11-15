@@ -22,7 +22,7 @@ const HeroSection = () => (
       <p className="max-w-3xl text-muted-foreground text-base md:text-xl leading-relaxed mb-5">Tenha acesso a uma biblioteca com mais de <strong className="inline-block rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e vender na:</p>
       <img src={marketplaces.url} alt="Mercado Livre, Shopee, TikTok Shop e sua cidade" className="w-full max-w-[310px] md:max-w-[350px] h-auto mb-4" />
       <img src={printer.url} alt="Impressora 3D com modelos articulados, vasos, miniaturas e peças decorativas" className="w-full max-w-[300px] md:max-w-[340px] aspect-square object-cover rounded-2xl shadow-lg border border-blue-100" loading="eager" />
-      <Button asChild className="mt-6 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">
+      <Button asChild className="mt-6 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">
         <a href="#oferta">QUERO COMEÇAR AGORA <span aria-hidden="true">↓</span></a>
       </Button>
       <div className="mt-4 flex flex-col items-center gap-2">

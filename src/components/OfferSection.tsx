@@ -125,7 +125,7 @@ const OfferSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="offer-title max-w-5xl mx-auto text-[1.7rem] sm:text-3xl md:text-5xl font-black text-center text-green-title mb-4 leading-[1.12] tracking-tight px-1"
+            className="offer-title max-w-4xl mx-auto text-[1.45rem] leading-[1.16] sm:text-3xl md:text-5xl font-black text-center text-green-title mb-4 tracking-tight px-2"
           >
             Crie, imprima e explore novas possibilidades <span className="text-cta">com a Biblioteca 3D Premium</span>
           </motion.h2>

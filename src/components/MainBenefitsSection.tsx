@@ -4,11 +4,11 @@ import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck, Layers3 
 
 const benefits = [
   { icon: Search, text: "Explore mais de 100 mil modelos 3D organizados por categoria." },
-  { icon: Lightbulb, text: "Descubra novas ideias para ampliar seu catálogo de produtos." },
-  { icon: Layers3, text: "Encontre opções de decoração, utilidades, veículos e colecionáveis." },
-  { icon: Printer, text: "Escolha modelos que façam sentido para sua impressora e seu público." },
-  { icon: Timer, text: "Passe menos tempo procurando arquivos em diferentes sites." },
-  { icon: PackageCheck, text: "Use cada modelo como ponto de partida para planejar seus próximos testes." },
+  { icon: PackageCheck, text: "Encontre ideias de produtos para montar um catálogo mais variado e atrativo." },
+  { icon: Layers3, text: "Tenha opções para datas comemorativas, decoração, utilidades, presentes e colecionáveis." },
+  { icon: Timer, text: "Pare de perder horas procurando arquivos em vários sites: encontre tudo em uma biblioteca organizada." },
+  { icon: Printer, text: "Escolha modelos para testar novas peças, personalizações e possibilidades de venda com sua impressora." },
+  { icon: Lightbulb, text: "Troque experiências, tire dúvidas e compartilhe ideias com uma comunidade gratuita." },
 ];
 
 const MainBenefitsSection = () => (

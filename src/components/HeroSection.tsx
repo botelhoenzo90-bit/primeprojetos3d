@@ -14,10 +14,10 @@ const HeroSection = () => (
   <section className="prime-hero bg-cream text-green-title py-6 md:py-10">
     <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
       <img src={logo.url} alt="Prime Biblioteca 3D" className="w-48 md:w-64 h-auto mb-5" loading="eager" />
-      <h1 className="hero-title max-w-4xl text-[31px] sm:text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.04] tracking-tight mb-5">
+      <h1 className="hero-title max-w-4xl text-[27px] leading-[1.08] sm:text-3xl md:text-[3.25rem] lg:text-6xl font-black tracking-tight mb-5">
         <span className="block text-[#17324D]">Transforme sua impressora 3D</span>
-        <span className="block text-[#1676D2]">em uma máquina de criar</span>
-        <span className="block text-[#17324D]">produtos que <span className="text-[#E85D25]">vendem todos os dias</span></span>
+        <span className="block text-[#0878C9]">em uma máquina de criar</span>
+        <span className="block text-[#17324D]">produtos que <span className="text-[#E65A20]">vendem todos os dias</span></span>
       </h1>
       <p className="max-w-3xl text-muted-foreground text-base md:text-xl leading-relaxed mb-5">Tenha acesso a uma biblioteca com mais de <strong className="inline-block rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e vender na:</p>
       <img src={marketplaces.url} alt="Mercado Livre, Shopee, TikTok Shop e sua cidade" className="w-full max-w-[310px] md:max-w-[350px] h-auto mb-4" />

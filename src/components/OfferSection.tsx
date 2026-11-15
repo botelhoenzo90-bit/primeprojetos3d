@@ -206,7 +206,7 @@ const OfferSection = () => {
                     <ul className="space-y-2 inline-flex flex-col">
                       {premiumBonusItems.map((item, i) => (
                         <li key={i} className="flex items-center gap-2.5">
-                          <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
+                          <div className="w-6 h-6 rounded-full bg-green-600 flex items-center justify-center flex-shrink-0">
                             <Gift className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-sm font-semibold text-foreground">{item}</span>
@@ -382,13 +382,13 @@ const OfferSection = () => {
                 <X className="w-3.5 h-3.5" />
               </button>
 
-              <div className="bg-gradient-to-r from-cta to-green-600 text-white py-2 px-4 text-center">
+              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-2 px-4 text-center">
                 <p className="text-xs font-bold uppercase tracking-wide mb-0.5">⚡ Pacote Premium ⚡</p>
                 <p className="text-[10px] opacity-90 mb-1">Leve o pacote completo com todos os bônus!</p>
                 <div className="inline-flex items-center justify-center gap-2 bg-white rounded-lg px-3 py-1">
                   <span className="line-through text-red-600 text-lg font-extrabold">R$ 97,00</span>
-                  <span className="text-xl font-extrabold text-cta">R$ 14,90</span>
-                  <span className="bg-cta/20 text-cta text-[10px] font-bold px-1.5 py-0.5 rounded">-85%</span>
+                  <span className="text-xl font-extrabold text-green-700">R$ 14,90</span>
+                  <span className="bg-green-100 text-green-700 text-[10px] font-bold px-1.5 py-0.5 rounded">-85%</span>
                 </div>
               </div>
 
@@ -412,8 +412,8 @@ const OfferSection = () => {
                   <ul className="space-y-1 inline-flex flex-col">
                     {premiumReceberItems.map((item, i) => (
                       <li key={i} className="flex items-center gap-1.5">
-                        <div className="w-3.5 h-3.5 rounded-full bg-cta/15 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-2.5 h-2.5 text-cta" />
+                        <div className="w-3.5 h-3.5 rounded-full bg-green-600/15 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-2.5 h-2.5 text-green-700" />
                         </div>
                         <span className="text-xs text-foreground">{item}</span>
                       </li>
@@ -446,7 +446,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Biblioteca STL 3D - Upsell Premium')}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-cta hover:bg-cta-hover text-cream font-bold text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
+                  className="block bg-green-600 hover:bg-green-700 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
                 >
                   <Zap className="w-4 h-4 inline mr-1" />
                   SIM! Quero por R$ 14,90
@@ -468,7 +468,7 @@ const OfferSection = () => {
                 </motion.a>
 
                 <div className="flex items-center justify-center gap-1.5 mt-1.5 text-[10px] text-muted-foreground">
-                  <ShieldCheck className="w-3 h-3 text-cta" />
+                  <ShieldCheck className="w-3 h-3 text-green-700" />
                   <span>Pagamento 100% seguro</span>
                 </div>
               </div>
@@ -503,7 +503,7 @@ const OfferSection = () => {
                 <X className="w-3.5 h-3.5" />
               </button>
 
-              <div className="bg-gradient-to-r from-red-600 to-cta text-white py-1.5 px-3 text-center flex-shrink-0">
+              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white py-1.5 px-3 text-center flex-shrink-0">
                 <div className="inline-flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span className="text-[13px] font-black uppercase tracking-wider">Oferta Especial Relâmpago!</span>
@@ -534,14 +534,14 @@ const OfferSection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-dashed border-cta/40 my-1.5" />
+                <div className="border-t border-dashed border-green-600/40 my-1.5" />
 
                 <div className="flex justify-center">
                   <ul className="space-y-1 inline-flex flex-col">
                     {premiumReceberItems.map((item, i) => (
                       <li key={i} className="flex items-center gap-1.5">
-                        <div className="w-3.5 h-3.5 rounded-full bg-cta/15 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-2.5 h-2.5 text-cta" />
+                        <div className="w-3.5 h-3.5 rounded-full bg-green-600/15 flex items-center justify-center flex-shrink-0">
+                          <Check className="w-2.5 h-2.5 text-green-700" />
                         </div>
                         <span className="text-[10px] text-foreground">{item}</span>
                       </li>
@@ -566,7 +566,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-blue-600 hover:bg-blue-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
+                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 29,90

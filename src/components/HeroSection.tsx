@@ -14,7 +14,7 @@ const HeroSection = () => (
   <section className="prime-hero bg-cream text-green-title py-6 md:py-10">
     <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
       <img src={logo.url} alt="Prime Biblioteca 3D" className="w-48 md:w-64 h-auto mb-5" loading="eager" />
-      <h1 className="hero-title mb-5 w-full max-w-5xl text-[clamp(1.22rem,5.1vw,3.65rem)] font-black leading-[1.12] tracking-[-0.035em] text-center">
+      <h1 className="hero-title mb-5 w-full max-w-5xl text-[clamp(1.22rem,5.1vw,3.65rem)] font-black leading-[1.1] tracking-[-0.045em] text-center [font-family:Arial_Black,Arial,sans-serif]">
         <span className="block whitespace-nowrap text-[#17324D]">Transforme sua impressora 3D</span>
         <span className="block whitespace-nowrap text-[#0878C9]">em uma máquina de criar</span>
         <span className="block whitespace-nowrap text-[#17324D]">produtos que <span className="text-[#E65A20]">vendem todos os dias</span></span>

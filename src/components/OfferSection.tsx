@@ -277,7 +277,7 @@ const OfferSection = () => {
                   <div className="text-center mb-4 mt-2">
                     <span className="text-red-600 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
-                    <div className="text-5xl md:text-6xl font-extrabold text-blue-700">
+                    <div className="text-5xl md:text-6xl font-extrabold text-green-700">
                       R$ 10<span className="text-3xl">,00</span>
                     </div>
                   </div>
@@ -321,7 +321,7 @@ const OfferSection = () => {
                       <Button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
-                        className="w-full min-h-[56px] whitespace-normal bg-[#E85D25] hover:bg-[#CF4D1B] prime-cta text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-md"
+                        className="w-full min-h-[56px] whitespace-normal bg-slate-500 hover:bg-slate-600 prime-cta-basic text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-md"
                       >
                         QUERO O PACOTE BÁSICO
                       </Button>

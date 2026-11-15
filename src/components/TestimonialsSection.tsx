@@ -4,21 +4,15 @@ import { Star } from "lucide-react";
 
 import canecaPai from "@/assets/depoimentos/caneca-pai.webp.asset.json";
 import canecasMengao from "@/assets/depoimentos/canecas-mengao.webp.asset.json";
-const existingTestimonials = [
-  "Comentários sobre pack de modelos 3D.png",
-  "Comentários sobre pack de projetos 3D.png",
-  "Depoimento sobre Buggy 3D Impresso.png",
-  "Depoimento sobre Pack de Projetos 3D (2).png",
-  "Depoimento sobre Pack de Projetos 3D.png",
-  "Depoimento sobre pack de projetos 3D (1).png",
-  "Depoimentos sobre o Pack 3D.png",
-];
+import cliente1 from "@/assets/depoimentos/cliente-3d-01.webp.asset.json";
+import cliente2 from "@/assets/depoimentos/cliente-3d-02.webp.asset.json";
+import cliente3 from "@/assets/depoimentos/cliente-3d-03.webp.asset.json";
+import cliente4 from "@/assets/depoimentos/cliente-3d-04.webp.asset.json";
+import cliente5 from "@/assets/depoimentos/cliente-3d-05.webp.asset.json";
+import cliente6 from "@/assets/depoimentos/cliente-3d-06.webp.asset.json";
+import cliente7 from "@/assets/depoimentos/cliente-3d-07.webp.asset.json";
 
-const testimonials = [
-  ...existingTestimonials.map(file => `/imagens/depoimentos/${encodeURIComponent(file)}`),
-  canecaPai.url,
-  canecasMengao.url,
-];
+const testimonials = [cliente1.url, cliente2.url, cliente3.url, cliente4.url, cliente5.url, cliente6.url, cliente7.url, canecaPai.url, canecasMengao.url];
 const TestimonialsSection = () => {
   const doubled = [...testimonials, ...testimonials];
   return (
@@ -30,7 +24,7 @@ const TestimonialsSection = () => {
           </span>
           <h2 className="mx-auto max-w-4xl text-3xl sm:text-4xl md:text-6xl font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
             <span className="block">Veja o que estão falando</span>
-            <span className="block text-cta">sobre o Pack 3D</span>
+            <span className="block text-heading-highlight">sobre o Pack 3D</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg font-medium">Relatos e comentários de quem já conhece os projetos e arquivos 3D.</p>
         </motion.div>
@@ -39,7 +33,7 @@ const TestimonialsSection = () => {
         <div className="flex w-max animate-marquee-testimonials" style={{ width: `${doubled.length * 304}px` }}>
           {doubled.map((file, i) => (
             <div key={i} className="flex-shrink-0 w-72 mx-2">
-              <img src={file} alt={`Depoimento de cliente ${(i % testimonials.length) + 1}`} className="w-72 h-[420px] object-contain bg-white rounded-2xl shadow-xl" loading="lazy" decoding="async" />
+              <img src={file} alt={`Depoimento de cliente ${(i % testimonials.length) + 1}`} className="w-72 h-[420px] object-contain bg-white rounded-2xl shadow-xl" loading="eager" decoding="async" />
             </div>
           ))}
         </div>

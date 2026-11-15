@@ -84,7 +84,7 @@ const RecipeCarousel = () => (
     <div className="container mx-auto px-4 mb-5">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-1.5 rounded-full border border-[#FFD700]">ARQUIVOS STL PARA IMPRESSÃO 3D</span>
-        <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3">Conheça a Biblioteca 3D: <span className="text-cta">modelos prontos para imprimir</span></h2>
+        <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight mb-3"><span className="md:block">Conheça a Biblioteca 3D:</span>{" "}<span className="md:block text-heading-highlight">modelos prontos para imprimir</span></h2>
         <p className="text-[#334155] text-base md:text-lg font-medium max-w-2xl mx-auto">De utilidades a peças decorativas e colecionáveis: explore possibilidades para escolher o próximo projeto.</p>
       </motion.div>
     </div>

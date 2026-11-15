@@ -58,6 +58,7 @@ export default {
         },
         "warm-brown": "hsl(var(--warm-brown))",
         "green-title": "hsl(var(--green-title))",
+        "heading-highlight": "hsl(var(--heading-highlight))",
         "green-highlight": "hsl(var(--green-highlight))",
         cta: {
           DEFAULT: "hsl(var(--cta-green))",

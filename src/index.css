@@ -156,6 +156,7 @@ display: none !important;
 
 /* Consistência visual e responsividade da página */
 :root {
+  --heading-highlight: 22 95% 45%;
   --prime-navy: 215 65% 24%;
   --prime-blue: 211 90% 42%;
   --prime-light: 210 80% 97%;

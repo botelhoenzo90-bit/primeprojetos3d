@@ -17,7 +17,7 @@ const DeliveryProofSection = () => (
         <div className="text-center sm:text-left">
           <h3 className="text-xl md:text-2xl font-black text-white">AVALIAÇÃO 4,9</h3>
           <div className="mt-1 flex justify-center sm:justify-start gap-1 text-3xl leading-none text-orange-500" aria-label="Cinco estrelas">★★★★★</div>
-          <p className="mt-2 text-base md:text-lg font-extrabold text-emerald-200">4,9 / 5,0 <span className="text-sm font-medium text-emerald-100/80">• avaliações de compradores</span></p>
+          <p className="mt-2 text-base md:text-lg font-extrabold text-emerald-200">4,9 / 5,0 <span className="text-sm font-medium text-emerald-100/80">• 3742 avaliações!</span></p>
         </div>
         <div className="flex justify-center -space-x-3" aria-hidden="true">
           {["#2563eb","#db8b62","#64748b","#d97706","#0f766e","#475569"].map((color, i) => <div key={i} className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-slate-300 bg-slate-800 text-sm font-black text-white shadow-md" style={{ backgroundColor: color }}>{["P","3","D","★","P","3"][i]}</div>)}

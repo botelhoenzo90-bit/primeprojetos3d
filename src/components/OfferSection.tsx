@@ -3,8 +3,9 @@ import { OFFER_PRICES } from "@/lib/offer-prices";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ShieldCheck, Zap, Gift, X, Sparkles, Crown } from "lucide-react";
-const produtoImg = "/imagens/oferta/Imagem do ChatGPT 2 de nov. de 2026, 15_45_11-Photoroom.png";
-import produtoMockup from "@/assets/produto-mockup.png";
+import produtoAsset from "@/assets/oferta/biblioteca-premium.webp.asset.json";
+const produtoImg = produtoAsset.url;
+const produtoMockup = produtoAsset.url;
 import paymentMethods from "@/assets/payment-methods.png";
 
 const premiumReceberItems = [
@@ -132,7 +133,7 @@ const OfferSection = () => {
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
             🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.
           </p>
-          <div className="max-w-2xl mx-auto grid grid-cols-1 gap-6">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* PLANO PREMIUM */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -163,7 +164,7 @@ const OfferSection = () => {
                   <img
                     src={produtoImg}
                       alt="Biblioteca digital de arquivos STL para impressão 3D"
-                    className="w-1/2 mx-auto rounded-xl mb-4"
+                    className="w-full max-w-[300px] aspect-square object-contain mx-auto rounded-lg mb-4"
                     loading="lazy"
                     decoding="async"
                   />
@@ -270,7 +271,7 @@ const OfferSection = () => {
                       Pacote Básico
                     </span>
                   </div>
-                  <h2 className="text-center text-3xl md:text-4xl font-extrabold text-cta mt-2 mb-3">
+                  <h2 className="text-center text-3xl md:text-4xl font-extrabold text-heading-highlight mt-2 mb-3">
                     Biblioteca STL 3D
                   </h2>
 
@@ -284,7 +285,7 @@ const OfferSection = () => {
 
                   <div className="border-t border-dashed border-gray-300 my-3" />
 
-                  <h3 className="text-center font-extrabold text-cta text-sm uppercase tracking-wider mb-3">
+                  <h3 className="text-center font-extrabold text-heading-highlight text-sm uppercase tracking-wider mb-3">
                     O que você vai receber:
                   </h3>
                   <div className="flex justify-center mb-3">

@@ -19,7 +19,7 @@ const FAQSection = () => (
     <div className="container mx-auto px-4 max-w-3xl">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
         <div className="flex justify-center mb-5"><span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full border border-[#FFD700]"><HelpCircle className="w-4 h-4 text-[#FF4500]" /> TIRE SUAS DÚVIDAS</span></div>
-        <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3">Tudo o que você precisa <span className="text-cta">saber antes de acessar</span></h2>
+        <h2 className="text-3xl md:text-5xl font-black text-green-title leading-tight mb-3">Tudo o que você precisa <span className="text-heading-highlight">saber antes de acessar</span></h2>
         <p className="text-slate-600 text-base md:text-lg max-w-2xl mx-auto">Respostas diretas para você entender o conteúdo, o acesso e as condições da biblioteca.</p>
       </motion.div>
       <Accordion type="single" collapsible className="space-y-3">

@@ -25,7 +25,7 @@ const GuaranteeSection = () => {
             viewport={{ once: true }}
           />
           <h2 className="text-3xl md:text-4xl font-extrabold text-green-title mb-4">
-            Garantia de <span className="text-cta">7 dias</span>
+            Garantia de <span className="text-heading-highlight">7 dias</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             Você tem 7 dias para conhecer a biblioteca, explorar as categorias e avaliar os arquivos incluídos no plano. Se o conteúdo não for adequado para você, poderá solicitar o reembolso dentro do prazo, conforme as condições da compra e da plataforma de pagamento.

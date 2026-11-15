@@ -11,7 +11,7 @@ const VSLSection = () => (
     <div className="container mx-auto px-4 max-w-6xl">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8 md:mb-10">
         <span className="inline-flex items-center gap-2 bg-[#FFD700] text-[#17324D] text-xs md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full">PESQUISA DE MERCADO</span>
-        <h2 className="text-2xl md:text-4xl font-black text-[#17324D] leading-tight mb-4">ANTES DE IMPRIMIR, VEJA O QUE JÁ ESTÁ SENDO OFERTADO NO MERCADO</h2>
+        <h2 className="text-2xl md:text-4xl font-black text-[#17324D] leading-tight mb-4"><span className="md:block">ANTES DE IMPRIMIR, VEJA O QUE</span>{" "}<span className="md:block">JÁ ESTÁ SENDO OFERTADO NO MERCADO</span></h2>
         <p className="text-slate-600 text-base md:text-lg max-w-4xl mx-auto leading-relaxed">Use referências de marketplaces para observar categorias, produtos e apresentações que já existem no mercado e encontrar novas ideias para seus próprios testes.</p>
       </motion.div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-7">

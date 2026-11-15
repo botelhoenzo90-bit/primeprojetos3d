@@ -227,3 +227,13 @@ img, iframe, video {
 .compatibility-track { animation-duration: 16s; }
 .sales-notification { background: hsl(var(--notification-background)); color: hsl(var(--primary-foreground)); border-color: hsl(var(--notification-background) / .3); }
 :root { --notification-background: 147 73% 38%; }
+
+
+/* Ajustes de acabamento e respiro da página */
+.prime-hero { padding-top: 1.25rem !important; padding-bottom: 1.5rem !important; }
+.category-gallery { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+.compatibility-track { animation-duration: 13s !important; }
+@media (max-width: 767px) {
+  .prime-hero h1 { max-width: 100%; }
+  .compatibility-track > div { min-width: 7.5rem; }
+}

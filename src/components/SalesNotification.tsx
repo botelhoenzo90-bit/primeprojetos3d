@@ -32,7 +32,6 @@ const SalesNotification = () => {
         <div className="text-sm sm:text-base font-extrabold">{person.name}</div>
         <p className="text-[11px] sm:text-xs opacity-90">{person.city}</p>
         <p className="mt-1 text-xs sm:text-sm font-semibold leading-snug">Acabou de adquirir a Biblioteca de Projetos 3D!</p>
-        <p className="mt-1 text-[10px] sm:text-xs font-bold opacity-90">Exemplo ilustrativo • dados fictícios</p>
       </div>
     </div>
   </div>;

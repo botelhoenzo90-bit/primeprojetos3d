@@ -222,7 +222,7 @@ const OfferSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', OFFER_PRICES.premium, 'Biblioteca STL 3D - Premium')}
-                        className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
+                        className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover prime-cta text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         QUERO ACESSAR A BIBLIOTECA
@@ -321,7 +321,7 @@ const OfferSection = () => {
                       <Button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
-                        className="w-full min-h-[56px] whitespace-normal bg-slate-600 hover:bg-slate-700 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-md"
+                        className="w-full min-h-[56px] whitespace-normal bg-[#E85D25] hover:bg-[#CF4D1B] prime-cta text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-md"
                       >
                         QUERO O PACOTE BÁSICO
                       </Button>
@@ -446,7 +446,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Biblioteca STL 3D - Upsell Premium')}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-bold text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
+                  className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
                 >
                   <Zap className="w-4 h-4 inline mr-1" />
                   SIM! Quero por R$ 14,90
@@ -566,7 +566,7 @@ const OfferSection = () => {
                   onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.97 }}
-                  className="block bg-green-600 hover:bg-green-700 text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
+                  className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
                 >
                   <Zap className="w-3.5 h-3.5 inline mr-1" />
                   SIM! Quero o Premium por R$ 29,90

@@ -16,3 +16,4 @@
 - [x] Verify updated layouts on mobile and desktop.
 - [x] Refresh hero headline/subtitle and replace marketplace image; restore compact compatibility carousels and smaller mobile notification.
 - [ ] Confirm customer name/city purchase records and real 4,9/5,0 rating with 4.378 reviews — no invented social proof displayed.
+- [ ] Replace hero heading with uploaded artwork, compact top/marketplace spacing, remove requested benefit, and unify green CTAs with black shadows.

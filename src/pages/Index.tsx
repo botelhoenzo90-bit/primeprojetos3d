@@ -14,9 +14,9 @@ import FAQSection from "@/components/FAQSection";
 import FooterSection from "@/components/FooterSection";
 import SalesNotification from "@/components/SalesNotification";
 const Index = () => (
-  <div className="min-h-screen overflow-x-hidden">
+  <div className="prime-page min-h-screen overflow-x-hidden">
     <UrgencyBar />
-    <div className="pt-16 sm:pt-14">
+    <div className="pt-[37px] md:pt-10">
       <HeroSection />
       <RecipeCarousel />
       <MainBenefitsSection />

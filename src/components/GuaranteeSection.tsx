@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 import garantiaSelo from "@/assets/garantia-selo.png";
@@ -29,14 +30,12 @@ const GuaranteeSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             Você tem 7 dias para conhecer a biblioteca, explorar as categorias e avaliar os arquivos incluídos no plano. Se o conteúdo não for adequado para você, poderá solicitar o reembolso dentro do prazo, conforme as condições da compra e da plataforma de pagamento.
           </p>
-          <motion.a
+          <Button asChild className="h-auto whitespace-normal"><a
             href="#oferta"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-block w-full md:w-auto bg-[#FF4500] hover:bg-[#E63E00] text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-2 animate-pulse-soft"
+            className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-12 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2 "
           >
-            QUERO ACESSAR COM GARANTIA! →
-          </motion.a>
+            QUERO COMPRAR COM GARANTIA →
+          </a></Button>
           <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5 justify-center">
             🛡️ Garantia de 7 dias · Acesso digital imediato
           </p>

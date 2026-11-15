@@ -1,10 +1,9 @@
 import SectionCTA from "@/components/SectionCTA";
 import { motion } from "framer-motion";
-import { Lightbulb, Search, Printer, FolderKanban, Timer, PackageCheck, Layers3 } from "lucide-react";
+import { Lightbulb, Search, Printer, FolderKanban, Timer, Layers3 } from "lucide-react";
 
 const benefits = [
   { icon: Search, text: "Mais de 100 mil modelos 3D. Tudo organizado por categoria." },
-  { icon: PackageCheck, text: "Descubra novos produtos para diversificar suas vendas e atrair clientes." },
   { icon: Layers3, text: "Explore coleções de decoração, utilidades, presentes e temas sazonais." },
   { icon: Timer, text: "Chega de buscar em vários sites. Encontre tudo em um só lugar." },
   { icon: Printer, text: "Crie peças, personalize produtos e descubra novas oportunidades de venda." },
@@ -14,7 +13,7 @@ const benefits = [
 const MainBenefitsSection = () => (
   <section className="py-12 md:py-16 bg-cream">
     <div className="container mx-auto px-4 max-w-6xl">
-      <div className="text-center mb-9 md:mb-12">
+      <div className="text-center mb-6 md:mb-8">
         <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-[#FFD700]">
           <FolderKanban className="w-4 h-4" /> MAIS POSSIBILIDADES PARA SUA IMPRESSORA
         </span>
@@ -33,7 +32,7 @@ const MainBenefitsSection = () => (
           </motion.div>
         ))}
       </div>
-      <SectionCTA label="QUERO EXPLORAR OS MODELOS" />
+      <SectionCTA label="QUERO OS 100 MIL MODELOS" />
     </div>
   </section>
 );

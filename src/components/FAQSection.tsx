@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { HelpCircle } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -25,7 +26,7 @@ const FAQSection = () => (
         {faqs.map((faq, i) => <AccordionItem key={i} value={`item-${i}`} className="bg-white rounded-xl border border-blue-100 px-5 shadow-sm"><AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">{faq.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent></AccordionItem>)}
       </Accordion>
       <div className="text-center mt-8 flex flex-col items-center">
-        <motion.a href="#oferta" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block bg-cta hover:bg-cta-hover text-white font-black text-sm md:text-lg px-6 md:px-8 py-4 rounded-full transition-colors mb-2">QUERO VER OS PLANOS</motion.a>
+        <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-lg px-6 md:px-8 py-4 rounded-full transition-colors mb-2">QUERO ESCOLHER MEU PACOTE</a></Button>
         <p className="text-xs md:text-sm text-green-title font-semibold">🛡️ Garantia de 7 dias · Acesso digital</p>
       </div>
     </div>

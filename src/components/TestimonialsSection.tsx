@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
@@ -44,7 +45,7 @@ const TestimonialsSection = () => {
         </div>
       </div>
       <div className="text-center mt-8">
-        <motion.a href="#oferta" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block w-full md:w-auto bg-[#FF4500] hover:bg-[#E63E00] text-white font-black text-sm md:text-xl px-12 py-5 rounded-full text-center shadow-lg shadow-orange-200 transition-all uppercase tracking-wide mb-2 animate-pulse-soft">QUERO DESCOBRIR O QUE IMPRIMIR</motion.a>
+        <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-12 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2 ">QUERO MEU ACESSO AGORA</a></Button>
         <p className="text-xs md:text-sm text-[#064E3B] font-semibold">🛡️ Garantia de 7 dias · Acesso digital imediato</p>
       </div>
     </section>

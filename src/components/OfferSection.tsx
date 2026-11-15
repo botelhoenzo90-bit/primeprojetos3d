@@ -114,7 +114,7 @@ const OfferSection = () => {
 
   return (
     <>
-      <section id="oferta" className="py-8 md:py-12 bg-cream">
+      <section id="oferta" className="py-7 md:py-10 bg-cream">
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full whitespace-nowrap shadow-[0_0_15px_rgba(255,215,0,0.3)] border border-[#FFD700]">
@@ -125,9 +125,9 @@ const OfferSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="offer-title max-w-4xl mx-auto text-3xl md:text-5xl font-black text-center text-green-title mb-4 leading-tight"
+            className="offer-title max-w-5xl mx-auto text-[1.7rem] sm:text-3xl md:text-5xl font-black text-center text-green-title mb-4 leading-[1.12] tracking-tight px-1"
           >
-            Crie, imprima e explore novas possibilidades <span className="text-cta block">com a Biblioteca 3D Premium</span>
+            Crie, imprima e explore novas possibilidades <span className="text-cta">com a Biblioteca 3D Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
             🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.
@@ -222,7 +222,7 @@ const OfferSection = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', OFFER_PRICES.premium, 'Biblioteca STL 3D - Premium')}
-                        className="inline-block w-full bg-green-600 hover:bg-green-700 text-white font-black text-sm md:text-xl px-4 py-5 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
+                        className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
                         QUERO ACESSAR A BIBLIOTECA
@@ -243,12 +243,12 @@ const OfferSection = () => {
                     />
 
                     
-                    <div className="mt-3 border border-primary/30 rounded-lg p-2 text-center bg-primary/5">
-                      <p className="text-xs font-bold text-primary flex items-center justify-center gap-1.5">
+                    <div className="mt-3 border border-blue-200 rounded-lg p-2 text-center bg-blue-50">
+                      <p className="text-xs font-extrabold text-blue-800 flex items-center justify-center gap-1.5">
                         <Zap className="w-4 h-4" />
                         Acesso pelo WhatsApp e e-mail
                       </p>
-                      <p className="text-[11px] text-muted-foreground mt-0.5">
+                      <p className="text-[11px] text-slate-600 font-medium mt-0.5">
                         Enviado após a confirmação do pagamento.
                       </p>
                     </div>
@@ -321,7 +321,7 @@ const OfferSection = () => {
                       <Button
                         type="button"
                         onClick={() => setShowBasicUpsell(true)}
-                        className="inline-block w-full bg-gray-500 hover:bg-gray-600 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center transition-all uppercase tracking-wide cursor-pointer"
+                        className="w-full min-h-[56px] whitespace-normal bg-slate-600 hover:bg-slate-700 text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-md"
                       >
                         QUERO O PACOTE BÁSICO
                       </Button>

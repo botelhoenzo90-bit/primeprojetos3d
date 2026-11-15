@@ -18,7 +18,7 @@ const HeroSection = () => (
       <h1 className="mb-4 w-full max-w-4xl">
         <img src={headline.url} alt="Transforme sua Impressora 3D em uma Máquina de Criar Produtos que Vendem Todos os Dias" className="block w-full h-auto" loading="eager" />
       </h1>
-      <p className="hero-subtitle max-w-5xl text-green-title text-xl md:text-2xl font-extrabold leading-snug mb-5"><span className="md:block">Tenha acesso a uma biblioteca com mais de</span>{" "}<span className="md:block"><strong className="inline-block rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e vender na:</span></p>
+      <p className="hero-subtitle max-w-5xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug mb-5"><span className="block md:inline">Tenha acesso a uma biblioteca</span>{" "}<span className="block md:inline">com mais de <strong className="inline-block rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong></span>{" "}<span className="block md:inline">prontos para imprimir e vender na:</span></p>
       <img src={marketplaces.url} alt="Mercado Livre, Shopee, TikTok Shop e sua cidade" className="w-full max-w-[190px] md:max-w-[230px] h-auto mb-3" />
       <img src={printer.url} alt="Impressora 3D com modelos articulados, vasos, miniaturas e peças decorativas" className="w-full max-w-[370px] md:max-w-[460px] aspect-square object-cover rounded-2xl shadow-lg border border-blue-100" loading="eager" />
       <Button asChild className="mt-4 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">

@@ -1,29 +1,41 @@
 import { Printer, Layers } from "lucide-react";
+
 const printers = ["Creality", "Anycubic", "Elegoo", "Artillery", "Kingroon", "Prusa", "FlashForge"];
 const slicers = ["PrusaSlicer", "Bambu Studio", "OrcaSlicer", "ChiTuBox", "Simplify3D", "Cura"];
-const CompatibilityRow = ({ items, reverse = false }: { items: string[]; reverse?: boolean }) => (
-  <div className="w-full max-w-full overflow-hidden text-center">
-    <div className={`compatibility-track flex w-max gap-2 ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}>
-      {[...items, ...items].map((name, i) => <div key={`${name}-${i}`} className="w-32 shrink-0 rounded-md border border-border bg-background px-3 py-2.5 text-center text-xs md:text-sm font-bold">{name}</div>)}
-    </div>
+
+const CompatibilityGroup = ({ title, items, icon: Icon }: { title: string; items: string[]; icon: typeof Printer }) => (
+  <div className="min-w-0 w-full rounded-2xl border border-blue-100 bg-white p-4 md:p-5 shadow-sm">
+    <h3 className="mb-4 flex items-center justify-center gap-2 text-base md:text-lg font-extrabold text-[#17324D]">
+      <Icon className="h-5 w-5 shrink-0 text-[#1676D2]" />
+      {title}
+    </h3>
+    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+      {items.map((name) => (
+        <li key={name} className="flex min-h-11 min-w-0 items-center justify-center rounded-xl border border-blue-100 bg-[#F2F7FC] px-2 py-2 text-center text-xs sm:text-sm font-bold leading-tight text-[#17324D] break-words">
+          {name}
+        </li>
+      ))}
+    </ul>
   </div>
 );
+
 const CompatibilitySection = () => (
-  <section className="bg-cream py-6 md:py-8 text-green-title" aria-label="Compatibilidade">
-    <div className="mx-auto max-w-5xl px-4 text-center">
-      <h2 className="text-xl md:text-3xl font-black text-center leading-tight">Compatível com diversas <span className="text-cta">impressoras 3D</span></h2>
-      <p className="mt-2 text-xs md:text-sm text-muted-foreground text-center mx-auto max-w-xl">Arquivos STL para diferentes impressoras. Ajuste no fatiador conforme seu equipamento.</p>
-      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-center justify-items-center">
-        <div className="border-t border-border pt-3">
-          <h3 className="flex items-center justify-center gap-2 text-sm font-bold mb-2"><Printer className="w-4 h-4 text-primary" /> Impressoras</h3>
-          <CompatibilityRow items={printers} />
-        </div>
-        <div className="border-t border-border pt-3">
-          <h3 className="flex items-center justify-center gap-2 text-sm font-bold mb-2"><Layers className="w-4 h-4 text-primary" /> Fatiadores</h3>
-          <CompatibilityRow items={slicers} reverse />
-        </div>
+  <section className="bg-[#F2F7FC] py-9 md:py-12 text-[#17324D]" aria-label="Compatibilidade">
+    <div className="mx-auto w-full max-w-5xl px-4">
+      <div className="mx-auto max-w-3xl text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black leading-tight tracking-tight text-[#17324D]">
+          Compatível com diversas <span className="text-[#1676D2]">impressoras 3D</span>
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm sm:text-base leading-relaxed text-slate-600">
+          Arquivos STL para diferentes impressoras. Ajuste o arquivo no fatiador de acordo com seu equipamento.
+        </p>
+      </div>
+      <div className="mt-7 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <CompatibilityGroup title="Impressoras 3D" items={printers} icon={Printer} />
+        <CompatibilityGroup title="Programas fatiadores" items={slicers} icon={Layers} />
       </div>
     </div>
   </section>
 );
+
 export default CompatibilitySection;

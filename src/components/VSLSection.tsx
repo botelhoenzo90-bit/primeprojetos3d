@@ -21,7 +21,7 @@ const VSLSection = () => (
           </motion.figure>
         ))}
       </div>
-      <div className="text-center"><p className="market-steps inline-block px-2 py-2 text-base md:text-2xl font-black text-green-title">Pesquise. Escolha. Produza. Venda.</p></div>
+      <div className="text-center"><p className="market-steps inline-block rounded-full border border-blue-200 bg-blue-50 px-5 py-3 text-base md:text-2xl font-black text-[#17324D] shadow-sm"><span className="text-blue-700">Da ideia ao projeto:</span> descubra, escolha e imprima</p></div>
       <SectionCTA label="QUERO TER ESSAS POSSIBILIDADES" />
     </div>
   </section>

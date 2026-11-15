@@ -15,17 +15,17 @@ const models = [
 const doubled = [...models, ...models];
 
 const RecipePagesCarousel = () => (
-  <section className="py-5 md:py-8 bg-white overflow-hidden">
+  <section className="py-6 md:py-9 bg-white overflow-hidden">
     <div className="container mx-auto px-4 mb-4">
       <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <p className="text-sm md:text-base font-extrabold uppercase tracking-wider text-blue-700">Mais ideias. Mais possibilidades.</p>
       </motion.div>
     </div>
     <div className="relative">
-      <div className="flex animate-marquee-reverse" style={{ width: `${doubled.length * 240}px` }}>
+      <div className="flex animate-marquee-reverse" style={{ width: `${doubled.length * 272}px` }}>
         {doubled.map((model, i) => {
           const Icon = model.icon;
-          return <div key={i} className="flex-shrink-0 w-56 mx-2"><div className="rounded-2xl overflow-hidden shadow-lg bg-white border border-blue-100"><div className={`h-44 bg-gradient-to-br ${model.color} flex items-center justify-center`}><div className="w-24 h-24 rounded-3xl bg-white/80 shadow-md flex items-center justify-center"><Icon className="w-14 h-14 text-blue-700" strokeWidth={1.6} /></div></div><div className="p-4 text-center"><p className="font-extrabold text-[#17324D] text-base">{model.title}</p><p className="text-slate-500 text-xs mt-1">{model.desc}</p></div></div></div>;
+          return <div key={i} className="flex-shrink-0 w-64 md:w-72 mx-2"><div className="rounded-2xl overflow-hidden shadow-lg bg-white border border-blue-100"><div className={`h-48 md:h-52 bg-gradient-to-br ${model.color} flex items-center justify-center`}><div className="w-24 h-24 rounded-3xl bg-white/80 shadow-md flex items-center justify-center"><Icon className="w-14 h-14 text-blue-700" strokeWidth={1.6} /></div></div><div className="p-4 text-center"><p className="font-extrabold text-[#17324D] text-base">{model.title}</p><p className="text-slate-500 text-xs mt-1">{model.desc}</p></div></div></div>;
         })}
       </div>
       <SectionCTA label="QUERO ACESSAR A BIBLIOTECA" />

@@ -5,7 +5,7 @@ import { FolderOpen, Zap, ShieldCheck } from "lucide-react";
 
 const features = [
   { icon: FolderOpen, title: "TUDO SEPARADO POR CATEGORIA", desc: "Decoração, utilidades, brinquedos, datas comemorativas e muito mais, organizados para você achar em segundos." },
-  { icon: Zap, title: "DOWNLOAD DIRETO E RÁPIDO", desc: "Escolheu o modelo? É só baixar e mandar para o fatiador. Sem cadastros extras nem sites duvidosos." },
+  { icon: Zap, title: "DO ARQUIVO À IMPRESSÃO", desc: "Encontre seu modelo, prepare no fatiador e dê vida à sua próxima criação." },
   { icon: ShieldCheck, title: "MODELOS PRONTOS PARA VENDER", desc: "Peças selecionadas com potencial de venda para você imprimir, testar e lucrar sem começar do zero." },
 ];
 
@@ -49,7 +49,7 @@ const NutriSection = () => (
           </motion.div>
         ); })}
       </div>
-      <SectionCTA label="QUERO ACESSAR OS ARQUIVOS" />
+      <SectionCTA label="GARANTIR ACESSO À BIBLIOTECA" />
     </div>
   </section>
 );

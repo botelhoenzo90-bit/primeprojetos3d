@@ -1,5 +1,7 @@
 # Tasks
 
+- [x] Adjust marketplace size, move compatibility below guarantee, refresh download/bonus copy and CTAs, set basic price to R$19,90 and compact the upgrade popup; verified at 320px, 375px, 906px and 1280px with basic checkout URL, UTM and event value.
+
 - [x] Strengthen hero subtitle and enlarge main image; balance desktop headings and show offers side by side.
 - [x] Extend compatibility loops edge to edge and change green heading accents to orange.
 - [x] Repair missing offer/testimonial images and verify mobile/desktop rendering.

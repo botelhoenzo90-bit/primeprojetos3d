@@ -115,7 +115,7 @@ const RecipeCarousel = () => (
       ))}
     </div>
     <div className="container mx-auto px-4">
-      <SectionCTA label="QUERO ACESSAR A BIBLIOTECA" />
+      <SectionCTA label="GARANTIR MINHA BIBLIOTECA 3D" />
     </div>
   </section>
 );

@@ -24,7 +24,7 @@ const DeliverySection = () => (
           </motion.div>
         ))}
       </div>
-      <SectionCTA label="QUERO LIBERAR MEU ACESSO" />
+      <SectionCTA label="GARANTIR MEU ACESSO AGORA" />
     </div>
   </section>
 );

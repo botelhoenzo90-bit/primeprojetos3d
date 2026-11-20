@@ -226,7 +226,7 @@ const OfferSection = () => {
                         className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover prime-cta text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
-                        QUERO O PREMIUM COMPLETO
+                        GARANTIR BIBLIOTECA COMPLETA
                       </a></Button>
                     </div>
 
@@ -279,7 +279,7 @@ const OfferSection = () => {
                     <span className="text-red-600 font-extrabold line-through text-2xl md:text-3xl block mb-0.5">R$ 47,00</span>
                     <p className="text-sm text-foreground font-semibold mb-0.5">por apenas</p>
                     <div className="text-5xl md:text-6xl font-extrabold text-green-700">
-                      R$ 10<span className="text-3xl">,00</span>
+                      {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
                     </div>
                   </div>
 
@@ -324,7 +324,7 @@ const OfferSection = () => {
                         onClick={() => setShowBasicUpsell(true)}
                         className="w-full min-h-[56px] whitespace-normal bg-slate-500 hover:bg-slate-600 prime-cta-basic text-white font-black text-sm md:text-lg px-4 py-4 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-md"
                       >
-                        QUERO O PACOTE BÁSICO
+                        ESCOLHER PACOTE BÁSICO
                       </Button>
                     </div>
 
@@ -461,7 +461,7 @@ const OfferSection = () => {
                   }}
                   className="prime-cta-basic block font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer"
                 >
-                  Não, quero apenas o Básico — R$ 10,00
+                  Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}
                 </a></Button>
 
                 <div className="flex items-center justify-center gap-1.5 mt-1.5 text-[10px] text-muted-foreground">
@@ -478,125 +478,48 @@ const OfferSection = () => {
       <AnimatePresence>
         {showBasicUpsell && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-3 bg-black/70 backdrop-blur-sm"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-3 bg-foreground/70 backdrop-blur-sm"
             onClick={() => setShowBasicUpsell(false)}
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: "spring", damping: 22, stiffness: 320 }}
-              className="bg-white rounded-2xl shadow-2xl border-2 border-cta overflow-hidden max-w-sm w-full relative max-h-[95vh] flex flex-col"
+              role="dialog" aria-modal="true" aria-labelledby="upgrade-title"
+              initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }}
+              className="upgrade-popup bg-background rounded-lg shadow-2xl border-2 border-heading-highlight w-full max-w-md relative"
               onClick={(e) => e.stopPropagation()}
+              onKeyDown={(e) => { if (e.key === 'Escape') setShowBasicUpsell(false); }}
             >
-              <button
-                onClick={() => setShowBasicUpsell(false)}
-                className="absolute top-2 right-2 z-10 w-7 h-7 rounded-full bg-white/95 hover:bg-white flex items-center justify-center text-gray-600 hover:text-gray-900 transition-colors cursor-pointer shadow"
-                aria-label="Fechar"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-
-              <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-1.5 px-3 text-center flex-shrink-0">
-                <div className="inline-flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span className="text-[13px] font-black uppercase tracking-wider">Oferta Especial Relâmpago!</span>
-                  <Sparkles className="w-3.5 h-3.5" />
-                </div>
-                <p className="text-[10px] font-semibold opacity-95 leading-tight">
-                  Leve tudo do Plano Premium por apenas:
-                </p>
+              <Button variant="ghost" size="icon" onClick={() => setShowBasicUpsell(false)} aria-label="Fechar oferta" className="absolute top-1 right-1 z-10 h-7 w-7 text-primary-foreground hover:bg-background/20 hover:text-primary-foreground"><X className="h-4 w-4" /></Button>
+              <div className="rounded-t-md bg-heading-highlight text-primary-foreground px-8 py-3 text-center">
+                <h3 id="upgrade-title" className="text-sm font-black uppercase">⚡ Oferta Especial Relâmpago!</h3>
+                <p className="mt-1 text-xs font-semibold">Leve a biblioteca completa por apenas:</p>
               </div>
-
-              <div className="px-4 py-2 flex-1 overflow-y-auto min-h-0">
-                <img
-                  src={produtoImg}
-                  alt="Pacote Premium de Arquivos STL 3D"
-                  className="w-[42%] mx-auto rounded-xl mb-2"
-                  loading="lazy"
-                  decoding="async"
-                />
-
-                <div className="text-center mb-2">
-                  <span className="text-red-600 font-extrabold line-through text-base block leading-tight">R$ 97,00</span>
-                  <p className="text-[10px] text-foreground font-semibold leading-tight">por apenas</p>
-                  <div className="text-3xl font-extrabold text-green-700 leading-none">
-                    R$ 29<span className="text-lg">,90</span>
-                  </div>
-                  <div className="inline-block bg-green-50 text-green-700 font-bold text-[10px] px-2 py-0.5 rounded-full mt-1">
-                    Economize R$ 67,10!
-                  </div>
+              <div className="upgrade-content px-4 py-3">
+                <img src={produtoImg} alt="Biblioteca 3D completa" className="upgrade-image w-full h-28 object-contain mx-auto" />
+                <div className="text-center mt-1">
+                  <span className="text-destructive font-bold line-through text-sm">R$ 97,00</span>
+                  <p className="text-4xl font-black text-cta leading-tight">{OFFER_PRICES.upgrade.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
+                  <p className="text-xs font-bold text-cta">Economize R$ 67,10!</p>
                 </div>
-
-                <div className="border-t border-dashed border-green-600/40 my-1.5" />
-
-                <div className="flex justify-center">
-                  <ul className="space-y-1 inline-flex flex-col">
-                    {premiumReceberItems.map((item, i) => (
-                      <li key={i} className="flex items-center gap-1.5">
-                        <div className="w-3.5 h-3.5 rounded-full bg-green-600/15 flex items-center justify-center flex-shrink-0">
-                          <Check className="w-2.5 h-2.5 text-green-700" />
-                        </div>
-                        <span className="text-[10px] text-foreground">{item}</span>
-                      </li>
-                    ))}
-                    {premiumBonusItems.map((item, i) => (
-                      <li key={`b-${i}`} className="flex items-center gap-1.5">
-                        <div className="w-3.5 h-3.5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                          <Gift className="w-2.5 h-2.5 text-white" />
-                        </div>
-                        <span className="text-[10px] font-semibold text-foreground">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <ul className="my-3 space-y-1.5 text-xs font-semibold text-foreground">
+                  {[
+                    '+100 mil arquivos STL organizados por categoria',
+                    'Todas as 19 coleções de bônus inclusas',
+                    'Acesso por WhatsApp e e-mail após a confirmação',
+                    'Pagamento único e garantia de 7 dias',
+                  ].map((item) => <li key={item} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-cta" />{item}</li>)}
+                </ul>
+                <div className="flex flex-col gap-2">
+                  <Button asChild className="prime-cta h-auto w-full whitespace-normal rounded-lg px-3 py-3 text-sm font-black">
+                    <a href="https://pay.cakto.com.br/whodr5r_907770" onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}>GARANTIR TUDO POR R$ 29,90</a>
+                  </Button>
+                  <Button asChild variant="ghost" className="h-auto w-full whitespace-normal rounded-lg py-2 text-xs text-muted-foreground">
+                    <a href="https://pay.cakto.com.br/3bjr73a_907769" onClick={(e) => { setShowBasicUpsell(false); handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico'); }}>Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</a>
+                  </Button>
                 </div>
-              </div>
-
-              <div className="px-3 pb-2 pt-1 flex-shrink-0">
-                <Button asChild className="h-auto whitespace-normal"><a
-                  href="https://pay.cakto.com.br/whodr5r_907770"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}
-                  className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-xs px-3 py-2.5 rounded-full transition-colors w-full text-center uppercase cursor-pointer mb-1"
-                >
-                  <Zap className="w-3.5 h-3.5 inline mr-1" />
-                  QUERO O PREMIUM POR R$ 29,90
-                </a></Button>
-
-                <Button asChild className="h-auto whitespace-normal"><a
-                  href="https://pay.cakto.com.br/3bjr73a_907769"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => {
-                    setShowBasicUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
-                  }}
-                  className="prime-cta-basic block font-semibold text-[10px] px-3 py-1 rounded-full transition-colors w-full text-center cursor-pointer mb-1.5"
-                >
-                  Não, quero apenas o Básico — R$ 10,00
-                </a></Button>
-
-                <div className="flex items-center justify-center gap-2">
-                  <img
-                    src={paymentMethods}
-                    alt="Métodos de pagamento aceitos"
-                    className="w-[55%] max-w-[160px]"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="border border-blue-500/40 rounded-lg px-1.5 py-1 text-center bg-blue-500/10 flex-1">
-                    <p className="text-[9px] font-bold text-blue-700 flex items-center justify-center gap-0.5 leading-tight">
-                      <Zap className="w-2.5 h-2.5" />
-                      WhatsApp e e-mail
-                    </p>
-                    <p className="text-[8px] text-muted-foreground leading-tight">
-                      Garantia 7 dias
-                    </p>
-                  </div>
+                <div className="mt-2 flex items-center justify-center gap-2">
+                  <img src={paymentMethods} alt="Métodos de pagamento aceitos" className="w-36 h-8 object-contain" />
+                  <span className="flex items-center gap-1 text-[10px] font-semibold text-muted-foreground"><ShieldCheck className="h-4 w-4 shrink-0 text-cta" />Pagamento seguro</span>
                 </div>
               </div>
             </motion.div>
@@ -604,7 +527,6 @@ const OfferSection = () => {
         )}
       </AnimatePresence>
     </>
-
   );
 };
 

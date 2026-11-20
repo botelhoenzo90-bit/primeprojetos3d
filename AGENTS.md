@@ -10,3 +10,5 @@
 
 - Main purchase CTAs share semantic green and crisp black-shadow tokens through the button component; the basic plan keeps its neutral variant to preserve consistent styling.
 - Proxy the CDN asset path to the hosted app in local Vite development — local previews must render the same images as hosted pages.
+
+- Summarize upgrade inclusions in the popup rather than repeating full plan lists; keep the purchase and basic continuation actions visible without internal scrolling.

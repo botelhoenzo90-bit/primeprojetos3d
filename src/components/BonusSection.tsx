@@ -21,7 +21,7 @@ const bonuses = [
   { image: "VcahILv.png", title: "Coleção especial 16", desc: "Uma seleção extra de projetos para explorar novas ideias." },
   { image: "gg0YzCN.png", title: "Coleção especial 17", desc: "Conteúdos adicionais para diversificar seu catálogo." },
   { image: "kMoygo7.png", title: "Coleção especial 18", desc: "Mais referências visuais para seus próximos projetos." },
-  { image: "zuajik7.png", title: "Coleção especial 19", desc: "Uma coleção extra incluída no acesso Premium." },
+  { image: "zuajik7.png", title: "Coleção especial 19", desc: "Uma coleção extra para ampliar seus projetos." },
 ];
 
 const BonusSection = () => {
@@ -30,7 +30,7 @@ const BonusSection = () => {
     <section className="py-8 md:py-12 bg-[#EFF7FF] overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-6">
-          <span className="inline-flex items-center gap-1.5 bg-white text-[#17324D] text-xs md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-blue-100"><Gift className="w-4 h-4 text-[#FF4500]" /> 19 COLEÇÕES TEMÁTICAS NO PREMIUM</span>
+          <span className="inline-flex items-center gap-1.5 bg-white text-[#17324D] text-xs md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-blue-100"><Gift className="w-4 h-4 text-[#FF4500]" /> 19 COLEÇÕES TEMÁTICAS EXCLUSIVAS</span>
           <h2 className="text-3xl md:text-5xl font-black text-[#17324D] leading-tight tracking-tight mb-3">Mais variedade para <span className="block text-blue-700">seus próximos projetos.</span></h2>
           <p className="text-slate-600 text-base md:text-xl font-medium max-w-2xl mx-auto">Explore coleções temáticas de diferentes estilos e encontre referências para ampliar suas ideias de impressão.</p>
         </motion.div>
@@ -45,14 +45,14 @@ const BonusSection = () => {
               <span className="inline-block self-center bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1 rounded-full mb-2 tracking-wide">COLEÇÃO {(i % bonuses.length) + 1}</span>
               <h3 className="font-extrabold text-lg text-[#17324D] mb-2">{b.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
-              <span className="mt-auto pt-4 text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">INCLUSO NO PREMIUM</span>
+              <span className="mt-auto pt-4 text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">BÔNUS INCLUSO</span>
             </article>
           ))}
         </div>
       </div>
       <div className="container mx-auto px-4">
         <div className="text-center mt-8 flex flex-col items-center">
-          <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-10 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2">QUERO O PREMIUM COMPLETO</a></Button>
+          <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-10 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2">GARANTIR A BIBLIOTECA COM BÔNUS</a></Button>
           <p className="text-xs md:text-sm text-[#334155] font-semibold">🛡️ Garantia de 7 dias • Acesso digital</p>
         </div>
       </div>

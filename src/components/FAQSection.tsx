@@ -26,7 +26,7 @@ const FAQSection = () => (
         {faqs.map((faq, i) => <AccordionItem key={i} value={`item-${i}`} className="bg-white rounded-xl border border-blue-100 px-5 shadow-sm"><AccordionTrigger className="text-left font-semibold text-foreground hover:no-underline">{faq.q}</AccordionTrigger><AccordionContent className="text-muted-foreground leading-relaxed">{faq.a}</AccordionContent></AccordionItem>)}
       </Accordion>
       <div className="text-center mt-8 flex flex-col items-center">
-        <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-lg px-6 md:px-8 py-4 rounded-full transition-colors mb-2">QUERO ESCOLHER MEU PACOTE</a></Button>
+        <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-lg px-6 md:px-8 py-4 rounded-full transition-colors mb-2">ESCOLHER MEU PACOTE AGORA</a></Button>
         <p className="text-xs md:text-sm text-green-title font-semibold">🛡️ Garantia de 7 dias · Acesso digital</p>
       </div>
     </div>

@@ -20,13 +20,13 @@ const Index = () => (
       <HeroSection />
       <RecipeCarousel />
       <MainBenefitsSection />
-      <CompatibilitySection />
       <VSLSection />
       <NutriSection />
       <TestimonialsSection />
       <BonusSection />
       <OfferSection />
       <GuaranteeSection />
+      <CompatibilitySection />
       <DeliverySection />
       <FAQSection />
       <FooterSection />

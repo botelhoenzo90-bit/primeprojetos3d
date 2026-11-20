@@ -1,7 +1,7 @@
 import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const SectionCTA = ({ label = "QUERO MEU ACESSO AGORA", dark = false }: { label?: string; dark?: boolean }) => (
+const SectionCTA = ({ label = "GARANTIR MEU ACESSO AGORA", dark = false }: { label?: string; dark?: boolean }) => (
   <div className="mt-7 md:mt-9 flex flex-col items-center text-center">
     <Button asChild className="h-auto w-full max-w-sm whitespace-normal rounded-xl bg-cta hover:bg-cta-hover prime-cta px-6 py-4 text-sm md:text-base font-black uppercase text-primary-foreground">
       <a href="#oferta" className="flex items-center justify-center gap-2 text-center leading-tight">{label} <ArrowRight className="h-5 w-5 shrink-0" /></a>

@@ -34,7 +34,7 @@ const GuaranteeSection = () => {
             href="#oferta"
             className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-12 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2 "
           >
-            QUERO COMPRAR COM GARANTIA →
+            GARANTIR MEU ACESSO COM SEGURANÇA →
           </a></Button>
           <p className="text-xs md:text-sm text-[#064E3B] font-semibold flex items-center justify-center gap-1.5 justify-center">
             🛡️ Garantia de 7 dias · Acesso digital imediato

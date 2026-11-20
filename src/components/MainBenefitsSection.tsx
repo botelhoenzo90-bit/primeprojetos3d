@@ -32,7 +32,7 @@ const MainBenefitsSection = () => (
           </motion.div>
         ))}
       </div>
-      <SectionCTA label="QUERO OS 100 MIL MODELOS" />
+      <SectionCTA label="GARANTIR ACESSO AOS 100 MIL MODELOS" />
     </div>
   </section>
 );

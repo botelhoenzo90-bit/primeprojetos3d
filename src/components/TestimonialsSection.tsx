@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
         </div>
       </div>
       <div className="text-center mt-8">
-        <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-12 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2 ">QUERO MEU ACESSO AGORA</a></Button>
+        <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-12 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2 ">GARANTIR MEU ACESSO AGORA</a></Button>
         <p className="text-xs md:text-sm text-[#064E3B] font-semibold">🛡️ Garantia de 7 dias · Acesso digital imediato</p>
       </div>
     </section>

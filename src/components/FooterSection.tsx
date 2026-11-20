@@ -1,5 +1,6 @@
 import SectionCTA from "@/components/SectionCTA";
 import logo from "@/assets/topo/logo.png.asset.json";
+import PrivacyPreferences from "@/components/PrivacyPreferences";
 const FooterSection = () => (
   <footer className="bg-green-title py-12 px-4 text-center">
     <div className="max-w-4xl mx-auto space-y-4">
@@ -12,6 +13,7 @@ const FooterSection = () => (
       <p className="text-cream/90 text-sm font-bold font-body">
         © 2026 Prime Projetos 3D. Todos os direitos reservados.
       </p>
+      <PrivacyPreferences />
     </div>
   </footer>
 );

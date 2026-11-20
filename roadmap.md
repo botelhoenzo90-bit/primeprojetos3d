@@ -1,5 +1,9 @@
 # Tasks
 
+- [x] Remove old Meta, Clarity and Utmify code and checkout query forwarding; install Meta pixel 2150691958883963 gated by advertising permission; eight tests passed, SDK/config returned 200 and blocked-region/browser opt-out checks passed.
+- [ ] Resolve regional consent choice — until answered, use no-banner blocking in consent/unknown regions.
+- [ ] Verify new Meta PageView transmission and provider receipt on the published site — publication not requested and no connected Events Manager; local SDK/config loaded but no event request was observed.
+
 - [x] Add two seconds to the sales notification interval and change the hero subtitle to “vender no:”; interval test passed and subtitle verified in the browser.
 
 - [x] Update Premium, Basic and popup checkout destinations; slow category, bonus and testimonial rows while preserving the first collection row; six tests passed and all three buttons preserved UTMs in browser checks.

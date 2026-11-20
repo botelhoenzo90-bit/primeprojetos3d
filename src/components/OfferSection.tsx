@@ -226,7 +226,7 @@ const OfferSection = () => {
                         className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover prime-cta text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
-                        GARANTIR BIBLIOTECA COMPLETA
+                        QUERO O PREMIUM COMPLETO
                       </a></Button>
                     </div>
 
@@ -495,29 +495,35 @@ const OfferSection = () => {
                 <p className="mt-1 text-xs font-semibold">Leve a biblioteca completa por apenas:</p>
               </div>
               <div className="upgrade-content px-4 py-3">
-                <img src={produtoImg} alt="Biblioteca 3D completa" className="upgrade-image w-full h-28 object-contain mx-auto" />
+                <div className="upgrade-overview">
+                <img src={produtoImg} alt="Biblioteca 3D completa" className="upgrade-image w-full h-20 object-contain mx-auto" />
                 <div className="text-center mt-1">
                   <span className="text-destructive font-bold line-through text-sm">R$ 97,00</span>
                   <p className="text-4xl font-black text-cta leading-tight">{OFFER_PRICES.upgrade.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
                   <p className="text-xs font-bold text-cta">Economize R$ 67,10!</p>
                 </div>
-                <ul className="my-3 space-y-1.5 text-xs font-semibold text-foreground">
+                </div>
+                <ul className="upgrade-inclusions my-3 space-y-1.5 text-xs font-semibold leading-snug text-foreground">
                   {[
-                    '+100 mil arquivos STL organizados por categoria',
-                    'Todas as 19 coleções de bônus inclusas',
-                    'Acesso por WhatsApp e e-mail após a confirmação',
-                    'Pagamento único e garantia de 7 dias',
-                  ].map((item) => <li key={item} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-cta" />{item}</li>)}
+                    '+100 mil STL organizados por categoria',
+                    '19 coleções: veículos, heróis e chaveiros',
+                    'Articulados, cosplay, Pokémon e LEGO',
+                    'Minecraft, Natal, Copa e mascotes',
+                    '+250 luminárias e bichinhos amigurumi',
+                    'Canecas temáticas e réplicas de estádios',
+                    'Após confirmação: WhatsApp e e-mail',
+                    'Pagamento único + garantia de 7 dias',
+                  ].map((item) => <li key={item} className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-cta" /><span className="min-w-0">{item}</span></li>)}
                 </ul>
-                <div className="flex flex-col gap-2">
+                <div className="upgrade-actions flex flex-col gap-2">
                   <Button asChild className="prime-cta h-auto w-full whitespace-normal rounded-lg px-3 py-3 text-sm font-black">
                     <a href="https://pay.cakto.com.br/whodr5r_907770" onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}>GARANTIR TUDO POR R$ 29,90</a>
                   </Button>
-                  <Button asChild variant="ghost" className="h-auto w-full whitespace-normal rounded-lg py-2 text-xs text-muted-foreground">
+                  <Button asChild className="prime-cta-basic h-auto min-h-9 w-full whitespace-normal rounded-lg px-2 py-2 text-xs text-primary-foreground">
                     <a href="https://pay.cakto.com.br/3bjr73a_907769" onClick={(e) => { setShowBasicUpsell(false); handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico'); }}>Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</a>
                   </Button>
                 </div>
-                <div className="mt-2 flex items-center justify-center gap-2">
+                <div className="upgrade-payment mt-2 flex items-center justify-center gap-2">
                   <img src={paymentMethods} alt="Métodos de pagamento aceitos" className="w-36 h-8 object-contain" />
                   <span className="flex items-center gap-1 text-[10px] font-semibold text-muted-foreground"><ShieldCheck className="h-4 w-4 shrink-0 text-cta" />Pagamento seguro</span>
                 </div>

@@ -291,13 +291,20 @@ img, iframe, video {
 /* Summarized upgrade offer stays readable without an internal scrolling list. */
 .upgrade-popup { max-height: calc(100dvh - 24px); }
 @media (max-height: 600px) {
-  .upgrade-popup .upgrade-image { height: 64px; }
+  .upgrade-popup .upgrade-image { height: 48px; }
   .upgrade-popup .upgrade-content { padding-top: 8px; padding-bottom: 8px; }
-  .upgrade-popup ul { margin-top: 8px; margin-bottom: 8px; }
+  .upgrade-popup .upgrade-inclusions { margin-top: 8px; margin-bottom: 8px; font-size: 11px; }
+  .upgrade-popup .upgrade-inclusions li + li { margin-top: 4px; }
+  .upgrade-popup .upgrade-overview .text-4xl { font-size: 30px; }
+  .upgrade-popup .upgrade-actions .prime-cta { padding-top: 8px; padding-bottom: 8px; }
 }
 @media (max-height: 480px) and (min-width: 640px) {
   .upgrade-popup { max-width: 720px; }
   .upgrade-popup .upgrade-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 16px; align-items: center; }
-  .upgrade-popup .upgrade-image { grid-row: span 2; height: 112px; }
-  .upgrade-popup ul { grid-column: 2; }
+  .upgrade-popup .upgrade-overview { grid-column: 1; grid-row: 1; }
+  .upgrade-popup .upgrade-image { height: 88px; }
+  .upgrade-popup .upgrade-inclusions { grid-column: 2; grid-row: 1; }
+  .upgrade-popup .upgrade-actions { grid-column: 1 / -1; flex-direction: row; align-items: stretch; }
+  .upgrade-popup .upgrade-actions > a { flex: 1; }
+  .upgrade-popup .upgrade-payment { grid-column: 1 / -1; }
 }

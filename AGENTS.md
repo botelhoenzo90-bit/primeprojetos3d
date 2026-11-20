@@ -13,5 +13,5 @@
 
 - Summarize upgrade inclusions in the popup rather than repeating full plan lists; keep the purchase and basic continuation actions visible without internal scrolling.
 - Calculate the promotional banner date through the shared Brasília-time formatter and refresh it while the page stays open — prevents hardcoded dates and UTC day drift.
-- Load Meta only through the shared advertising permission module and revoke on preference changes; keep checkout destinations independent of tracking and incoming URL parameters to prevent old attribution leakage.
+- Load Meta and Cakto only through shared advertising permission; isolate Cakto in a removable same-origin tracking frame because its SDK has no teardown API, restore original checkout URLs and clear its storage on refusal. Only the permitted Cakto SDK decorates checkout URLs, preventing legacy attribution leakage.
 - Keep one regional consent panel and permanent settings in the footer, with independent analytics and advertising answers through the shared consent module — accepting analytics must never unlock Meta.

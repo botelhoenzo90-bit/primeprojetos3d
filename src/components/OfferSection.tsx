@@ -498,7 +498,7 @@ const OfferSection = () => {
                 <div className="upgrade-overview">
                 <img src={produtoImg} alt="Biblioteca 3D completa" className="upgrade-image w-full h-20 object-contain mx-auto" />
                 <div className="text-center mt-1">
-                  <span className="text-destructive font-bold line-through text-sm">R$ 97,00</span>
+                  <span className="text-destructive font-extrabold line-through text-lg">R$ 97,00</span>
                   <p className="text-4xl font-black text-cta leading-tight">{OFFER_PRICES.upgrade.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p>
                   <p className="text-xs font-bold text-cta">Economize R$ 67,10!</p>
                 </div>

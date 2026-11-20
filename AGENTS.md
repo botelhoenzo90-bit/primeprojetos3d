@@ -12,3 +12,4 @@
 - Proxy the CDN asset path to the hosted app in local Vite development — local previews must render the same images as hosted pages.
 
 - Summarize upgrade inclusions in the popup rather than repeating full plan lists; keep the purchase and basic continuation actions visible without internal scrolling.
+- Calculate the promotional banner date through the shared Brasília-time formatter and refresh it while the page stays open — prevents hardcoded dates and UTC day drift.

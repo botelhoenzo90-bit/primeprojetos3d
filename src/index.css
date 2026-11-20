@@ -291,7 +291,7 @@ img, iframe, video {
 /* Summarized upgrade offer stays readable without an internal scrolling list. */
 .upgrade-popup { max-height: calc(100dvh - 24px); }
 @media (max-height: 600px) {
-  .upgrade-popup .upgrade-image { height: 48px; }
+  .upgrade-popup .upgrade-image { height: 40px; }
   .upgrade-popup .upgrade-content { padding-top: 8px; padding-bottom: 8px; }
   .upgrade-popup .upgrade-inclusions { margin-top: 8px; margin-bottom: 8px; font-size: 11px; }
   .upgrade-popup .upgrade-inclusions li + li { margin-top: 4px; }

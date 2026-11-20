@@ -1,5 +1,7 @@
 # Tasks
 
+- [x] Add two seconds to the sales notification interval and change the hero subtitle to “vender no:”; interval test passed and subtitle verified in the browser.
+
 - [x] Update Premium, Basic and popup checkout destinations; slow category, bonus and testimonial rows while preserving the first collection row; six tests passed and all three buttons preserved UTMs in browser checks.
 
 - [x] Compact mobile hero subtitle, enlarge popup's crossed-out price and keep banner date current in Brasília with “até”; date rollover and layout verified at 320px, 375px, 394px and 1280px; six tests passed.

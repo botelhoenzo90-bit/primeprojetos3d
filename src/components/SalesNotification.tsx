@@ -20,7 +20,7 @@ const SalesNotification = () => {
       window.clearTimeout(hideTimer);
       hideTimer = window.setTimeout(() => setShow(false), 6000);
     };
-    const interval = window.setInterval(showNotification, 11000);
+    const interval = window.setInterval(showNotification, 13000);
     const initial = window.setTimeout(showNotification, 3500);
     return () => { window.clearInterval(interval); window.clearTimeout(initial); window.clearTimeout(hideTimer); };
   }, []);

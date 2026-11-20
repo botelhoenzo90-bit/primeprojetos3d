@@ -27,7 +27,7 @@ const bonuses = [
 const BonusSection = () => {
   const loop = [...bonuses, ...bonuses];
   return (
-    <section className="py-8 md:py-12 bg-[#EFF7FF] overflow-hidden">
+    <section className="bonus-section py-8 md:py-12 bg-[#EFF7FF] overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-6">
           <span className="inline-flex items-center gap-1.5 bg-white text-[#17324D] text-xs md:text-sm font-black uppercase tracking-wider mb-4 px-4 py-2 rounded-full border border-blue-100"><Gift className="w-4 h-4 text-[#FF4500]" /> 19 COLEÇÕES TEMÁTICAS EXCLUSIVAS</span>

@@ -219,10 +219,10 @@ const OfferSection = () => {
                   <div className="mt-auto">
                     <div className="rounded-full mb-4">
                       <Button asChild className="h-auto whitespace-normal"><a
-                        href="https://pay.cakto.com.br/36cgyiw_840628"
+                        href="https://pay.cakto.com.br/vfa8ugj_1323876"
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/36cgyiw_840628', OFFER_PRICES.premium, 'Biblioteca STL 3D - Premium')}
+                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/vfa8ugj_1323876', OFFER_PRICES.premium, 'Biblioteca STL 3D - Premium')}
                         className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover prime-cta text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
@@ -441,10 +441,10 @@ const OfferSection = () => {
                 </div>
 
                 <Button asChild className="h-auto whitespace-normal"><a
-                  href="https://pay.cakto.com.br/etagmjj_848143"
+                  href="https://pay.cakto.com.br/vfhdgrk_1350699"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/etagmjj_848143', 14.90, 'Biblioteca STL 3D - Upsell Premium')}
+                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/vfhdgrk_1350699', 14.90, 'Biblioteca STL 3D - Upsell Premium')}
                   className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
                 >
                   <Zap className="w-4 h-4 inline mr-1" />
@@ -452,12 +452,12 @@ const OfferSection = () => {
                 </a></Button>
 
                 <Button asChild className="h-auto whitespace-normal"><a
-                  href="https://pay.cakto.com.br/kv9j6ie_848142"
+                  href="https://pay.cakto.com.br/buf4wp3_1350697"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     setShowUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/kv9j6ie_848142', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
+                    handleCheckout(e, 'https://pay.cakto.com.br/buf4wp3_1350697', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico');
                   }}
                   className="prime-cta-basic block font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer"
                 >
@@ -517,10 +517,10 @@ const OfferSection = () => {
                 </ul>
                 <div className="upgrade-actions flex flex-col gap-2">
                   <Button asChild className="prime-cta h-auto w-full whitespace-normal rounded-lg px-3 py-3 text-sm font-black">
-                    <a href="https://pay.cakto.com.br/whodr5r_907770" onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/whodr5r_907770', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}>GARANTIR TUDO POR R$ 29,90</a>
+                    <a href="https://pay.cakto.com.br/vfhdgrk_1350699" onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/vfhdgrk_1350699', OFFER_PRICES.upgrade, 'Biblioteca STL 3D - Oferta Premium')}>GARANTIR TUDO POR R$ 29,90</a>
                   </Button>
                   <Button asChild className="prime-cta-basic h-auto min-h-9 w-full whitespace-normal rounded-lg px-2 py-2 text-xs text-primary-foreground">
-                    <a href="https://pay.cakto.com.br/3bjr73a_907769" onClick={(e) => { setShowBasicUpsell(false); handleCheckout(e, 'https://pay.cakto.com.br/3bjr73a_907769', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico'); }}>Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</a>
+                    <a href="https://pay.cakto.com.br/buf4wp3_1350697" onClick={(e) => { setShowBasicUpsell(false); handleCheckout(e, 'https://pay.cakto.com.br/buf4wp3_1350697', OFFER_PRICES.basic, 'Biblioteca STL 3D - Básico'); }}>Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</a>
                   </Button>
                 </div>
                 <div className="upgrade-payment mt-2 flex items-center justify-center gap-2">

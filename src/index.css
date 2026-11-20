@@ -130,7 +130,7 @@
 }
 
 .animate-marquee-testimonials {
-  animation: marquee-testimonials 22s linear infinite;
+  animation: marquee-testimonials 30s linear infinite;
 }
 
 .animate-pulse-glow {
@@ -167,7 +167,7 @@ display: none !important;
 
 .category-gallery { background-color: hsl(var(--gallery-surface)); }
 .category-card { background-color: hsl(var(--gallery-card)); }
-.category-track { animation-duration: 48s; }
+.category-track { animation-duration: 60s; }
 
 @media (prefers-reduced-motion: reduce) {
   .category-gallery .category-track { animation: none; }
@@ -308,3 +308,6 @@ img, iframe, video {
   .upgrade-popup .upgrade-actions > a { flex: 1; }
   .upgrade-popup .upgrade-payment { grid-column: 1 / -1; }
 }
+
+/* A calmer pace for the thematic bonus row. */
+.bonus-section .animate-marquee { animation-duration: 30s; }

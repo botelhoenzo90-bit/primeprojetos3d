@@ -17,7 +17,7 @@ const UrgencyBar = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-heading-highlight py-2.5 px-3 shadow-md">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-topbar py-2.5 px-3 shadow-md">
       <p className="text-center text-primary-foreground font-black text-[11px] md:text-sm uppercase tracking-wide">
         Oferta Promocional Válida até ({today})
       </p>

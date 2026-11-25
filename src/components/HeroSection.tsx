@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/topo/logo.png.asset.json";
 import marketplaces from "@/assets/topo/marketplaces-transparent.webp.asset.json";
 import headline from "@/assets/topo/titulo-impressora.webp.asset.json";
-import printer from "@/assets/topo/impressora-oficina.webp.asset.json";
+import printer from "@/assets/topo/biblioteca-100mil.webp.asset.json";
 import perfil1 from "@/assets/perfis/perfil-1.webp.asset.json";
 import perfil2 from "@/assets/perfis/perfil-2.webp.asset.json";
 import perfil3 from "@/assets/perfis/perfil-3.webp.asset.json";
@@ -20,7 +20,7 @@ const HeroSection = () => (
       </h1>
       <p className="hero-subtitle w-full max-w-5xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug md:leading-tight mb-5"><span className="md:block">Tenha acesso a uma biblioteca com mais de</span>{" "}<span className="md:block"><strong className="inline-block whitespace-nowrap rounded-md bg-primary text-primary-foreground px-1.5 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e vender no:</span></p>
       <img src={marketplaces.url} alt="Mercado Livre, Shopee, TikTok Shop e sua cidade" className="w-full max-w-[245px] md:max-w-[295px] h-auto mb-3" />
-      <img src={printer.url} alt="Impressora 3D com modelos articulados, vasos, miniaturas e peças decorativas" className="w-full max-w-[370px] md:max-w-[460px] aspect-square object-cover rounded-2xl shadow-lg border border-blue-100" loading="eager" />
+      <img src={printer.url} alt="Mais de 100.000 arquivos STL para impressão 3D" className="w-full max-w-[370px] md:max-w-[460px] aspect-square object-cover rounded-3xl shadow-lg" loading="eager" />
       <Button asChild className="mt-4 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">
         <a href="#oferta">GARANTIR MEU ACESSO AGORA <span aria-hidden="true">↓</span></a>
       </Button>

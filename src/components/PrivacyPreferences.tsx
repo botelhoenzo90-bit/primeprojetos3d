@@ -58,6 +58,7 @@ const PrivacyPreferences = () => {
         <summary className="cursor-pointer">Política de privacidade e publicidade</summary>
         <div className="mt-3 space-y-3 leading-relaxed">
           <p>Contamos visitas com a Lovable sem cookies e sem identificar você. São medidos páginas visitadas, origem, país, navegador e dispositivo, tempo na página, velocidade e erros. Nas regiões com aviso, cliques aguardam sua autorização para análise. Os detalhes ficam disponíveis por 90 dias e os totais diários por um ano.</p>
+          <p>Quando a análise é permitida, o Microsoft Clarity usa cookies para registrar cliques, rolagem e movimentos na página e entender como ela é usada. Ele não recebe dados de pagamento.</p>
           <p>Quando a publicidade é permitida, o pixel da Meta compartilha visitas, endereço da página, informações do navegador e identificadores de cookies com a Meta para medir e otimizar anúncios e formar públicos. Esta página não envia dados de formulários nem confirmações de compras para a Meta.</p>
           <p>Quando a publicidade é permitida, a Cakto guarda neste site os parâmetros de campanha e de clique do anúncio por 90 dias e um identificador aleatório do visitante, repassando a campanha aos links de pagamento. Também recebe visitas, tipo de dispositivo, origem e campanha para medir visitas e atribuir vendas aos anúncios. O identificador do visitante permanece até a retirada da autorização ou limpeza dos dados do navegador.</p>
           <p>Na UE/EEE, Reino Unido, Suíça, em todo o Canadá e quando a localização é desconhecida, Meta e Cakto aguardam sua autorização para publicidade. Nas outras regiões, podem funcionar sem uma escolha prévia, salvo recusa ou sinal de privacidade do navegador.</p>
@@ -70,14 +71,14 @@ const PrivacyPreferences = () => {
           <h2 id="consent-title" className="text-lg font-extrabold">{panel === 'banner' ? 'Sua privacidade, sua escolha' : 'Configurações de cookies'}</h2>
           {panel === 'banner' ? (
             <div className="mt-2 space-y-2 text-sm leading-relaxed">
-              <p>Contamos visitas sem cookies. Se você aceitar análise, também medimos cliques.</p>
+              <p>Contamos visitas sem cookies. Se você aceitar análise, também medimos cliques e o uso da página com o Microsoft Clarity.</p>
               <p>Com sua autorização para publicidade, usamos cookies e armazenamento no navegador para medir anúncios, guardar campanhas por 90 dias, associá-las ao pagamento e formar públicos.</p>
             </div>
           ) : (
             <div className="mt-3 space-y-3 text-sm">
               {gpc && <p>O sinal de privacidade do seu navegador está ativo. As opções permanecem desativadas.</p>}
               <div className="flex justify-between gap-3 border-b border-border pb-3"><span className="font-bold">Necessários</span><span>Sempre ativos</span></div>
-              <label className="flex items-center justify-between gap-3"><span>Análise, fornecida pela Lovable</span><Switch aria-label="Análise, fornecida pela Lovable" checked={analytics} disabled={gpc} onCheckedChange={setAnalytics} /></label>
+              <label className="flex items-center justify-between gap-3"><span>Análise, fornecida pela Lovable e Microsoft Clarity</span><Switch aria-label="Análise, fornecida pela Lovable e Microsoft Clarity" checked={analytics} disabled={gpc} onCheckedChange={setAnalytics} /></label>
               <label className="flex items-center justify-between gap-3"><span>Publicidade, fornecida pela Meta e Cakto</span><Switch aria-label="Publicidade, fornecida pela Meta e Cakto" checked={advertising} disabled={gpc} onCheckedChange={setAdvertising} /></label>
             </div>
           )}

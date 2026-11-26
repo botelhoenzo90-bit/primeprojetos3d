@@ -39,14 +39,14 @@ const BonusSection = () => {
       <div className="overflow-hidden w-full">
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
           {loop.map((b, i) => (
-            <article key={i} className="w-[260px] md:w-[300px] shrink-0 mx-2 rounded-3xl bg-white p-4 shadow-lg border border-blue-100 text-center flex flex-col min-h-[330px]">
+            <article key={i} className="w-[260px] md:w-[300px] shrink-0 mx-2 rounded-3xl bg-white p-4 shadow-lg border border-blue-100 text-center flex flex-col">
               <div className="w-full aspect-[4/3] shrink-0 rounded-lg overflow-hidden bg-muted mb-4">
                 <img src={`/imagens/bonus/${b.image}`} alt={b.title} loading="lazy" decoding="async" className="block w-full h-full object-cover" />
               </div>
               <span className="inline-block self-center bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1 rounded-full mb-2 tracking-wide">COLEÇÃO {(i % bonuses.length) + 1}</span>
               <h3 className="font-extrabold text-lg text-[#17324D] mb-2">{b.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
-              <span className="mt-auto pt-4 text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">BÔNUS INCLUSO</span>
+              <span className="mt-3 self-center text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">BÔNUS INCLUSO</span>
             </article>
           ))}
         </div>

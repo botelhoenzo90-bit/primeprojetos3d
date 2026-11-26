@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
           <span className="inline-flex items-center gap-1.5 bg-[#FFD700] text-black text-[10px] md:text-sm font-black uppercase tracking-wider mb-6 px-4 py-1.5 rounded-full whitespace-nowrap border border-[#FFD700]">
             <Star className="w-3 h-3 md:w-4 md:h-4 text-[#FF4500]" /> DEPOIMENTOS E EXPERIÊNCIAS
           </span>
-          <h2 className="mx-auto max-w-4xl text-[clamp(1.35rem,5.8vw,3.75rem)] font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
+          <h2 className="mx-auto max-w-4xl text-[clamp(1.55rem,6.6vw,3.75rem)] font-black text-green-title mb-2 leading-tight px-1 tracking-tight">
             <span className="block whitespace-nowrap">Veja o que estão falando</span>
             <span className="block whitespace-nowrap text-heading-highlight">sobre o Pack 3D</span>
           </h2>

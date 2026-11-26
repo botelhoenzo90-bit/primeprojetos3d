@@ -1,7 +1,7 @@
 import SectionCTA from "@/components/SectionCTA";
 import WistiaVideo from "@/components/WistiaVideo";
 import { motion } from "framer-motion";
-import { FolderOpen, Users, ShieldCheck, PlayCircle } from "lucide-react";
+import { FolderOpen, Users, ShieldCheck } from "lucide-react";
 
 const features = [
   { icon: FolderOpen, title: "TUDO SEPARADO POR CATEGORIA", desc: "Decoração, utilidades, brinquedos, datas comemorativas e muito mais, organizados para você achar em segundos." },
@@ -19,8 +19,7 @@ const NutriSection = () => (
       </motion.div>
 
       <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto mb-8">
-        <p className="mb-3 flex items-center justify-center gap-2 text-center text-sm md:text-base font-extrabold text-green-title"><PlayCircle className="h-5 w-5 shrink-0 text-heading-highlight" /> Clique no vídeo e conheça a biblioteca por dentro</p>
-        <div className="w-full rounded-2xl md:rounded-3xl border border-blue-200 bg-[#10243A] shadow-2xl overflow-hidden">
+                <div className="w-full rounded-2xl md:rounded-3xl border border-blue-200 bg-[#10243A] shadow-2xl overflow-hidden">
           <WistiaVideo mediaId="m2f6qcvqu7" aspect={1.8823529411764706} />
         </div>
       </motion.div>

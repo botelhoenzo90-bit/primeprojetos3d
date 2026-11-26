@@ -101,9 +101,9 @@ const OfferSection = () => {
             Crie, imprima e explore novas possibilidades <span className="text-[#f97316]">com a Biblioteca 3D Premium</span>
           </motion.h2>
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-3 px-2">
-            Escolha o pacote ideal para você e comece agora mesmo!
+            Escolha o pacote ideal para você<br className="md:hidden" /> e comece agora mesmo!
           </p>
-          <div className="max-w-6xl mx-auto mt-14 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+          <div className="max-w-6xl mx-auto mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* PLANO PREMIUM */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -111,13 +111,13 @@ const OfferSection = () => {
               viewport={{ once: true }}
             >
               <div className="relative bg-white rounded-3xl shadow-2xl border-[3px] border-sage overflow-visible h-full flex flex-col">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%+12px)] z-10 w-max">
-                  <div className="bg-green-600 text-white text-base md:text-2xl font-black px-6 py-2 rounded-full uppercase shadow-[0_3px_0_#000] whitespace-nowrap">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-max">
+                  <div className="bg-green-600 text-white text-sm md:text-xl font-black px-5 py-1.5 rounded-full uppercase shadow-[0_3px_0_#000] whitespace-nowrap">
                     97% escolhem esse pacote!
                   </div>
                 </div>
 
-                <div className="p-5 md:p-6 flex flex-col flex-1">
+                <div className="p-5 pt-8 md:p-6 md:pt-9 flex flex-col flex-1">
                   <div className="text-center mb-1">
                     <span className="inline-block bg-orange-500 text-white text-xs md:text-sm font-black uppercase tracking-wider px-4 py-1.5 rounded-full">
                       Pacote Premium
@@ -243,7 +243,7 @@ const OfferSection = () => {
               viewport={{ once: true }}
             >
               <div className="relative bg-white rounded-3xl shadow-lg border-[3px] border-gray-300 overflow-visible h-full flex flex-col">
-                <div className="p-5 md:p-6 flex flex-col flex-1">
+                <div className="p-5 pt-8 md:p-6 md:pt-9 flex flex-col flex-1">
                   <div className="text-center mb-1">
                     <span className="inline-block bg-gray-200 text-gray-600 text-[10px] md:text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full border border-gray-300">
                       Pacote Básico
@@ -273,7 +273,7 @@ const OfferSection = () => {
                           <div className="w-5 h-5 rounded-full bg-orange-500/15 flex items-center justify-center flex-shrink-0">
                             <Check className="w-3.5 h-3.5 text-cta" />
                           </div>
-                          <span className="text-sm text-foreground">{item}</span>
+                          <span className="text-sm font-bold text-green-600">{item}</span>
                         </li>
                       ))}
                       {basicMissingItems.map((item, i) => (
@@ -281,7 +281,7 @@ const OfferSection = () => {
                           <div className="w-5 h-5 rounded-full bg-red-500/15 flex items-center justify-center flex-shrink-0">
                             <X className="w-3.5 h-3.5 text-red-500" />
                           </div>
-                          <span className="text-sm text-foreground line-through decoration-red-400 decoration-1">{item}</span>
+                          <span className="text-sm font-bold text-foreground line-through decoration-red-400 decoration-1">{item}</span>
                         </li>
                       ))}
                       {premiumBonusItems.map((item, i) => (

@@ -1,4 +1,4 @@
-import { Star, PlayCircle } from "lucide-react";
+import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/topo/logo.png.asset.json";
 import headline from "@/assets/topo/titulo-impressora.webp.asset.json";
@@ -18,8 +18,8 @@ const HeroSection = () => (
         <img src={headline.url} alt="Transforme sua Impressora 3D em uma Máquina de Criar Produtos que Vendem Todos os Dias" className="block w-full h-auto" loading="eager" />
       </h1>
       <p className="hero-subtitle w-full max-w-4xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug md:leading-tight mb-5">Acesse mais de <strong className="inline-block whitespace-nowrap rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e crie produtos incríveis para vender todos os dias.</p>
-      <p className="mb-3 text-center text-sm font-extrabold text-green-title"><PlayCircle className="mr-2 inline h-5 w-5 -translate-y-0.5 text-heading-highlight" /> Aperte o play e descubra o que dá pra <span className="whitespace-nowrap">criar hoje&nbsp;<span aria-hidden="true">👇</span></span></p>
-      <div className="w-full max-w-[290px] md:max-w-[340px] aspect-[9/16] overflow-hidden rounded-lg bg-muted" aria-label="Vídeo de apresentação da Prime Biblioteca 3D">
+      <p className="mb-3 whitespace-nowrap text-center text-base md:text-lg font-black uppercase text-heading-highlight">👇 Dê o play e veja! 👇</p>
+      <div className="w-full max-w-[290px] md:max-w-[340px] aspect-[9/16] overflow-hidden rounded-lg border-4 border-orange-500 bg-muted" aria-label="Vídeo de apresentação da Prime Biblioteca 3D">
         <WistiaVideo mediaId="0j8hig4a0f" aspect={0.5625} />
       </div>
       <Button asChild className="mt-4 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">

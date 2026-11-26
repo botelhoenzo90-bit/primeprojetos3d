@@ -93,9 +93,15 @@ const OfferSection = () => {
           >
             Crie, imprima e explore novas possibilidades <span className="text-[#f97316]">com a Biblioteca 3D Premium</span>
           </motion.h2>
-          <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-8 px-2">
-            🚀 Explore mais de 100 mil modelos 3D organizados por categorias e receba 19 coleções temáticas para inspirar seus próximos projetos.
+          <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-3 px-2">
+            Escolha o pacote ideal para você e comece agora mesmo!
           </p>
+          <div className="flex justify-center mb-8">
+            <span className="inline-flex items-center gap-2 bg-red-600 text-white text-xs md:text-base font-black uppercase tracking-wide px-4 py-2 rounded-full shadow-[0_3px_0_#000] whitespace-nowrap">
+              <span className="w-2 h-2 rounded-full bg-white animate-pulse" aria-hidden="true" />
+              Restam apenas 03 vagas
+            </span>
+          </div>
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* PLANO PREMIUM */}
             <motion.div
@@ -105,8 +111,8 @@ const OfferSection = () => {
             >
               <div className="relative bg-white rounded-3xl shadow-2xl border-[3px] border-sage overflow-visible h-full flex flex-col">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-max">
-                  <div className="bg-cta text-white text-[11px] md:text-xs font-black px-5 py-1.5 rounded-full uppercase shadow-md whitespace-nowrap">
-                    🔥 Mais Vendido!
+                  <div className="bg-red-600 text-white text-base md:text-2xl font-black px-6 py-2 rounded-full uppercase shadow-[0_3px_0_#000] whitespace-nowrap">
+                    97% escolhem esse pacote!
                   </div>
                 </div>
 

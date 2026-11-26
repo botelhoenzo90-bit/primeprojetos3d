@@ -100,12 +100,12 @@ const OfferSection = () => {
           >
             Crie, imprima e explore novas possibilidades <span className="text-[#f97316]">com a Biblioteca 3D Premium</span>
           </motion.h2>
-          <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-3 px-2">
+          <p className="text-center text-base md:text-2xl text-green-title font-extrabold max-w-2xl mx-auto mb-4 px-2 leading-snug">
             Escolha o pacote ideal para você<br className="md:hidden" /> e comece agora mesmo!
           </p>
           <div className="flex justify-center mb-2">
-            <span className="inline-flex items-center gap-2 bg-red-600 text-white text-[11px] md:text-sm font-black uppercase tracking-wide px-4 py-1.5 rounded-full shadow-[0_2px_0_#000]">
-              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" aria-hidden="true" />
+            <span className="inline-flex items-center justify-center gap-2 bg-red-600 text-white text-[11px] md:text-base font-black uppercase tracking-wide px-4 py-2 md:px-7 md:py-2.5 rounded-full text-center whitespace-nowrap border-2 border-black shadow-[0_3px_0_#000]">
+              <span className="w-2 h-2 shrink-0 rounded-full bg-white animate-pulse" aria-hidden="true" />
               Restam apenas 3 vagas no valor promocional
             </span>
           </div>

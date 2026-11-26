@@ -1,30 +1,13 @@
 import SectionCTA from "@/components/SectionCTA";
-import { createElement, useEffect } from "react";
+import WistiaVideo from "@/components/WistiaVideo";
 import { motion } from "framer-motion";
-import { FolderOpen, Zap, ShieldCheck } from "lucide-react";
+import { FolderOpen, Users, ShieldCheck } from "lucide-react";
 
 const features = [
   { icon: FolderOpen, title: "TUDO SEPARADO POR CATEGORIA", desc: "Decoração, utilidades, brinquedos, datas comemorativas e muito mais, organizados para você achar em segundos." },
-  { icon: Zap, title: "DO ARQUIVO À IMPRESSÃO", desc: "Encontre seu modelo, prepare no fatiador e dê vida à sua próxima criação." },
+  { icon: Users, title: "COMUNIDADE GRATUITA EXCLUSIVA", desc: "Tire dúvidas, troque ideias e compartilhe suas criações com outros apaixonados por impressão 3D." },
   { icon: ShieldCheck, title: "MODELOS PRONTOS PARA VENDER", desc: "Peças selecionadas com potencial de venda para você imprimir, testar e lucrar sem começar do zero." },
 ];
-
-const WistiaVSL = () => {
-  useEffect(() => {
-    ["https://fast.wistia.com/player.js", "https://fast.wistia.com/embed/m2f6qcvqu7.js"].forEach((src, i) => {
-      if (document.querySelector(`script[src="${src}"]`)) return;
-      const el = document.createElement("script");
-      el.src = src; el.async = true; if (i === 1) el.type = "module";
-      document.head.appendChild(el);
-    });
-  }, []);
-  return (
-    <>
-      <style>{`wistia-player[media-id='m2f6qcvqu7']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/m2f6qcvqu7/swatch'); display: block; filter: blur(5px); padding-top:53.13%; }`}</style>
-      {createElement("wistia-player", { "media-id": "m2f6qcvqu7", aspect: "1.8823529411764706" })}
-    </>
-  );
-};
 
 const NutriSection = () => (
   <section className="py-12 md:py-16 bg-[#EFF7FF]">
@@ -37,7 +20,7 @@ const NutriSection = () => (
 
       <motion.div initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-4xl mx-auto mb-8">
         <div className="w-full rounded-2xl md:rounded-3xl border border-blue-200 bg-[#10243A] shadow-2xl overflow-hidden">
-          <WistiaVSL />
+          <WistiaVideo mediaId="m2f6qcvqu7" aspect={1.8823529411764706} />
         </div>
       </motion.div>
 

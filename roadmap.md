@@ -1,5 +1,7 @@
 # Tasks
 
+- [x] Replace the hero image with the supplied Wistia video, remove the ideas section, highlight the free community below bonuses and inside library features, and swap delivery/compatibility sections; playback, section order and layouts verified at 394px and 906px without runtime errors.
+
 - [x] Install Cakto campaign tracker with existing advertising permission; 14 tests passed; browser verified all three checkout links, stored campaign on return, page-view request and withdrawal. Publication and Cakto dashboard receipt remain unverified.
 
 - [x] Remove old Meta, Clarity and Utmify code and checkout query forwarding; install Meta pixel 2150691958883963 gated by advertising permission; eight tests passed, SDK/config returned 200 and blocked-region/browser opt-out checks passed.

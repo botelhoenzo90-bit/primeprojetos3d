@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Gift } from "lucide-react";
+import { Gift, Users, MessageCircle, Lightbulb, Check } from "lucide-react";
 
 const bonuses = [
   { image: "veiculos.webp", title: "Pack de Veículos 3D", desc: "Miniaturas de carros e outros veículos para explorar o nicho de colecionáveis." },
@@ -51,6 +51,21 @@ const BonusSection = () => {
         </div>
       </div>
       <div className="container mx-auto px-4">
+        <article className="mx-auto mt-8 max-w-3xl rounded-lg border border-primary/20 bg-background p-5 md:p-7">
+          <div className="flex items-start gap-4">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"><Users className="h-7 w-7" /></div>
+            <div className="min-w-0">
+              <span className="text-xs font-extrabold uppercase text-heading-highlight">Também incluso no seu acesso</span>
+              <h3 className="mt-1 text-xl md:text-2xl font-black text-green-title">Comunidade gratuita exclusiva</h3>
+              <p className="mt-2 text-sm md:text-base text-muted-foreground">Você também recebe acesso à nossa comunidade para conversar sobre impressão 3D, compartilhar experiências e encontrar novas ideias para seus projetos.</p>
+            </div>
+          </div>
+          <ul className="mt-5 grid gap-3 text-sm font-bold text-green-title sm:grid-cols-3">
+            <li className="flex items-center gap-2"><MessageCircle className="h-4 w-4 shrink-0 text-primary" /> Tire dúvidas</li>
+            <li className="flex items-center gap-2"><Lightbulb className="h-4 w-4 shrink-0 text-primary" /> Troque ideias</li>
+            <li className="flex items-center gap-2"><Check className="h-4 w-4 shrink-0 text-cta" /> Sem custo adicional</li>
+          </ul>
+        </article>
         <div className="text-center mt-8 flex flex-col items-center">
           <Button asChild className="h-auto whitespace-normal"><a href="#oferta" className="prime-cta inline-block w-full md:w-auto bg-cta hover:bg-cta-hover text-primary-foreground font-black text-sm md:text-xl px-10 py-5 rounded-full text-center  transition-all uppercase tracking-wide mb-2">GARANTIR A BIBLIOTECA COM BÔNUS</a></Button>
           <p className="text-xs md:text-sm text-[#334155] font-semibold">🛡️ Garantia de 7 dias • Acesso digital</p>

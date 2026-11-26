@@ -41,6 +41,13 @@ const premiumBonusItems = [
   "Canecas de Games",
 ];
 
+const bonusPrices = [
+  47, 39, 27, 57, 34, 67, 44, 54, 37, 49,
+  62, 32, 41, 58, 29, 36, 45, 33, 51,
+];
+
+const bonusPrice = (index: number) => `${bonusPrices[index % bonusPrices.length]},00`;
+
 const basicReceberItems = [
   "+50.000 arquivos STL",
   "Acesso organizado por categorias",
@@ -96,13 +103,7 @@ const OfferSection = () => {
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-3 px-2">
             Escolha o pacote ideal para você e comece agora mesmo!
           </p>
-          <div className="flex justify-center mb-8">
-            <span className="inline-flex items-center gap-2 bg-red-600 text-white text-xs md:text-base font-black uppercase tracking-wide px-4 py-2 rounded-full shadow-[0_3px_0_#000] whitespace-nowrap">
-              <span className="w-2 h-2 rounded-full bg-white animate-pulse" aria-hidden="true" />
-              Restam apenas 03 vagas
-            </span>
-          </div>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+          <div className="max-w-6xl mx-auto mt-14 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* PLANO PREMIUM */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -110,8 +111,8 @@ const OfferSection = () => {
               viewport={{ once: true }}
             >
               <div className="relative bg-white rounded-3xl shadow-2xl border-[3px] border-sage overflow-visible h-full flex flex-col">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-max">
-                  <div className="bg-red-600 text-white text-base md:text-2xl font-black px-6 py-2 rounded-full uppercase shadow-[0_3px_0_#000] whitespace-nowrap">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-[calc(100%+12px)] z-10 w-max">
+                  <div className="bg-green-600 text-white text-base md:text-2xl font-black px-6 py-2 rounded-full uppercase shadow-[0_3px_0_#000] whitespace-nowrap">
                     97% escolhem esse pacote!
                   </div>
                 </div>
@@ -147,6 +148,12 @@ const OfferSection = () => {
                     <div className="inline-block bg-green-50 text-green-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
                       Você economiza R$ 57,10!
                     </div>
+                    <div className="mt-2">
+                      <span className="inline-flex items-center gap-2 bg-red-600 text-white text-[11px] md:text-xs font-black uppercase tracking-wide px-3 py-1 rounded-full shadow-[0_2px_0_#000] whitespace-nowrap">
+                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" aria-hidden="true" />
+                        Restam apenas 03 vagas
+                      </span>
+                    </div>
                   </div>
 
                   <div className="border-t border-dashed border-sage my-3" />
@@ -173,13 +180,15 @@ const OfferSection = () => {
                     19 Bônus Inclusos:
                   </h3>
                   <div className="flex justify-center mb-4">
-                    <ul className="space-y-2 inline-flex flex-col">
+                    <ul className="space-y-2 inline-flex flex-col w-full">
                       {premiumBonusItems.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2.5">
+                        <li key={i} className="flex items-center gap-1.5 w-full">
                           <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
                             <Gift className="w-3.5 h-3.5 text-white" />
                           </div>
-                          <span className="text-sm font-semibold text-foreground">{item}</span>
+                          <span className="text-xs font-semibold text-foreground flex-1 text-left min-w-0">{item}</span>
+                          <span className="text-red-600 font-extrabold text-[10px] line-through decoration-red-500 decoration-2 whitespace-nowrap">R$ {bonusPrice(i)}</span>
+                          <span className="text-green-700 font-black text-[10px] bg-green-50 px-1.5 py-0.5 rounded-full uppercase whitespace-nowrap">Grátis</span>
                         </li>
                       ))}
                     </ul>

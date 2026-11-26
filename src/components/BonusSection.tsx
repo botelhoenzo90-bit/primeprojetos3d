@@ -25,13 +25,6 @@ const bonuses = [
   { image: "zuajik7.png", title: "Coleção especial 19", desc: "Uma coleção extra para ampliar seus projetos." },
 ];
 
-const bonusPrices = [
-  47, 39, 27, 57, 34, 67, 44, 54, 37, 49,
-  62, 32, 41, 58, 29, 36, 45, 33, 51,
-];
-
-const bonusPrice = (index: number) => `${bonusPrices[index % bonusPrices.length]},00`;
-
 const BonusSection = () => {
   const loop = [...bonuses, ...bonuses];
   return (
@@ -53,14 +46,7 @@ const BonusSection = () => {
               <span className="inline-block self-center bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1 rounded-full mb-2 tracking-wide">COLEÇÃO {(i % bonuses.length) + 1}</span>
               <h3 className="font-extrabold text-lg text-[#17324D] mb-2">{b.title}</h3>
               <p className="text-slate-600 text-sm leading-relaxed">{b.desc}</p>
-              <div className="mt-auto pt-4 flex items-center justify-center gap-2">
-                <span className="text-red-600 font-extrabold text-sm line-through decoration-red-500 decoration-2">
-                  R$ {bonusPrice(i % bonuses.length)}
-                </span>
-                <span className="text-green-700 font-black text-sm bg-green-50 px-3 py-1 rounded-full uppercase">
-                  Grátis
-                </span>
-              </div>
+              <span className="mt-auto pt-4 text-green-700 font-extrabold text-xs bg-green-50 px-4 py-2 rounded-full">BÔNUS INCLUSO</span>
             </article>
           ))}
         </div>

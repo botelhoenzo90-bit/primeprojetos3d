@@ -18,8 +18,8 @@ const HeroSection = () => (
         <img src={headline.url} alt="Transforme sua Impressora 3D em uma Máquina de Criar Produtos que Vendem Todos os Dias" className="block w-full h-auto" loading="eager" />
       </h1>
       <p className="hero-subtitle w-full max-w-4xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug md:leading-tight mb-5">Acesse mais de <strong className="inline-block whitespace-nowrap rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e crie produtos incríveis para vender todos os dias.</p>
-      <p className="mb-3 w-full max-w-sm md:max-w-xl text-center text-sm sm:text-base md:text-lg font-black uppercase leading-snug text-cta text-outline-black">Dê o play e descubra como aproveitar<br />sua impressora 3D ao máximo! <span aria-hidden="true">👇</span></p>
-      <div className="w-full max-w-[290px] md:max-w-[340px] aspect-[9/16] overflow-hidden rounded-lg border-4 border-orange-500 bg-muted" aria-label="Vídeo de apresentação da Prime Biblioteca 3D">
+      <p className="mb-3 w-full max-w-sm md:max-w-xl text-center text-sm sm:text-base md:text-lg font-black uppercase leading-snug text-cta">Dê o play e descubra como aproveitar<br />sua impressora 3D ao máximo! <span aria-hidden="true">👇</span></p>
+      <div className="w-full max-w-[290px] md:max-w-[340px] aspect-[9/16] overflow-hidden rounded-lg border-4 border-primary bg-muted" aria-label="Vídeo de apresentação da Prime Biblioteca 3D">
         <WistiaVideo mediaId="0j8hig4a0f" aspect={0.5625} />
       </div>
       <Button asChild className="mt-4 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">

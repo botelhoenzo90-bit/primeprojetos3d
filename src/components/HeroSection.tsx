@@ -1,7 +1,6 @@
-import { Star } from "lucide-react";
+import { Star, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/topo/logo.png.asset.json";
-import marketplaces from "@/assets/topo/marketplaces-transparent.webp.asset.json";
 import headline from "@/assets/topo/titulo-impressora.webp.asset.json";
 import WistiaVideo from "@/components/WistiaVideo";
 import perfil1 from "@/assets/perfis/perfil-1.webp.asset.json";
@@ -18,9 +17,9 @@ const HeroSection = () => (
       <h1 className="mb-4 w-full max-w-4xl">
         <img src={headline.url} alt="Transforme sua Impressora 3D em uma Máquina de Criar Produtos que Vendem Todos os Dias" className="block w-full h-auto" loading="eager" />
       </h1>
-      <p className="hero-subtitle w-full max-w-5xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug md:leading-tight mb-5"><span className="md:block">Tenha acesso a uma biblioteca com mais de</span>{" "}<span className="md:block"><strong className="inline-block whitespace-nowrap rounded-md bg-primary text-primary-foreground px-1.5 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e vender no:</span></p>
-      <img src={marketplaces.url} alt="Mercado Livre, Shopee, TikTok Shop e sua cidade" className="w-full max-w-[245px] md:max-w-[295px] h-auto mb-3" />
-      <div className="w-full max-w-[370px] md:max-w-[400px] aspect-[9/16] overflow-hidden rounded-lg bg-muted" aria-label="Vídeo de apresentação da Prime Biblioteca 3D">
+      <p className="hero-subtitle w-full max-w-4xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug md:leading-tight mb-5">Acesse mais de <strong className="text-primary">100 mil arquivos STL</strong> prontos para imprimir e crie produtos incríveis para vender todos os dias.</p>
+      <p className="mb-3 flex items-center justify-center gap-2 text-sm font-extrabold text-green-title"><PlayCircle className="h-5 w-5 shrink-0 text-heading-highlight" /> Clique no vídeo e veja o que você pode criar</p>
+      <div className="w-full max-w-[240px] md:max-w-[280px] aspect-[9/16] overflow-hidden rounded-lg bg-muted" aria-label="Vídeo de apresentação da Prime Biblioteca 3D">
         <WistiaVideo mediaId="0j8hig4a0f" aspect={0.5625} />
       </div>
       <Button asChild className="mt-4 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">

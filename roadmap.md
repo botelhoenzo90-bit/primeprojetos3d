@@ -1,5 +1,7 @@
 # Tasks
 
+- [x] Update hero subtitle, remove marketplaces image, reduce portrait video and add viewing prompts to both videos; restyle community card with uploaded image and rename gallery heading. Verified layouts at 394px/1280px, Clarity zjwbt40fqf SDK HTTP 200 and collection HTTP 204, regional consent blocking and 14 regression tests; provider dashboard display not verified.
+
 - [x] Replace the hero image with the supplied Wistia video, remove the ideas section, highlight the free community below bonuses and inside library features, and swap delivery/compatibility sections; playback, section order and layouts verified at 394px and 906px without runtime errors.
 
 - [x] Install Cakto campaign tracker with existing advertising permission; 14 tests passed; browser verified all three checkout links, stored campaign on return, page-view request and withdrawal. Publication and Cakto dashboard receipt remain unverified.

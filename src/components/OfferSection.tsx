@@ -103,6 +103,12 @@ const OfferSection = () => {
           <p className="text-center text-sm md:text-lg text-green-title font-semibold max-w-2xl mx-auto mb-3 px-2">
             Escolha o pacote ideal para você<br className="md:hidden" /> e comece agora mesmo!
           </p>
+          <div className="flex justify-center mb-2">
+            <span className="inline-flex items-center gap-2 bg-red-600 text-white text-[11px] md:text-sm font-black uppercase tracking-wide px-4 py-1.5 rounded-full shadow-[0_2px_0_#000]">
+              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" aria-hidden="true" />
+              Restam apenas 3 vagas no valor promocional
+            </span>
+          </div>
           <div className="max-w-6xl mx-auto mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* PLANO PREMIUM */}
             <motion.div
@@ -148,12 +154,6 @@ const OfferSection = () => {
                     <div className="inline-block bg-green-50 text-green-700 font-bold text-sm px-4 py-1 rounded-full mt-2">
                       Você economiza R$ 57,10!
                     </div>
-                    <div className="mt-2">
-                      <span className="inline-flex items-center gap-2 bg-red-600 text-white text-[11px] md:text-xs font-black uppercase tracking-wide px-3 py-1 rounded-full shadow-[0_2px_0_#000] whitespace-nowrap">
-                        <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" aria-hidden="true" />
-                        Restam apenas 03 vagas
-                      </span>
-                    </div>
                   </div>
 
                   <div className="border-t border-dashed border-sage my-3" />
@@ -187,8 +187,8 @@ const OfferSection = () => {
                             <Gift className="w-3.5 h-3.5 text-white" />
                           </div>
                           <span className="text-xs font-semibold text-foreground flex-1 text-left min-w-0">{item}</span>
-                          <span className="text-red-600 font-extrabold text-[10px] line-through decoration-red-500 decoration-2 whitespace-nowrap">R$ {bonusPrice(i)}</span>
-                          <span className="text-green-700 font-black text-[10px] bg-green-50 px-1.5 py-0.5 rounded-full uppercase whitespace-nowrap">Grátis</span>
+                          <span className="text-red-600 font-extrabold text-xs line-through decoration-red-500 decoration-2 whitespace-nowrap">R$ {bonusPrice(i)}</span>
+                          <span className="text-green-700 font-black text-[11px] bg-green-50 px-1.5 py-0.5 rounded-full uppercase whitespace-nowrap">Grátis</span>
                         </li>
                       ))}
                     </ul>

@@ -41,3 +41,5 @@
 - [x] Refresh hero headline/subtitle and replace marketplace image; restore compact compatibility carousels and smaller mobile notification.
 - [ ] Confirm customer name/city purchase records and real 4,9/5,0 rating with 4.378 reviews — no invented social proof displayed.
 - [x] Replace hero heading with uploaded artwork, compact top/marketplace spacing, remove requested benefit, and unify green CTAs with black shadows.
+- [x] Replace hero Wistia video with the supplied Mega Pack artwork (CDN WebP) and remove the "Dê o play" line; verified image renders and phrase is gone at 390px/1280px.
+- [x] Fix checkout tracking: forward every UTM/click-id to Cakto, fire InitiateCheckout on click and Purchase on the new /obrigado return page with a stable event id; 34 tests passed, browser confirmed UTMs in the checkout address and the Purchase call with value 39,90. Meta receipt still unverified (sandbox browser sends no hit; check Test Events).

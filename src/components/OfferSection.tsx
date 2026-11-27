@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { OFFER_PRICES } from "@/lib/offer-prices";
+import { withMarketingParams } from "@/lib/checkout-links";
+import { rememberCheckoutStart, trackInitiateCheckout, type CheckoutPlan } from "@/lib/meta-events";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ShieldCheck, Zap, Gift, X, Sparkles, Crown } from "lucide-react";
@@ -48,6 +50,12 @@ const bonusPrices = [
 
 const bonusPrice = (index: number) => `${bonusPrices[index % bonusPrices.length]},00`;
 
+const CHECKOUT: Record<CheckoutPlan, string> = {
+  premium: "https://pay.cakto.com.br/vfa8ugj_1323876",
+  upgrade: "https://pay.cakto.com.br/vfhdgrk_1350699",
+  basic: "https://pay.cakto.com.br/buf4wp3_1350697",
+};
+
 const basicReceberItems = [
   "+50.000 arquivos STL",
   "Acesso organizado por categorias",
@@ -75,12 +83,14 @@ const OfferSection = () => {
     return () => { document.body.style.overflow = ''; };
   }, [showUpsell, showBasicUpsell]);
 
-  const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, url: string) => {
+  const checkoutHref = (plan: CheckoutPlan) => withMarketingParams(CHECKOUT[plan]);
+
+  const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, plan: CheckoutPlan) => {
     e.preventDefault();
-
-    const checkoutUrl = new URL(url);
-
-    window.location.href = checkoutUrl.toString();
+    rememberCheckoutStart(plan);
+    void trackInitiateCheckout(plan);
+    // The anchor may already carry the sales platform's own tracking parameters.
+    window.location.href = withMarketingParams(e.currentTarget.href);
   };
 
   return (
@@ -197,10 +207,10 @@ const OfferSection = () => {
                   <div className="mt-auto">
                     <div className="rounded-full mb-4">
                       <Button asChild className="h-auto whitespace-normal"><a
-                        href="https://pay.cakto.com.br/vfa8ugj_1323876"
+                        href={checkoutHref("premium")}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/vfa8ugj_1323876')}
+                        onClick={(e) => handleCheckout(e, "premium")}
                         className="flex w-full min-h-[58px] items-center justify-center gap-2 bg-cta hover:bg-cta-hover prime-cta text-white font-black text-sm sm:text-base md:text-xl px-4 py-4 md:py-5 rounded-full text-center leading-tight transition-all uppercase tracking-wide cursor-pointer shadow-lg shadow-green-200"
                       >
                         <Zap className="w-5 h-5 inline mr-2" />
@@ -419,10 +429,10 @@ const OfferSection = () => {
                 </div>
 
                 <Button asChild className="h-auto whitespace-normal"><a
-                  href="https://pay.cakto.com.br/vfhdgrk_1350699"
+                  href={checkoutHref("upgrade")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/vfhdgrk_1350699')}
+                  onClick={(e) => handleCheckout(e, "upgrade")}
                   className="block bg-green-600 hover:bg-green-700 prime-cta text-white font-black text-sm px-4 py-2.5 rounded-xl transition-colors w-full text-center uppercase whitespace-nowrap cursor-pointer mb-1.5"
                 >
                   <Zap className="w-4 h-4 inline mr-1" />
@@ -430,12 +440,12 @@ const OfferSection = () => {
                 </a></Button>
 
                 <Button asChild className="h-auto whitespace-normal"><a
-                  href="https://pay.cakto.com.br/buf4wp3_1350697"
+                  href={checkoutHref("basic")}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
                     setShowUpsell(false);
-                    handleCheckout(e, 'https://pay.cakto.com.br/buf4wp3_1350697');
+                    handleCheckout(e, "basic");
                   }}
                   className="prime-cta-basic block font-semibold text-[10px] px-4 py-1.5 rounded-xl transition-colors w-full text-center cursor-pointer"
                 >
@@ -495,10 +505,10 @@ const OfferSection = () => {
                 </ul>
                 <div className="upgrade-actions flex flex-col gap-2">
                   <Button asChild className="prime-cta h-auto w-full whitespace-normal rounded-lg px-3 py-3 text-sm font-black">
-                    <a href="https://pay.cakto.com.br/vfhdgrk_1350699" onClick={(e) => handleCheckout(e, 'https://pay.cakto.com.br/vfhdgrk_1350699')}>GARANTIR TUDO POR R$ 29,90</a>
+                    <a href={checkoutHref("upgrade")} onClick={(e) => handleCheckout(e, "upgrade")}>GARANTIR TUDO POR R$ 29,90</a>
                   </Button>
                   <Button asChild className="prime-cta-basic h-auto min-h-9 w-full whitespace-normal rounded-lg px-2 py-2 text-xs text-primary-foreground">
-                    <a href="https://pay.cakto.com.br/buf4wp3_1350697" onClick={(e) => { setShowBasicUpsell(false); handleCheckout(e, 'https://pay.cakto.com.br/buf4wp3_1350697'); }}>Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</a>
+                    <a href={checkoutHref("basic")} onClick={(e) => { setShowBasicUpsell(false); handleCheckout(e, "basic"); }}>Continuar com o Básico — {OFFER_PRICES.basic.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</a>
                   </Button>
                 </div>
                 <div className="upgrade-payment mt-2 flex items-center justify-center gap-2">

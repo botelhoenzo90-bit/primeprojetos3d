@@ -13,13 +13,13 @@ const profiles = [perfil1, perfil2, perfil3, perfil4, perfil5, perfil6];
 const HeroSection = () => (
   <section className="prime-hero bg-cream text-green-title py-6 md:py-10">
     <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
-      <img src={logo.url} alt="Prime Biblioteca 3D" className="w-48 md:w-56 h-auto mb-3" loading="eager" />
+      <img src={logo.url} alt="Prime Biblioteca 3D" width={700} height={280} className="w-48 md:w-56 h-auto mb-3" loading="eager" decoding="async" />
       <h1 className="mb-4 w-full max-w-4xl">
-        <img src={headline.url} alt="Transforme sua Impressora 3D em uma Máquina de Criar Produtos que Vendem Todos os Dias" className="block w-full h-auto" loading="eager" />
+        <img src={headline.url} alt="Transforme sua Impressora 3D em uma Máquina de Criar Produtos que Vendem Todos os Dias" width={1600} height={486} fetchPriority="high" className="block w-full h-auto" loading="eager" decoding="async" />
       </h1>
       <p className="hero-subtitle w-full max-w-4xl text-green-title text-base sm:text-lg md:text-2xl font-extrabold leading-snug md:leading-tight mb-5">Acesse mais de <strong className="inline-block whitespace-nowrap rounded-md bg-primary text-primary-foreground px-2 py-0.5">100 mil arquivos STL</strong> prontos para imprimir e crie produtos incríveis para vender todos os dias.</p>
       <div className="w-full max-w-[320px] md:max-w-[400px] overflow-hidden rounded-lg border-4 border-primary bg-muted" aria-label="Divulgação da Prime Biblioteca 3D com mais de 100 mil arquivos STL por R$ 10,00">
-        <img src={megaPack.url} alt="Mega Pack com mais de 100 mil arquivos STL para impressão 3D por apenas R$ 10,00, acesso imediato e bônus de calculadora de custos e lucros" className="block w-full h-auto" loading="eager" decoding="async" />
+        <img src={megaPack.url} alt="Mega Pack com mais de 100 mil arquivos STL para impressão 3D por apenas R$ 10,00, acesso imediato e bônus de calculadora de custos e lucros" width={900} height={888} className="block w-full h-auto" loading="eager" decoding="async" />
       </div>
       <Button asChild className="mt-4 h-auto w-full max-w-md whitespace-normal bg-cta hover:bg-cta-hover prime-cta text-primary-foreground font-black text-base md:text-lg px-6 py-4 rounded-lg">
         <a href="#oferta">GARANTIR MEU ACESSO AGORA <span aria-hidden="true">↓</span></a>

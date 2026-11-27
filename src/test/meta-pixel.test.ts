@@ -3,6 +3,7 @@ import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 beforeEach(() => {
   vi.resetModules();
   localStorage.clear();
+  sessionStorage.clear();
   delete window.fbq;
   delete window._fbq;
   // jsdom lacks the browser's AbortSignal.timeout implementation.
@@ -78,4 +79,16 @@ it('respeita Global Privacy Control mesmo no Brasil', async () => {
   await new Promise(resolve => setTimeout(resolve, 0));
   expect(window.fbq).toBeUndefined();
   stop();
+});
+
+it('inicializa o pixel antes de enviar uma venda ao abrir diretamente a página de retorno', async () => {
+  localStorage.setItem('cookie_consent_advertising', JSON.stringify({ choice: 'granted', at: Date.now() }));
+  const { trackPurchase } = await import('../lib/meta-events');
+  await trackPurchase('?orderId=teste-123&value=39.90');
+  const queue = window.fbq?.queue ?? [];
+  const initIndex = queue.findIndex(args => args[0] === 'init' && args[1] === '2150691958883963');
+  const purchaseIndex = queue.findIndex(args => args[0] === 'track' && args[1] === 'Purchase');
+  expect(initIndex).toBeGreaterThanOrEqual(0);
+  expect(purchaseIndex).toBeGreaterThan(initIndex);
+  expect(queue[purchaseIndex]).toEqual(['track', 'Purchase', { currency: 'BRL', value: 39.9 }, { eventID: 'prime-purchase-teste-123' }]);
 });

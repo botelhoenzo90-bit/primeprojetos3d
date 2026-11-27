@@ -1,4 +1,6 @@
 # Tasks
+- [x] Reduce initial media work and layout shifts: intrinsic hero dimensions, lazy testimonials, near-viewport Wistia. Verify checkout UTMs/sck across all three real Cakto destinations and initialized Pixel event helpers; 31 tests passed, mobile/desktop no overflow/runtime errors. Report conversion obstacles: 100k/R$10 artwork conflicts with 50k Basic, unsupported social proof and lengthy plan lists. Post-publication speed improvement not yet measured.
+- [ ] Confirm Cakto payment-success redirect/native Purchase configuration and Meta receipt — requires sales-platform settings and Events Manager access.
 
 - [x] Update hero subtitle, remove marketplaces image, reduce portrait video and add viewing prompts to both videos; restyle community card with uploaded image and rename gallery heading. Verified layouts at 394px/1280px, Clarity zjwbt40fqf SDK HTTP 200 and collection HTTP 204, regional consent blocking and 14 regression tests; provider dashboard display not verified.
 
@@ -34,7 +36,7 @@
 - [x] Adjust headings, plan prices, checkout event values and WhatsApp/email access notices.
 - [x] Verify mobile, desktop and the basic-to-premium offer.
 - [ ] Confirm real rating totals and buyer activity before displaying customer statistics or purchase notifications — awaiting real customer data.
-- [ ] Verify the new prices charged by Cakto — checkout links preserved; external product prices require confirmation.
+- [x] Verify Cakto base offer prices on 2026-11-27: Premium R$39,90, Basic R$10,00, upgrade R$29,90; all three checkout pages loaded with campaign query intact. No payment or fulfillment performed; installment/payment fees and optional extras may alter final totals.
 - [x] Add four collection photos and two testimonial screenshots; speed up the first gallery row.
 - [x] Crop circular profile photos, remove blue strip, compact compatibility/access notices and add footer logo.
 - [x] Verify updated layouts on mobile and desktop.

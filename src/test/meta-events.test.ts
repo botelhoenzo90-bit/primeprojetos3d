@@ -1,5 +1,12 @@
 import { beforeEach, expect, it, vi } from 'vitest';
-import { rememberCheckoutStart, trackInitiateCheckout, trackPurchase } from '../lib/meta-events';
+let rememberCheckoutStart: typeof import('../lib/meta-events').rememberCheckoutStart;
+let trackInitiateCheckout: typeof import('../lib/meta-events').trackInitiateCheckout;
+let trackPurchase: typeof import('../lib/meta-events').trackPurchase;
+
+vi.mock('../lib/meta-pixel', async () => {
+  const { canTrack } = await import('../lib/consent');
+  return { ensureMetaPixel: () => canTrack('advertising') };
+});
 
 let calls: unknown[][];
 
@@ -7,8 +14,11 @@ function allowAdvertising() {
   localStorage.setItem('cookie_consent_advertising', JSON.stringify({ choice: 'granted', at: Date.now() }));
 }
 
-beforeEach(() => {
+beforeEach(async () => {
+  vi.resetModules();
+  ({ rememberCheckoutStart, trackInitiateCheckout, trackPurchase } = await import('../lib/meta-events'));
   localStorage.clear();
+  sessionStorage.clear();
   calls = [];
   const fbq = vi.fn((...args: unknown[]) => {
     calls.push(args);
@@ -29,14 +39,23 @@ it('usa o valor informado no retorno quando ele vem na URL', async () => {
   expect(calls[0][2]).toEqual({ currency: 'BRL', value: 10 });
 });
 
-it('repete o mesmo evento ao recarregar o mesmo pedido, sem criar segunda venda', async () => {
+it('envia apenas uma venda mesmo ao recarregar o mesmo pedido', async () => {
   rememberCheckoutStart('basic');
   await trackPurchase('?orderId=555');
+  vi.resetModules();
+  const reloaded = await import('../lib/meta-events');
+  await reloaded.trackPurchase('?orderId=555');
   await trackPurchase('?orderId=555');
   expect(calls.map((args) => (args[3] as { eventID: string }).eventID)).toEqual([
     'prime-purchase-555',
-    'prime-purchase-555',
   ]);
+});
+
+it('não transforma uma visita sem pedido ou um clique no checkout em venda', async () => {
+  rememberCheckoutStart('premium');
+  await trackPurchase('');
+  await trackPurchase('?value=39.90');
+  expect(calls).toEqual([]);
 });
 
 it('não envia valor quando nenhum preço é conhecido', async () => {

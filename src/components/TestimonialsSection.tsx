@@ -33,7 +33,7 @@ const TestimonialsSection = () => {
         <div className="flex w-max animate-marquee-testimonials" style={{ width: `${doubled.length * 304}px` }}>
           {doubled.map((file, i) => (
             <div key={i} className="flex-shrink-0 w-72 mx-2">
-              <img src={file} alt={`Depoimento de cliente ${(i % testimonials.length) + 1}`} className="w-72 h-[420px] object-contain bg-white rounded-2xl shadow-xl" loading="eager" decoding="async" />
+              <img src={file} alt={`Depoimento de cliente ${(i % testimonials.length) + 1}`} width={288} height={420} className="w-72 h-[420px] object-contain bg-white rounded-2xl shadow-xl" loading="lazy" decoding="async" />
             </div>
           ))}
         </div>

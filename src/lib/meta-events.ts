@@ -1,9 +1,10 @@
-import { canTrack } from "./consent";
+import { ensureMetaPixel } from "./meta-pixel";
 import { OFFER_PRICES } from "./offer-prices";
 
 export type CheckoutPlan = keyof typeof OFFER_PRICES;
 
 const CLICK_KEY = "prime_checkout_start";
+const reportedOrders = new Set<string>();
 
 type ClickRecord = { plan: CheckoutPlan; value: number; at: number; clickId: string };
 
@@ -51,22 +52,30 @@ function numericValue(raw: string | null): number | null {
 
 /** Checkout was started for that plan; only fires with advertising permission. */
 export async function trackInitiateCheckout(plan: CheckoutPlan): Promise<void> {
-  if (!(await canTrack("advertising"))) return;
+  if (!(await ensureMetaPixel())) return;
   window.fbq?.("track", "InitiateCheckout", { value: OFFER_PRICES[plan], currency: "BRL" });
 }
 
 /**
- * Sale confirmed on the return page. The event id stays the same for the same
- * order so reloading the page cannot count the sale twice.
+ * Requires a payment-success redirect with an order id; an ordinary page visit
+ * or checkout click is not a sale. This helper does not verify payment itself.
  */
 export async function trackPurchase(search: string = window.location.search): Promise<void> {
-  if (!(await canTrack("advertising"))) return;
   const params = new URLSearchParams(search);
+  const orderId = firstParam(params, ["orderId", "order_id", "pedido", "transaction_id", "id_pedido"]);
+  if (!orderId) return;
+  if (!(await ensureMetaPixel())) return;
+  const eventId = `prime-purchase-${orderId}`;
+  const marker = `prime_reported_${eventId}`;
+  if (reportedOrders.has(eventId)) return;
+  try { if (sessionStorage.getItem(marker)) return; } catch { /* Storage may be unavailable. */ }
   const start = readCheckoutStart();
   const value = numericValue(firstParam(params, ["value", "valor"])) ?? start?.value ?? null;
-  const orderId =
-    firstParam(params, ["orderId", "order_id", "pedido", "transaction_id", "id_pedido"]) ?? start?.clickId ?? newId();
   const payload: Record<string, unknown> = { currency: "BRL" };
   if (value !== null) payload.value = value;
-  window.fbq?.("track", "Purchase", payload, { eventID: `prime-purchase-${orderId}` });
+  const pixel = window.fbq;
+  if (!pixel) return;
+  pixel("track", "Purchase", payload, { eventID: eventId });
+  reportedOrders.add(eventId);
+  try { sessionStorage.setItem(marker, "1"); } catch { /* In-memory deduplication remains active. */ }
 }

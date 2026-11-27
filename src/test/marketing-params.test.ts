@@ -35,4 +35,15 @@ describe('Parâmetros de campanha no checkout', () => {
   it('ignora parâmetro de campanha vazio', () => {
     expect(marketingParams('?utm_source=&utm_medium=pago').toString()).toBe('utm_medium=pago');
   });
+
+  it('preserva sck da Cakto e UTMs adicionais em todos os três checkouts', () => {
+    for (const offer of ['vfa8ugj_1323876', 'buf4wp3_1350697', 'vfhdgrk_1350699']) {
+      const params = new URL(withMarketingParams(`https://pay.cakto.com.br/${offer}`, '?sck=campanha%7Canuncio&utm_id=123&utm_source_platform=instagram&utm_creative_format=video&utm_marketing_tactic=prospeccao')).searchParams;
+      expect(params.get('sck')).toBe('campanha|anuncio');
+      expect(params.get('utm_id')).toBe('123');
+      expect(params.get('utm_source_platform')).toBe('instagram');
+      expect(params.get('utm_creative_format')).toBe('video');
+      expect(params.get('utm_marketing_tactic')).toBe('prospeccao');
+    }
+  });
 });

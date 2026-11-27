@@ -85,12 +85,17 @@ const OfferSection = () => {
 
   const checkoutHref = (plan: CheckoutPlan) => withMarketingParams(CHECKOUT[plan]);
 
-  const handleCheckout = (e: React.MouseEvent<HTMLAnchorElement>, plan: CheckoutPlan) => {
+  const handleCheckout = async (e: React.MouseEvent<HTMLAnchorElement>, plan: CheckoutPlan) => {
     e.preventDefault();
+    const destination = withMarketingParams(e.currentTarget.href);
     rememberCheckoutStart(plan);
-    void trackInitiateCheckout(plan);
+    // Do not leave before the permission lookup and Pixel initialization can enqueue the event.
+    await Promise.race([
+      trackInitiateCheckout(plan).catch(() => undefined),
+      new Promise<void>((resolve) => setTimeout(resolve, 600)),
+    ]);
     // The anchor may already carry the sales platform's own tracking parameters.
-    window.location.href = withMarketingParams(e.currentTarget.href);
+    window.location.href = destination;
   };
 
   return (
